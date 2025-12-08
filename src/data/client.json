@@ -1,0 +1,28 @@
+{
+	"name": "Your Spa Name Here",
+	"businessType": "Thai Massage & Spa",
+	"servicesTemplate": "tiles",
+	"email": "info@yourspa.com",
+	"phoneForTel": "+44-20-1234-5678",
+	"phoneFormatted": "+44 20 1234 5678",
+	"whatsapp": "+447123456789",
+	"address": {
+		"lineOne": "123 High Street",
+		"lineTwo": "Soho",
+		"city": "London",
+		"postcode": "SW1A 1AA",
+		"country": "United Kingdom",
+		"mapLink": "https://goo.gl/maps/YOUR_MAP_LINK"
+		
+	},
+	"social": {
+		"facebook": "https://facebook.com/yourspa",
+		"instagram": "https://instagram.com/yourspa",
+		"google": "https://g.page/yourspa"
+	},
+	"hours": "Mon-Sat: 10:00-20:00, Sun: 10:00-18:00",
+	"domain": "www.yourspa.com",
+	"bookingUrl": "https://book.yourspa.com",
+	"giftVoucherUrl": "https://vouchers.yourspa.com",
+	"leaveReview": "https://g.page/yourspa/review"
+}

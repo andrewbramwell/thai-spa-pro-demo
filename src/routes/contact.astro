@@ -1,0 +1,421 @@
+---
+// src/routes/contact.astro
+import BaseLayout from "@layouts/BaseLayout.astro";
+import Landing from "@components/Landing.astro";
+import { t } from "i18n:astro";
+import client from "@data/client.json";
+
+// Optimize our landing image and pass it as props to the BaseLayout (for preloading) and Landing (for rendering)
+import { getOptimizedImage } from "@utils/utils";
+import landingImage from "@assets/images/landing.jpg";
+const optimizedImage = await getOptimizedImage(landingImage);
+
+// Page metadata
+const title = t("contact:landing.title");
+const description = t("contact:landing.description");
+---
+
+<BaseLayout
+    title={title}
+    description={description}
+    preloadedImage={optimizedImage}
+>
+    <!-- ============================================ -->
+    <!--                    LANDING                   -->
+    <!-- ============================================ -->
+
+    <Landing title={t("contact:landing.title")} image={optimizedImage} />
+
+    <!-- ============================================ -->
+    <!--                   Contact                    -->
+    <!-- ============================================ -->
+
+    <section id="contact-1403">
+        <div class="cs-container">
+            <div class="cs-content">
+                <span class="cs-topper">{t("contact:section.topper")}</span>
+                <h2 class="cs-title">{t("contact:section.title")}</h2>
+                <p class="cs-text">
+                    {t("contact:section.text")}
+                </p>
+                <ul class="cs-ul">
+                    <li class="cs-li">
+                        <picture class="cs-icon-wrapper">
+                            <img aria-hidden="true" src="/assets/svgs/phone-76.svg" alt="phone icon" class="cs-icon" width="40" height="40" decoding="async" />
+                        </picture>
+                        <div class="cs-flex-group">
+                            <span class="cs-header">{t("contact:section.phoneLabel")}</span>
+                            <a href={`tel:${client.phoneForTel}`} class="cs-link">{client.phoneFormatted}</a>
+                        </div>
+                    </li>
+                    <li class="cs-li">
+                        <picture class="cs-icon-wrapper">
+                            <img aria-hidden="true" src="/assets/svgs/clock-76.svg" alt="hours icon" class="cs-icon" width="40" height="40" decoding="async" />
+                        </picture>
+                        <div class="cs-flex-group">
+                            <span class="cs-header">{t("contact:section.hoursLabel")}</span>
+                            <span class="cs-link">{client.hours}</span>
+                        </div>
+                    </li>
+                    <li class="cs-li">
+                        <picture class="cs-icon-wrapper">
+                            <img aria-hidden="true" src="/assets/svgs/pin-76.svg" alt="address icon" class="cs-icon" width="40" height="40" decoding="async" />
+                        </picture>
+                        <div class="cs-flex-group">
+                            <span class="cs-header">{t("contact:section.addressLabel")}</span>
+                            <a href={client.address.mapLink} class="cs-link">{client.address.lineOne}{client.address.lineTwo && `, ${client.address.lineTwo}`}, {client.address.city} {client.address.postcode}</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!--Form-->
+            <form class="cs-form" id="cs-form-1403" name="Contact Form" method="post" data-netlify="true"><input type='hidden' name='form-name' value='Contact Form' />
+                <h3 class="cs-h3">{t("contact:form.title")}</h3>
+                <label class="cs-label">
+                    {t("contact:form.nameLabel")}
+                    <input class="cs-input" required type="text" id="name-1403" name="name" placeholder={t("contact:form.namePlaceholder")} />
+                </label>
+                <label class="cs-label cs-email">
+                    {t("contact:form.emailLabel")}
+                    <input class="cs-input" required type="email" id="email-1403" name="email" placeholder={t("contact:form.emailPlaceholder")} />
+                </label>
+                <label class="cs-label cs-phone">
+                    {t("contact:form.phoneLabel")}
+                    <input class="cs-input" required type="tel" id="phone-1403" name="phone" placeholder={t("contact:form.phonePlaceholder")} />
+                </label>
+                <label class="cs-label">
+                    {t("contact:form.messageLabel")}
+                    <textarea class="cs-input cs-textarea" required name="Message" id="message-1403" placeholder={t("contact:form.messagePlaceholder")}></textarea>
+                </label>
+                <button class="cs-button-solid cs-submit" type="submit">{t("contact:form.submitButton")}</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!--          Google Map Iframe Embed             -->
+    <!-- ============================================ -->
+
+    <section id="map-1403">
+        <iframe src={client.address.mapLink} width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+    
+</BaseLayout>
+
+<style lang="less">
+
+/*-- -------------------------- -->
+<---          Contact           -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #contact-1403 {
+        padding: var(--sectionPadding);
+        padding-bottom: 0;
+        background-color: var(--sectionColor);
+        position: relative;
+        z-index: 10;
+
+        .cs-container {
+            width: 100%;
+            /* changes to 1280px at tablet */
+            max-width: (584/16rem);
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            flex-direction: column;
+            column-gap: auto;
+            /* 48px - 64px */
+            gap: clamp(2rem, 3vw, 3rem);
+            position: relative;
+        }
+
+        .cs-content {
+            /* set text align to left if content needs to be left aligned */
+            text-align: left;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
+            align-items: flex-start;
+        }
+
+        .cs-text {
+            font-size: var(--bodyFontSize);
+            line-height: 1.5em;
+            text-align: inherit;
+            width: 100%;
+            max-width: (650/16rem);
+            margin: 0;
+            color: var(--bodyTextColor);
+        }
+
+        .cs-title {
+            max-width: 23ch;
+        }
+
+        .cs-text {
+            margin-bottom: (16/16rem);
+            &:last-of-type {
+                margin-bottom: (32/16rem);
+            }
+        }
+
+        .cs-ul {
+            text-align: left;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: (24/16rem);
+            position: relative;
+        }
+
+        .cs-li {
+            list-style: none;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: (20/16rem);
+
+            &:hover {
+                .cs-icon-wrapper {
+                    transform: scale(1.1);
+                }
+            }
+        }
+
+        .cs-header {
+            font-size: (20/16rem);
+            font-weight: 700;
+            line-height: 1.2em;
+            margin-bottom: (12/16rem);
+            color: var(--headerColor);
+            display: block;
+        }
+
+        .cs-link {
+            font-size: (16/16rem);
+            line-height: 1.5em;
+            text-decoration: none;
+            color: #767676;
+            display: block;
+            position: relative;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        .cs-icon-wrapper {
+            width: (60/16rem);
+            height: (60/16rem);
+            margin: 0;
+            border: 1px solid #bababa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* prevents flexbox from squishing it */
+            flex: none;
+            transition: transform 0.3s;
+            .card-radius(full);
+        }
+
+        .cs-icon {
+            width: (24/16rem);
+            height: auto;
+            display: block;
+        }
+
+        .cs-form {
+            width: 100%;
+            max-width: (630/16rem);
+            /* -30px to -100px */
+            margin-bottom: ~"calc(clamp(1.875rem, 7vw, 6.25rem)*-1)";
+            /* 24px - 48px top and bottom */
+            /* 16px - 48px left and right */
+            padding: clamp(1.5rem, 5.18vw, 3rem) clamp(1rem, 4vw, 3rem);
+            /* prevents flexbox from affecting height and width */
+            box-sizing: border-box;
+            background-color: #fff;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: (12/16rem);
+            .card-radius(lg);
+        }
+
+        .cs-h3 {
+            /* 20px - 39px */
+            font-size: clamp(1.25rem, 3vw, 2.4375rem);
+            line-height: 1.2em;
+            font-weight: 700;
+            margin: 0 0 (4/16rem) 0;
+            color: var(--headerColor);
+        }
+
+        .cs-label {
+            /* 14px - 16px */
+            font-size: clamp(0.875rem, 1.5vw, 1rem);
+            width: 100%;
+            color: var(--headerColor);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            gap: (4/16rem);
+        }
+
+        .cs-input {
+            font-size: (16/16rem);
+            width: 100%;
+            height: (56/16rem);
+            padding: 0;
+            padding-left: (24/16rem);
+            color: var(--headerColor);
+            background-color: var(--sectionColor);
+            border: none;
+            /* prevents padding from adding to height and width */
+            box-sizing: border-box;
+            &::placeholder {
+                color: #7d799c;
+                opacity: 0.6;
+            }
+            .card-radius(md);
+        }
+
+        .cs-textarea {
+            min-height: (120/16rem);
+            padding-top: (24/16rem);
+            margin-bottom: (12/16rem);
+            font-family: inherit;
+        }
+
+        .cs-submit {
+            width: 100%;
+            min-width: (200/16rem);
+            border: none;
+
+            &:hover {
+                color: #fff;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #contact-1403 {
+        .cs-container {
+            max-width: (1280/16rem);
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .cs-content {
+            width: 47%;
+            /* prevents flexbox from squishing it */
+            flex: none;
+        }
+
+        .cs-submit {
+            width: auto;
+        }
+    }
+}
+
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+    #contact-1403 {
+        .cs-form {
+            width: 46%;
+            max-width: (578/16rem);
+        }
+
+        .cs-submit {
+            width: auto;
+        }
+    }
+}
+
+/* Large Desktop - 1500px */
+@media only screen and (min-width: 93.75rem) {
+    #contact-1403 {
+        .cs-graphic {
+            display: block;
+        }
+    }
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #contact-1403 {
+            background-color: rgba(0, 0, 0, 0.2);
+            .cs-title,
+            .cs-text,
+            .cs-header,
+            .cs-link,
+            .cs-label,
+            .cs-h3 {
+                color: var(--bodyTextColorWhite);
+            }
+
+            .cs-contact-text,
+            .cs-link {
+                opacity: 0.8;
+            }
+
+            .cs-icon-wrapper {
+                border-color: #fff;
+            }
+
+            .cs-icon {
+                /* makes it white */
+                filter: grayscale(1) brightness(1000%);
+            }
+
+            .cs-form {
+                background-color: var(--medium);
+            }
+
+            .cs-input {
+                background-color: rgba(255, 255, 255, 0.2);
+                color: #fff;
+                &::placeholder {
+                    color: #fff;
+                    opacity: 0.8;
+                }
+            }
+
+            .cs-graphic {
+                opacity: 0.4;
+            }
+        }
+    }
+}
+
+/*-- -------------------------- -->
+<---    Google Maps Iframe      -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #map-1403 {
+        iframe {
+            width: 100%;
+            /* 400px - 560px */
+            height: clamp(25rem, 42vw, 35rem);
+        }
+    }
+}
+
+                                
+</style>

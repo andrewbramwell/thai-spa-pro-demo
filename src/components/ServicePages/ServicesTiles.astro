@@ -1,0 +1,391 @@
+---
+// src/components/Services/ServicesTiles.astro
+import { t } from "i18n:astro";
+import { getImage } from "astro:assets";
+import client from "@data/client.json";
+
+// Import massage images
+import massage1 from "@assets/images/massages/massage1.jpg";
+import massage2 from "@assets/images/massages/massage2.jpg";
+import massage3 from "@assets/images/massages/massage3.jpg";
+import massage4 from "@assets/images/massages/massage4.jpg";
+import massage5 from "@assets/images/massages/massage5.jpg";
+import massage6 from "@assets/images/massages/massage6.jpg";
+import massage7 from "@assets/images/massages/massage7.jpg";
+import massage8 from "@assets/images/massages/massage8.jpg";
+import massage9 from "@assets/images/massages/massage9.jpg";
+
+// Optimize images
+const optimizedMassage1 = await getImage({ src: massage1, format: 'webp', width: 305 });
+const optimizedMassage1Mobile = await getImage({ src: massage1, format: 'webp', width: 600 });
+const optimizedMassage2 = await getImage({ src: massage2, format: 'webp', width: 305 });
+const optimizedMassage2Mobile = await getImage({ src: massage2, format: 'webp', width: 600 });
+const optimizedMassage3 = await getImage({ src: massage3, format: 'webp', width: 305 });
+const optimizedMassage3Mobile = await getImage({ src: massage3, format: 'webp', width: 600 });
+const optimizedMassage4 = await getImage({ src: massage4, format: 'webp', width: 305 });
+const optimizedMassage4Mobile = await getImage({ src: massage4, format: 'webp', width: 600 });
+const optimizedMassage5 = await getImage({ src: massage5, format: 'webp', width: 305 });
+const optimizedMassage5Mobile = await getImage({ src: massage5, format: 'webp', width: 600 });
+const optimizedMassage6 = await getImage({ src: massage6, format: 'webp', width: 305 });
+const optimizedMassage6Mobile = await getImage({ src: massage6, format: 'webp', width: 600 });
+const optimizedMassage7 = await getImage({ src: massage7, format: 'webp', width: 305 });
+const optimizedMassage7Mobile = await getImage({ src: massage7, format: 'webp', width: 600 });
+const optimizedMassage8 = await getImage({ src: massage8, format: 'webp', width: 305 });
+const optimizedMassage8Mobile = await getImage({ src: massage8, format: 'webp', width: 600 });
+const optimizedMassage9 = await getImage({ src: massage9, format: 'webp', width: 305 });
+const optimizedMassage9Mobile = await getImage({ src: massage9, format: 'webp', width: 600 });
+
+// Create services array - add as many as needed
+const services = [
+  {
+    name: t("services:tiles.service1.name"),
+    tagline: t("services:tiles.service1.tagline"),
+    imageDesktop: optimizedMassage1.src,
+    imageMobile: optimizedMassage1Mobile.src,
+    imageFallback: massage1.src,
+    price1: t("services:tiles.service1.price1"),
+    price2: t("services:tiles.service1.price2"),
+    price3: t("services:tiles.service1.price3"),
+    price4: t("services:tiles.service1.price4")
+  },
+  {
+    name: t("services:tiles.service2.name"),
+    tagline: t("services:tiles.service2.tagline"),
+    imageDesktop: optimizedMassage2.src,
+    imageMobile: optimizedMassage2Mobile.src,
+    imageFallback: massage2.src,
+    price1: t("services:tiles.service2.price1"),
+    price2: t("services:tiles.service2.price2"),
+    price3: t("services:tiles.service2.price3"),
+    price4: t("services:tiles.service2.price4")
+  },
+  {
+    name: t("services:tiles.service3.name"),
+    tagline: t("services:tiles.service3.tagline"),
+    imageDesktop: optimizedMassage3.src,
+    imageMobile: optimizedMassage3Mobile.src,
+    imageFallback: massage3.src,
+    price1: t("services:tiles.service3.price1"),
+    price2: t("services:tiles.service3.price2"),
+    price3: t("services:tiles.service3.price3"),
+    price4: t("services:tiles.service3.price4")
+  },
+  {
+    name: t("services:tiles.service4.name"),
+    tagline: t("services:tiles.service4.tagline"),
+    imageDesktop: optimizedMassage4.src,
+    imageMobile: optimizedMassage4Mobile.src,
+    imageFallback: massage4.src,
+    price1: t("services:tiles.service4.price1"),
+    price2: t("services:tiles.service4.price2"),
+    price3: t("services:tiles.service4.price3"),
+    price4: t("services:tiles.service4.price4")
+  },
+  {
+    name: t("services:tiles.service5.name"),
+    tagline: t("services:tiles.service5.tagline"),
+    imageDesktop: optimizedMassage5.src,
+    imageMobile: optimizedMassage5Mobile.src,
+    imageFallback: massage5.src,
+    price1: t("services:tiles.service5.price1"),
+    price2: t("services:tiles.service5.price2"),
+    price3: t("services:tiles.service5.price3"),
+    price4: t("services:tiles.service5.price4")
+  },
+  {
+    name: t("services:tiles.service6.name"),
+    tagline: t("services:tiles.service6.tagline"),
+    imageDesktop: optimizedMassage6.src,
+    imageMobile: optimizedMassage6Mobile.src,
+    imageFallback: massage6.src,
+    price1: t("services:tiles.service6.price1"),
+    price2: t("services:tiles.service6.price2"),
+    price3: t("services:tiles.service6.price3"),
+    price4: t("services:tiles.service6.price4")
+  },
+  {
+    name: t("services:tiles.service7.name"),
+    tagline: t("services:tiles.service7.tagline"),
+    imageDesktop: optimizedMassage7.src,
+    imageMobile: optimizedMassage7Mobile.src,
+    imageFallback: massage7.src,
+    price1: t("services:tiles.service7.price1"),
+    price2: t("services:tiles.service7.price2"),
+    price3: t("services:tiles.service7.price3"),
+    price4: t("services:tiles.service7.price4")
+  },
+  {
+    name: t("services:tiles.service8.name"),
+    tagline: t("services:tiles.service8.tagline"),
+    imageDesktop: optimizedMassage8.src,
+    imageMobile: optimizedMassage8Mobile.src,
+    imageFallback: massage8.src,
+    price1: t("services:tiles.service8.price1"),
+    price2: t("services:tiles.service8.price2"),
+    price3: t("services:tiles.service8.price3"),
+    price4: t("services:tiles.service8.price4")
+  },
+  {
+    name: t("services:tiles.service9.name"),
+    tagline: t("services:tiles.service9.tagline"),
+    imageDesktop: optimizedMassage9.src,
+    imageMobile: optimizedMassage9Mobile.src,
+    imageFallback: massage9.src,
+    price1: t("services:tiles.service9.price1"),
+    price2: t("services:tiles.service9.price2"),
+    price3: t("services:tiles.service9.price3"),
+    price4: t("services:tiles.service9.price4")
+  }
+].filter(service => service.name); // Filter out empty services
+---
+
+<!-- ============================================ -->
+<!--                   Services                   -->
+<!-- ============================================ -->
+
+<section id="services-877">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">{t("services:tiles.topper")}</span>
+            <h2 class="cs-title">{t("services:tiles.title")}</h2>
+            <p class="cs-text">
+                {t("services:tiles.text")}
+            </p>
+        </div>
+        <ul class="cs-card-group">
+            {services.map((service) => (
+                <li class="cs-item">
+                    <a href={client.bookingUrl} class="cs-link">
+                        <picture class="cs-picture" aria-hidden="true">
+                            <source media="(max-width: 600px)" srcset={service.imageMobile} type="image/webp" />
+                            <source media="(min-width: 601px)" srcset={service.imageDesktop} type="image/webp" />
+                            <img loading="lazy" decoding="async" src={service.imageFallback} alt={service.name} width="305" height="200" />
+                        </picture>
+                        <h3 class="cs-h3">{service.name}</h3>
+                        <p class="cs-item-text">
+                            {service.tagline}
+                        </p>
+                        <div class="cs-pricing">
+                            {service.price1 && <span class="cs-duration">{service.price1}</span>}
+                            {service.price2 && <span class="cs-duration"><br />{service.price2}</span>}
+                            {service.price3 && <span class="cs-duration"><br />{service.price3}</span>}
+                            {service.price4 && <span class="cs-duration"><br />{service.price4}</span>}
+                        </div>
+                    </a>
+                </li>
+            ))}
+        </ul>
+        <a href={client.bookingUrl} target="_blank" rel="noopener noreferrer" class="cs-button-solid">{t("services:tiles.cta")}</a>
+    </div>
+</section>
+
+<style lang="less">
+
+/*-- -------------------------- -->
+<---         Services           -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #services-877 {
+        padding: var(--sectionPadding);
+
+        .cs-container {
+            width: 100%;
+            /* changes to 1280px at Tablet */
+            max-width: (784/16rem);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 48px - 64px */
+            gap: clamp(3rem, 6vw, 4rem);
+        }
+
+        .cs-content {
+            /* set text align to left if content needs to be left aligned */
+            text-align: center;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
+            align-items: center;
+        }
+
+        .cs-title {
+            /* max width of 22 characters, includes spaces between words */
+            max-width: 39ch;
+        }
+
+        .cs-text {
+            max-width: (1064/16rem);
+        }
+
+        .cs-card-group {
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: (20/16rem);
+        }
+
+        .cs-item {
+            text-align: center;
+            list-style: none;
+            width: 100%;
+            max-width: (500/16rem);
+            background-color: #fff;
+            overflow: hidden;
+            grid-column: span 3;
+            position: relative;
+            z-index: 1;
+            transition:
+                box-shadow 0.3s,
+                transform 0.3s;
+            .img-radius(lg);
+
+            &:hover {
+                box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+                transform: translateY(-0.4375rem);
+                .cs-picture {
+                    img {
+                        opacity: 0.3;
+                        transform: scale(1.1);
+                    }
+                }
+                .cs-h3 {
+                    color: var(--primaryLight);
+                }
+            }
+
+            &:before {
+                /* border, done in pseudo so it can sit under the picture */
+                content: "";
+                width: 100%;
+                height: 100%;
+                border: 1px solid #e8e8e8;
+                /* prevents border from affecting height and width */
+                box-sizing: border-box;
+                background: transparent;
+                opacity: 1;
+                position: absolute;
+                display: block;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                .img-radius(lg);
+            }
+        }
+
+        .cs-link {
+            text-decoration: none;
+            padding: 0 0 (20/16rem) 0;
+            display: block;
+        }
+
+        .cs-picture {
+            width: 100%;
+            height: (200/16rem);
+            margin-bottom: (20/16rem);
+            background-color: var(--primaryLight);
+            /* clips the img tag corners */
+            overflow: hidden;
+            display: block;
+            position: relative;
+            z-index: 10;
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                transition:
+                    transform 0.6s,
+                    opacity 0.3s;
+            }
+        }
+
+        .cs-h3 {
+            font-size: (20/16rem);
+            text-align: inherit;
+            line-height: 1.2em;
+            font-weight: 700;
+            color: var(--headerColor);
+            margin: 0 0 (12/16rem) 0;
+            /* 16px - 24px */
+            padding: 0 clamp(1rem, 2vw, 1.5rem);
+            transition: color 0.3s;
+        }
+
+        .cs-item-text {
+            /* 14px - 16px  */
+            font-size: clamp(0.875rem, 1.5vw, 1rem);
+            text-align: inherit;
+            line-height: 1.5em;
+            color: var(--bodyTextColor);
+            margin: 0;
+            padding: 0 (20/16rem);
+        }
+
+        .cs-pricing {
+            /* 14px - 16px  */
+            font-size: clamp(0.875rem, 1.5vw, 1rem);
+            font-weight: 700;
+            text-align: inherit;
+            line-height: 1.5em;
+            color: var(--bodyTextColor);
+            margin-top: 0.5em;
+            padding: 0 (20/16rem);
+        }
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #services-877 {
+        .cs-container {
+            max-width: (1280/16rem);
+        }
+        .cs-item {
+            grid-column: span 1;
+            max-width: (462/16rem);
+        }
+    }
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #services-877 {
+            .cs-topper {
+                color: var(--primaryLight);
+            }
+
+            .cs-title,
+            .cs-text,
+            .cs-h3,
+            .cs-pricing,
+            .cs-item-text {
+                color: var(--bodyTextColorWhite);
+            }
+
+            .cs-text,
+            .cs-item-text {
+                opacity: 0.8;
+            }
+
+            .cs-item {
+                background-color: var(--medium);
+                &:before {
+                    opacity: 0.3;
+                }
+            }
+        }
+    }
+}               
+                                                                                            
+</style>
+                                

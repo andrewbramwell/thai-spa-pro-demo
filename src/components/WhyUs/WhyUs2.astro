@@ -1,0 +1,275 @@
+---
+// src/components/WhyUs/WhyUs2.astro
+import { t } from "i18n:astro";
+import { getImage } from "astro:assets";
+
+// Import image
+import about1 from "@assets/images/about1.jpg";
+
+// Optimize image
+const optimizedAbout1 = await getImage({ src: about1, format: 'webp', width: 608 });
+const optimizedAbout1Mobile = await getImage({ src: about1, format: 'webp', width: 600 });
+
+// Create reasons array for easy mapping
+const reasons = [
+  {
+    icon: "https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/chat-gold.svg",
+    title: t("home:whyUs.reason1.title"),
+    description: t("home:whyUs.reason1.description")
+  },
+  {
+    icon: "https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/call-gold.svg",
+    title: t("home:whyUs.reason2.title"),
+    description: t("home:whyUs.reason2.description")
+  },
+  {
+    icon: "https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/money-gold.svg",
+    title: t("home:whyUs.reason3.title"),
+    description: t("home:whyUs.reason3.description")
+  }
+];
+---
+
+<!-- ============================================ -->
+<!--                Why Choose Us                 -->
+<!-- ============================================ -->
+<section id="why-choose-1631">
+    <div class="cs-container">
+        <div class="cs-flex">
+            <picture class="cs-picture">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset={optimizedAbout1Mobile.src} type="image/webp" />
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset={optimizedAbout1.src} type="image/webp" />
+                <img loading="lazy" decoding="async" src={about1.src} alt={t("home:whyUs.imageAlt")} width="608" height="400" />
+            </picture>
+            <div class="cs-content">
+                <span class="cs-topper">{t("home:whyUs.topper")}</span>
+                <h2 class="cs-title">{t("home:whyUs.title")}</h2>
+                <p class="cs-text">
+                    {t("home:whyUs.description")}
+                </p>
+            </div>
+        </div>
+        <ul class="cs-card-group">
+            {reasons.map((reason) => (
+                <li class="cs-item">
+                    <h3 class="cs-h3">
+                        <picture class="cs-wrapper">
+                            <img class="cs-h3-icon" aria-hidden="true" loading="lazy" decoding="async" src={reason.icon} alt="icon" width="24" height="24" />
+                        </picture>
+                        {reason.title}
+                    </h3>
+                    <p class="cs-item-text">
+                        {reason.description}
+                    </p>
+                </li>
+            ))}
+        </ul>
+    </div>
+</section>
+
+<style lang="less">
+
+/*-- -------------------------- -->
+<---       Why Choose Us        -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #why-choose-1631 {
+        padding: var(--sectionPadding);
+
+        .cs-container {
+            width: 100%;
+            /* changes to 1280px at desktop */
+            max-width: (550/16rem);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 48px - 64px */
+            gap: clamp(3rem, 7vw, 4rem);
+        }
+
+        .cs-flex {
+            width: 100%;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 48px - 64px */
+            gap: clamp(3rem, 7vw, 4rem)
+        }
+
+        .cs-content {
+            /* set text align to left if content needs to be left aligned */
+            text-align: left;
+            width: 100%;
+            max-width: (608/16rem);
+            /* prevents padding from affecting width and height */
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
+            align-items: flex-start;
+        }
+
+        .cs-text {
+            margin-bottom: (16/16rem);
+            &:last-of-type {
+                margin-bottom: (0/16rem);
+            }
+        }
+
+        .cs-picture {
+            display: block;
+            position: relative;
+            width: 100%;
+            max-width: (630/16rem);
+            /* chnages to auto at tablet */
+            height: 50vw;
+            /* removed at tablet */
+            max-height: (400/16rem);
+            /* clips img tag corners */
+            overflow: hidden;
+            /* sends it to the 2nd posiiton in the bottom */
+            order: 2;
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                .img-radius(lg);
+            }
+        }
+
+        .cs-card-group {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            align-items: stretch;
+            /* 16px - 20px */
+            column-gap: clamp(1rem, 2.5vw, 2rem);
+            row-gap: (28/16rem);
+        }
+
+        .cs-item {
+            list-style: none;
+            display: flex;
+            grid-column: span 12;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: (12/16rem);
+        }
+
+        .cs-h3 {
+            /* 20px - 25px */
+            font-size: clamp(1.25rem, 3vw, 1.5625rem);
+            line-height: 1.2em;
+            font-weight: 700;
+            margin: 0;
+            color: var(--headerColor);
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: (12/16rem);
+            transition: color 0.3s;
+        }
+
+        .cs-wrapper {
+            width: (48/16rem);
+            height: (48/16rem);
+            border: 1px solid var(--primary);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .card-radius(sm);
+        }
+
+        .cs-h3-icon {
+            width: (24/16rem);
+            height: auto;
+            margin-top: 2px;
+            display: block;
+        }
+
+        .cs-item-text {
+            /* 14px - 16px */
+            font-size: clamp(.875rem, 1.5vw, 1rem);
+            line-height: 1.5em;
+            margin: 0;
+            color: var(--bodyTextColor);
+            transition:
+                color 0.3s,
+                opacity 0.3s;
+        }
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #why-choose-1631 {
+        .cs-container {
+            max-width: (1280/16rem);
+        }
+
+        .cs-flex {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: stretch;
+        }
+
+        .cs-content {
+            width: 50%;
+            /* 32px - 56px top and bottom */
+            padding: clamp(2rem, 4vw, 3.5rem) 0;
+            align-self: center;
+            flex: none;
+        }
+
+        .cs-picture {
+            width: 47vw;
+            min-height: (400/16rem);
+            max-height: 100%;
+            height: auto;
+            /* sends it to the left in the 1st position */
+            order: -1;
+            position: relative;
+        }
+        
+        .cs-item {
+            grid-column: span 4;
+        }
+    }
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #why-choose-1631 {
+            .cs-title,
+            .cs-text, .cs-h3, .cs-item-text {
+                color: var(--bodyTextColorWhite);
+            }
+
+            .cs-text, .cs-item-text {
+                opacity: 0.8;
+            }
+
+            .cs-picture {
+                &:before {
+                    background-color: var(--accent);
+                }
+            }
+        }
+    }
+}
+                                                   
+                                                                                            
+</style>

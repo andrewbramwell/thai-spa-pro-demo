@@ -1,0 +1,321 @@
+---
+// src/components/Services/ServiceSquares.astro
+import { t } from "i18n:astro";
+import { getImage } from "astro:assets";
+
+// Import service images
+import massage1 from "@assets/images/massages/massage1.jpg";
+import massage2 from "@assets/images/massages/massage2.jpg";
+import massage3 from "@assets/images/massages/massage3.jpg";
+
+// Optimize images
+const optimizedMassage1 = await getImage({ src: massage1, format: 'webp', width: 1280 });
+const optimizedMassage2 = await getImage({ src: massage2, format: 'webp', width: 1280 });
+const optimizedMassage3 = await getImage({ src: massage3, format: 'webp', width: 1280 });
+
+const optimizedMassage1Mobile = await getImage({ src: massage1, format: 'webp', width: 600 });
+const optimizedMassage2Mobile = await getImage({ src: massage2, format: 'webp', width: 600 });
+const optimizedMassage3Mobile = await getImage({ src: massage3, format: 'webp', width: 600 });
+
+// Create services array for easy mapping
+const services = [
+  {
+    name: t("home:services.service1.name"),
+    description: t("home:services.service1.description"),
+    link: t("home:services.service1.link"),
+    imageDesktop: optimizedMassage1.src,
+    imageMobile: optimizedMassage1Mobile.src,
+    imageFallback: massage1.src
+  },
+  {
+    name: t("home:services.service2.name"),
+    description: t("home:services.service2.description"),
+    link: t("home:services.service2.link"),
+    imageDesktop: optimizedMassage2.src,
+    imageMobile: optimizedMassage2Mobile.src,
+    imageFallback: massage2.src
+  },
+  {
+    name: t("home:services.service3.name"),
+    description: t("home:services.service3.description"),
+    link: t("home:services.service3.link"),
+    imageDesktop: optimizedMassage3.src,
+    imageMobile: optimizedMassage3Mobile.src,
+    imageFallback: massage3.src
+  }
+];
+---
+
+<!-- ============================================ -->
+<!--                  Services                    -->
+<!-- ============================================ -->
+
+<section id="services-879">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">{t("home:services.topper")}</span>
+            <h2 class="cs-title">{t("home:services.title")}</h2>
+            <p class="cs-text">
+                {t("home:services.description")}
+            </p>
+        </div>
+        <ul class="cs-card-group">
+            {services.map((service) => (
+                <li class="cs-item">
+                    <a href={service.link} class="cs-link">
+                        <h3 class="cs-h3">{service.name}</h3>
+                        <p class="cs-item-p">
+                            {service.description}
+                        </p>
+                        <!--Background Image-->
+                        <picture class="cs-background">
+                            <source media="(max-width: 600px)" srcset={service.imageMobile} type="image/webp" />
+                            <source media="(min-width: 601px)" srcset={service.imageDesktop} type="image/webp" />
+                            <img loading="lazy" decoding="async" src={service.imageFallback} alt={service.name} width={1280} height={568} />
+                        </picture>
+                    </a>
+                </li>
+            ))}
+        </ul>
+        <a href={t("home:services.ctaLink")} class="cs-button-solid">{t("home:services.cta")}</a>
+    </div>
+</section>
+
+<style lang="less">
+
+/*-- -------------------------- -->
+<---          Services          -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #services-879 {
+        padding: var(--sectionPadding);
+        background-color: var(--sectionColor);
+        z-index: 1;
+
+        .cs-container {
+            width: 100%;
+            /* changes to 1280px at desktop */
+            max-width: (550/16rem);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 48px - 64px */
+            gap: clamp(3rem, 6vw, 4rem);
+        }
+
+        .cs-content {
+            /* set text align to left if content needs to be left aligned */
+            text-align: center;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
+            align-items: center;
+        }
+
+        .cs-card-group {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            /* 16px - 20px */
+            gap: clamp(1rem, 2vw, 1.25rem);
+            position: relative;
+            z-index: 1;
+        }
+
+        .cs-item {
+            list-style: none;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            grid-column: span 6;
+        }
+
+        .cs-link {
+            text-align: center;
+            text-decoration: none;
+            width: 100%;
+            height: (420/16rem);
+            padding: (20/16rem);
+            /* prevents padding and border from affecting height and width */
+            box-sizing: border-box;
+            /* CHANGED: Using config border radius instead of hardcoded value */
+            .card-radius(lg);
+            /* clips img corners around the border */
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            gap: (12/16rem);
+            position: relative;
+        }
+
+        .cs-h3 {
+            font-size: (20/16rem);
+            line-height: 1.2em;
+            text-align: inherit;
+            font-weight: 700;
+            margin: 0;
+            color: var(--bodyTextColorWhite);
+        }
+
+        .cs-item-p {
+            font-size: (16/16rem);
+            line-height: 1.5em;
+            text-align: inherit;
+            margin: 0;
+            color: var(--bodyTextColorWhite);
+        }
+
+        .cs-background {
+            width: 100%;
+            height: 100%;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            object-fit: cover;
+
+            &:before {
+                /* gradient overlay */
+                content: "";
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(
+                    0deg,
+                    #000000 10.13%,
+                    rgba(0, 0, 0, 0) 40.71%
+                );
+                opacity: 1;
+                position: absolute;
+                display: block;
+                bottom: 0;
+                left: 0;
+                transition: height 0.3s;
+            }
+
+            img {
+                height: 100%;
+                width: 100%;
+                /* Makes img tag act as a background image */
+                object-fit: cover;
+                position: relative;
+                z-index: -1;
+                transition: transform 0.6s;
+            }
+        }
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #services-879 {
+        .cs-item {
+            grid-column: span 3;
+            &:last-of-type {
+                grid-column: span 6;
+            }
+        }
+    }
+}
+
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+    #services-879 {
+        .cs-container {
+            max-width: (1280/16rem);
+        }
+
+        .cs-item {
+            grid-column: span 2;
+            &:last-of-type {
+                grid-column: span 2;
+            }
+        }
+
+        .cs-link {
+            &:hover,
+            &:focus-within {
+                .cs-h3 {
+                    color: var(--primary);
+                    transform: translateY(0);
+                }
+
+                .cs-item-p {
+                    height: auto;
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+
+                .cs-background {
+                    &:before {
+                        height: 180%;
+                    }
+                    img {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+
+        .cs-h3 {
+            /* transform down the same amount as the flex gap */
+            transform: translateY(0.75rem);
+            transition:
+                transform 0.3s,
+                color 0.3s;
+        }
+
+        .cs-item-p {
+            height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transform: translateY(3.125rem);
+            transition:
+                height 0.3s,
+                opacity 0.3s,
+                transform 0.3s;
+        }
+
+        .cs-wave {
+            width: 100%;
+            left: 0;
+            transform: none;
+        }
+    }
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #services-879 {
+            background-color: fade(#000, 20%);
+
+            .cs-topper {
+                color: var(--primaryLight);
+            }
+            .cs-title,
+            .cs-text {
+                color: var(--bodyTextColorWhite);
+            }
+
+            .cs-text {
+                opacity: 0.8;
+            }
+
+            .cs-wave {
+                path {
+                    fill: var(--dark);
+                }
+            }
+        }
+    }
+}                         
+                                                                                            
+</style>

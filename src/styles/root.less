@@ -1,0 +1,408 @@
+/* CODESTITCH STYLES, RESET, HEADER/NAVIGATION AND FOOTER */
+
+/* ===== IMPORT CONFIG FILE ===== */
+@import 'config.less';  // Import configuration settings
+
+/*-- -------------------------- -->
+<---        Core Styles         -->
+<--- -------------------------- -*/
+
+/* CodeStitch Root and Helpers */
+@media only screen and (min-width: 0em) {
+  :root {
+    --primary: #2CB6CE;
+    --primaryLight: #2CB6CE;
+    --secondary: #9B86FE;
+    --secondaryLight: #9B86FE;
+    --headerColor: #1a1a1a;
+    --bodyTextColor: #4e4b66;
+    --bodyTextColorWhite: #fafbfc;
+    --sectionColor: #F7F7FA;
+
+    /* dark mode colors */
+    --primaryDark: #fab0c6;
+    --dark: #121212;
+    --medium: #282828;
+    --accent: #404040;
+    --grey: hsl(224, 14%, 16%);
+    --light: hsl(230, 20%, 94%);
+
+
+
+    /* 13px - 16px */
+    --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+    /* 31px - 49px */
+    --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+    --bodyFontSize: 1rem;
+
+    /* 60px - 100px top and bottom */
+    --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+  }
+
+  // Text styles - can be replaced using CodeStitch's "Content Flair" Stitches
+  .cs-topper {
+    font-size: var(--topperFontSize);
+    font-weight: 700;
+    line-height: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--primaryLight);
+    margin-bottom: (8/16rem);
+    display: block;
+    font-family: @font-body, Arial, sans-serif;  // Uses body font
+  }
+
+  .cs-title {
+    font-size: var(--headerFontSize);
+    font-weight: 900;
+    line-height: 1.2em;
+    margin-bottom: (16/16rem);  // Only set bottom margin
+    color: var(--headerColor);
+    position: relative;
+    text-align: inherit;  // Inherit from .cs-content
+  }
+
+  .cs-text {
+    font-size: var(--bodyFontSize);
+    line-height: 1.5em;
+    width: 100%;
+    margin: 0 auto;
+    color: var(--bodyTextColor);
+    font-family: @font-body, Arial, sans-serif;  // Uses body font
+  }
+
+  // Button styles
+  // Button styles - Different hover effects based on button style
+  .cs-button-solid {
+    font-size: (16/16rem);
+    font-weight: bold;
+    line-height: (50/16em);
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    width: auto;
+    height: (50/16rem);
+    padding: 0 (30/16rem);
+
+    // Base styles
+    color: var(--light);
+    background-color: var(--primary);
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    
+    // Apply button style from config
+    .apply-button-style();
+    
+    // Conditional hover effects based on button style
+    
+    // PILL BUTTON - Simple fade transition (looks best for fully rounded buttons)
+    & when (@button-style = 'pill') {
+      transition: background-color 0.3s, color 0.3s;
+      
+      &:hover {
+        background-color: #000;
+        color: #fff;
+      }
+    }
+    
+    // SOFT & SHARP BUTTONS - Slide transition (works well with corners)
+    & when (@button-style = 'soft'), (@button-style = 'sharp') {
+      transition: color 0.3s;
+      transition-delay: 0.1s;
+      
+      &:hover {
+        color: #fff;
+        &:before {
+          width: 100%;
+        }
+      }
+
+      &:before {
+        content: "";
+        width: 0;
+        height: 100%;
+        background-color: #000;
+        opacity: 1;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: width 0.3s;
+        .apply-button-style();
+      }
+    }
+  }
+}
+
+/* Dark mode general styles */
+@media only screen and (min-width: 0em) {
+  body.dark-mode {
+    background-color: var(--dark);
+
+    /* Fallback text color */
+    p,
+    li,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: #fff;
+    }
+
+    .cs-topper {
+      color: var(--primaryDark);
+    }
+
+    .cs-reviewer {
+      color: var(--bodyTextColorWhite);
+    }
+  }
+
+}
+
+/* Fonts and general styles */
+@media only screen and (min-width: 0em) {
+  // Grab your fonts to locally host from https://google-webfonts-helper.herokuapp.com/fonts
+
+  /* aleo-regular - latin */
+  @font-face {
+    font-display: swap;
+    font-family: 'Aleo';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/assets/fonts/aleo-v16-latin-regular.woff2') format('woff2');
+  }
+  /* aleo-700 - latin */
+  @font-face {
+    font-display: swap;
+    font-family: 'Aleo';
+    font-style: normal;
+    font-weight: 700;
+    src: url('/assets/fonts/aleo-v16-latin-700.woff2') format('woff2');
+  }
+
+  /* dm-sans-regular - latin */
+  @font-face {
+    font-display: swap;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/assets/fonts/dm-sans-v17-latin-regular.woff2') format('woff2');
+  }
+  /* dm-sans-700 - latin */
+  @font-face {
+    font-display: swap;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: url('/assets/fonts/dm-sans-v17-latin-700.woff2') format('woff2');
+  }
+
+  /* italiana-regular - latin */
+  @font-face {
+    font-display: swap;
+    font-family: 'Italiana';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/assets/fonts/italiana-v21-latin-regular.woff2') format('woff2');
+  }
+
+  /* josefin-sans-regular - latin */
+  @font-face {
+    font-display: swap;
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/assets/fonts/josefin-sans-v34-latin-regular.woff2') format('woff2');
+  }
+  /* josefin-sans-700 - latin */
+  @font-face {
+    font-display: swap;
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: url('/assets/fonts/josefin-sans-v34-latin-700.woff2') format('woff2');
+  }
+
+  /* jost-regular - latin */
+  @font-face {
+    font-display: swap;
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/assets/fonts/jost-v20-latin-regular.woff2') format('woff2');
+  }
+  /* jost-600 - latin */
+  @font-face {
+    font-display: swap;
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 600;
+    src: url('/assets/fonts/jost-v20-latin-600.woff2') format('woff2');
+  }
+
+  /* marcellus-regular - latin */
+  @font-face {
+    font-display: swap;
+    font-family: 'Marcellus';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/assets/fonts/marcellus-v14-latin-regular.woff2') format('woff2');
+  }
+
+  /* oswald-700 - latin */
+  @font-face {
+    font-display: swap;
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 700;
+    src: url('/assets/fonts/oswald-v57-latin-700.woff2') format('woff2');
+  }
+
+  /* playfair-display-700 - latin */
+  @font-face {
+    font-display: swap;
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 700;
+    src: url('/assets/fonts/playfair-display-v40-latin-700.woff2') format('woff2');
+  }
+
+  /* raleway-regular - latin */
+  @font-face {
+    font-display: swap;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/assets/fonts/raleway-v37-latin-regular.woff2') format('woff2');
+  }
+  /* raleway-700 - latin */
+  @font-face {
+    font-display: swap;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    src: url('/assets/fonts/raleway-v37-latin-700.woff2') format('woff2');
+  }
+
+  /* syne-700 - latin */
+  @font-face {
+    font-display: swap;
+    font-family: 'Syne';
+    font-style: normal;
+    font-weight: 700;
+    src: url('/assets/fonts/syne-v24-latin-700.woff2') format('woff2');
+  }
+  
+  
+
+  body,
+  html {
+    font-family: @font-body, Arial, sans-serif;  // Uses body font from config
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    color: var(--bodyTextColor);
+    overflow-x: hidden;
+  }
+
+  *,
+  *:before,
+  *:after {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+  }
+
+  body {
+    transition: background-color 0.3s;
+  }
+
+  .container {
+    width: 92%;
+    margin: auto;
+    position: relative;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0;
+    color: var(--headerColor);
+    font-family: @font-heading, Arial, sans-serif;  // Uses heading font from config
+  }
+
+  p,
+  li,
+  a {
+    font-size: (16/16rem);
+    line-height: 1.5em;
+    margin: 0;
+  }
+
+  p,
+  li {
+    color: #353535;
+  }
+
+  a,
+  button {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  // Hidden Screen reader skip nav button
+  .skip {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1111111;
+  }
+}
+
+/* Reset Margins */
+@media only screen and (min-width: 1024px) {
+  body,
+  html {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/* Scale full website with the viewport width */
+@media only screen and (min-width: 2000px) {
+  body,
+  html {
+    font-size: 0.85vw;
+  }
+}
+
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border-width: 0;
+}
+
+.cs-hidden {
+  display: none;
+}
+
+.cs-shown {
+  display: flex;
+}
+

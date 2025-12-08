@@ -1,0 +1,38 @@
+{
+  "landing": {
+    "title": "About Us",
+    "description": "Learn about our story, mission, and the team behind [Your Business]. Discover what makes us unique and why clients trust us for their [service] needs."
+  },
+  "section": {
+    "topper": "About Section Label ",
+    "title": "About Page  ",
+    "paragraph1": "First paragraph introducing your business story, mission, and values. Explain what drives you and what makes your approach unique. Connect emotionally with your audience.",
+    "paragraph2": "Second paragraph elaborating on your expertise, experience, or philosophy. Share what sets you apart and why clients should trust you with their wellbeing.",
+    "paragraph3": "Third paragraph elaborating on your expertise, experience, or philosophy. Share what sets you apart and why clients should trust you with their wellbeing.",
+    "paragraph4": "Third paragraph elaborating on your expertise, experience, or philosophy. Share what sets you apart and why clients should trust you with their wellbeing.",
+    "quoteText": "Inspirational or meaningful quote that captures your business philosophy, mission, or approach to client care.",
+    "quoteName": "Quote Author Name ",
+    "quoteJob": "Quote Author Title ",
+    "imageAlt": "Descriptive alt text for about section image"
+  },
+  "team": {
+    "topper": "Team Section Label (e.g., Our Team, Meet The Team)",
+    "title": "Our Expert Team Members",
+    "member1": {
+      "name": "Team Member 1 Name",
+      "job": "Role/Title "
+    },
+    "member2": {
+      "name": "Team Member 2 Name",
+      "job": "Role/Title"
+    },
+    "member3": {
+      "name": "Team Member 3 Name",
+      "job": "Role/Title"
+    },
+    "member4": {
+      "name": "Team Member 4 Name",
+      "job": "Role/Title"
+    }
+  }
+}

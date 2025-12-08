@@ -1,0 +1,565 @@
+---
+// src/components/Services/ServicesList.astro
+import { t } from "i18n:astro";
+import { getImage } from "astro:assets";
+
+
+// Import massage images
+import massage1 from "@assets/images/massages/massage1.jpg";
+import massage2 from "@assets/images/massages/massage2.jpg";
+import massage3 from "@assets/images/massages/massage3.jpg";
+import massage4 from "@assets/images/massages/massage4.jpg";
+
+// Optimize images
+const optimizedMassage1 = await getImage({ src: massage1, format: 'webp', width: 521 });
+const optimizedMassage1Mobile = await getImage({ src: massage1, format: 'webp', width: 600 });
+const optimizedMassage2 = await getImage({ src: massage2, format: 'webp', width: 521 });
+const optimizedMassage2Mobile = await getImage({ src: massage2, format: 'webp', width: 600 });
+const optimizedMassage3 = await getImage({ src: massage3, format: 'webp', width: 521 });
+const optimizedMassage3Mobile = await getImage({ src: massage3, format: 'webp', width: 600 });
+const optimizedMassage4 = await getImage({ src: massage4, format: 'webp', width: 521 });
+const optimizedMassage4Mobile = await getImage({ src: massage4, format: 'webp', width: 600 });
+
+// Create 30-minute services array
+const services30 = [
+  {
+    name: t("services:list.duration30.service1.name"),
+    description: t("services:list.duration30.service1.description"),
+    price: t("services:list.duration30.service1.price")
+  },
+  {
+    name: t("services:list.duration30.service2.name"),
+    description: t("services:list.duration30.service2.description"),
+    price: t("services:list.duration30.service2.price")
+  },
+  {
+    name: t("services:list.duration30.service3.name"),
+    description: t("services:list.duration30.service3.description"),
+    price: t("services:list.duration30.service3.price")
+  }
+].filter(service => service.name);
+
+// Create 60-minute services array
+const services60 = [
+  {
+    name: t("services:list.duration60.service1.name"),
+    description: t("services:list.duration60.service1.description"),
+    price: t("services:list.duration60.service1.price")
+  },
+  {
+    name: t("services:list.duration60.service2.name"),
+    description: t("services:list.duration60.service2.description"),
+    price: t("services:list.duration60.service2.price")
+  },
+  {
+    name: t("services:list.duration60.service3.name"),
+    description: t("services:list.duration60.service3.description"),
+    price: t("services:list.duration60.service3.price")
+  },
+  {
+    name: t("services:list.duration60.service4.name"),
+    description: t("services:list.duration60.service4.description"),
+    price: t("services:list.duration60.service4.price")
+  },
+  {
+    name: t("services:list.duration60.service5.name"),
+    description: t("services:list.duration60.service5.description"),
+    price: t("services:list.duration60.service5.price")
+  }
+].filter(service => service.name);
+
+// Create 90-minute services array
+const services90 = [
+  {
+    name: t("services:list.duration90.service1.name"),
+    description: t("services:list.duration90.service1.description"),
+    price: t("services:list.duration90.service1.price")
+  },
+  {
+    name: t("services:list.duration90.service2.name"),
+    description: t("services:list.duration90.service2.description"),
+    price: t("services:list.duration90.service2.price")
+  },
+  {
+    name: t("services:list.duration90.service3.name"),
+    description: t("services:list.duration90.service3.description"),
+    price: t("services:list.duration90.service3.price")
+  },
+  {
+    name: t("services:list.duration90.service4.name"),
+    description: t("services:list.duration90.service4.description"),
+    price: t("services:list.duration90.service4.price")
+  }
+].filter(service => service.name);
+
+// Create 120-minute services array
+const services120 = [
+  {
+    name: t("services:list.duration120.service1.name"),
+    description: t("services:list.duration120.service1.description"),
+    price: t("services:list.duration120.service1.price")
+  },
+  {
+    name: t("services:list.duration120.service2.name"),
+    description: t("services:list.duration120.service2.description"),
+    price: t("services:list.duration120.service2.price")
+  },
+  {
+    name: t("services:list.duration120.service3.name"),
+    description: t("services:list.duration120.service3.description"),
+    price: t("services:list.duration120.service3.price")
+  }
+].filter(service => service.name);
+---
+
+<!-- ============================================ -->
+<!--                  Content                     -->
+<!-- ============================================ -->
+
+<section id="content-1450">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">{t("services:tiles.topper")}</span>
+            <h2 class="cs-title">{t("services:tiles.title")}</h2>
+            <p class="cs-text">
+                {t("services:tiles.text")}
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--                  Pricing                     -->
+<!-- ============================================ -->
+
+<section id="pricing-995">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">{t("services:list.topper")}</span>
+            <h2 class="cs-title">{t("services:list.title30")}</h2>
+            <!--Menu-->
+            <ul class="cs-menu-group">
+                {services30.map((service) => (
+                    <li class="cs-menu-item">
+                        <h3 class="cs-h3">
+                            <span class="cs-header">{service.name}</span>
+                            <span class="cs-price">{service.price}</span>
+                        </h3>
+                        <p class="cs-menu-text">
+                            {service.description}
+                        </p>
+                    </li>
+                ))}
+            </ul>
+        </div>
+        <picture class="cs-picture">
+            <!--Mobile Image-->
+            <source media="(max-width: 600px)" srcset={optimizedMassage1Mobile.src} type="image/webp" />
+            <!--Tablet and above Image-->
+            <source media="(min-width: 601px)" srcset={optimizedMassage1.src} type="image/webp" />
+            <img loading="lazy" decoding="async" src={massage1.src} alt={t("services:list.imageAlt")} width="521" height="640" />
+        </picture>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--                  Pricing                     -->
+<!-- ============================================ -->
+
+<section id="pricing-r-995">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">{t("services:list.topper")}</span>
+            <h2 class="cs-title">{t("services:list.title60")}</h2>
+            <!--Menu-->
+            <ul class="cs-menu-group">
+                {services60.map((service) => (
+                    <li class="cs-menu-item">
+                        <h3 class="cs-h3">
+                            <span class="cs-header">{service.name}</span>
+                            <span class="cs-price">{service.price}</span>
+                        </h3>
+                        <p class="cs-menu-text">
+                            {service.description}
+                        </p>
+                    </li>
+                ))}
+            </ul>
+        </div>
+        <picture class="cs-picture">
+            <!--Mobile Image-->
+            <source media="(max-width: 600px)" srcset={optimizedMassage2Mobile.src} type="image/webp" />
+            <!--Tablet and above Image-->
+            <source media="(min-width: 601px)" srcset={optimizedMassage2.src} type="image/webp" />
+            <img loading="lazy" decoding="async" src={massage2.src} alt={t("services:list.imageAlt")} width="521" height="640" />
+        </picture>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--                  Pricing                     -->
+<!-- ============================================ -->
+
+<section id="pricing-995">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">{t("services:list.topper")}</span>
+            <h2 class="cs-title">{t("services:list.title90")}</h2>
+            <!--Menu-->
+            <ul class="cs-menu-group">
+                {services90.map((service) => (
+                    <li class="cs-menu-item">
+                        <h3 class="cs-h3">
+                            <span class="cs-header">{service.name}</span>
+                            <span class="cs-price">{service.price}</span>
+                        </h3>
+                        <p class="cs-menu-text">
+                            {service.description}
+                        </p>
+                    </li>
+                ))}
+            </ul>
+        </div>
+        <picture class="cs-picture">
+            <!--Mobile Image-->
+            <source media="(max-width: 600px)" srcset={optimizedMassage3Mobile.src} type="image/webp" />
+            <!--Tablet and above Image-->
+            <source media="(min-width: 601px)" srcset={optimizedMassage3.src} type="image/webp" />
+            <img loading="lazy" decoding="async" src={massage3.src} alt={t("services:list.imageAlt")} width="521" height="640" />
+        </picture>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--                  Pricing                     -->
+<!-- ============================================ -->
+
+<section id="pricing-r-995">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">{t("services:list.topper")}</span>
+            <h2 class="cs-title">{t("services:list.title120")}</h2>
+            <!--Menu-->
+            <ul class="cs-menu-group">
+                {services120.map((service) => (
+                    <li class="cs-menu-item">
+                        <h3 class="cs-h3">
+                            <span class="cs-header">{service.name}</span>
+                            <span class="cs-price">{service.price}</span>
+                        </h3>
+                        <p class="cs-menu-text">
+                            {service.description}
+                        </p>
+                    </li>
+                ))}
+            </ul>
+        </div>
+        <picture class="cs-picture">
+            <!--Mobile Image-->
+            <source media="(max-width: 600px)" srcset={optimizedMassage4Mobile.src} type="image/webp" />
+            <!--Tablet and above Image-->
+            <source media="(min-width: 601px)" srcset={optimizedMassage4.src} type="image/webp" />
+            <img loading="lazy" decoding="async" src={massage4.src} alt={t("services:list.imageAlt")} width="521" height="640" />
+        </picture>
+    </div>
+</section>
+
+<style lang="less">
+
+/*-- -------------------------- -->
+<---          Content           -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #content-1450 {
+        padding: var(--sectionPadding);
+        padding-bottom: 0;
+        
+        .cs-container {
+            width: 100%;
+            max-width: (1280/16rem);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 48px - 64px */
+            gap: clamp(3rem, 6vw, 4rem);
+        }
+
+        .cs-content {
+            /* set text align to left if content needs to be left aligned */
+            text-align: center;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
+            align-items: center;
+        }
+
+        .cs-title {
+            /* max width of 22 characters, includes spaces between words */
+            max-width: 39ch;
+        }
+
+        .cs-text {
+            max-width: (1064/16rem);
+        }
+
+    }
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #content-1450 {
+            .cs-title, .cs-text {
+                color: var(--bodyTextColorWhite);
+            }
+
+            .cs-text {
+                opacity: .8;
+            }
+        }
+    }
+}
+                                
+
+/*-- -------------------------- -->
+<---          Pricing           -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #pricing-995,
+    #pricing-r-995 {
+        padding: var(--sectionPadding);
+
+        .cs-container {
+            width: 100%;
+            /* changes to 1280px at tablet */
+            max-width: (550/16rem);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 48px - 64px */
+            gap: clamp(3rem, 6vw, 4rem);
+        }
+
+        .cs-content {
+            /* set text align to left if content needs to be left aligned */
+            text-align: left;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
+            align-items: flex-start;
+        }
+
+        .cs-title {
+            margin: 0 0 (32/16rem) 0;
+        }
+
+        .cs-menu {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            column-gap: (20/16rem);
+            /* 28px - 40px */
+            row-gap: clamp(1.75rem, 3vw, 2.5rem);
+        }
+
+        .cs-menu-group {
+            width: 100%;
+            max-width: (630/16rem);
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            /* 28px - 40px */
+            gap: clamp(1.75rem, 3vw, 2.5rem);
+        }
+
+        .cs-menu-item {
+            list-style: none;
+            width: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            gap: (8/16rem);
+        }
+
+        .cs-h3 {
+            width: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: (24/16rem);
+            position: relative;
+            z-index: 1;
+
+            &:before {
+                /* grey line */
+                content: "";
+                width: 100%;
+                height: 2px;
+                background: #e8e8e8;
+                opacity: 1;
+                position: absolute;
+                display: block;
+                top: (13/16rem);
+                left: 0;
+                z-index: -1;
+            }
+        }
+
+        .cs-header {
+            /* 20px - 25px */
+            font-size: clamp(1.25rem, 2vw, 1.5625rem);
+            line-height: 1.2em;
+            text-align: inherit;
+            font-weight: 700;
+            max-width: (400/16rem);
+            padding-right: (8/16rem);
+            background-color: #fff;
+            color: var(--headerColor);
+        }
+
+        .cs-price {
+            font-size: (16/16rem);
+            line-height: 1.5em;
+            font-weight: 400;
+            padding-left: (8/16rem);
+            background-color: #fff;
+            color: var(--headerColor);
+        }
+
+        .cs-menu-text {
+            font-size: (16/16rem);
+            line-height: 1.5em;
+            text-align: inherit;
+            margin: 0;
+            color: var(--bodyTextColor);
+        }
+
+        .cs-picture {
+            width: 100%;
+            min-height: (380/16rem);
+            display: block;
+            /* sends it to the top */
+            order: -1;
+            position: relative;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                position: absolute;
+                top: 0;
+                left: 0;
+                .img-radius(lg);
+            }
+        }
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #pricing-995,
+    #pricing-r-995 {
+        .cs-container {
+            max-width: (1280/16rem);
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: stretch;
+        }
+
+        .cs-menu-group {
+            width: 100%;
+        }
+
+        .cs-picture {
+            max-width: (521/16rem);
+        }
+    }
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #pricing-995,
+        #pricing-r-995 {
+            .cs-title,
+            .cs-header,
+            .cs-menu-text,
+            .cs-price {
+                color: var(--bodyTextColorWhite);
+            }
+
+            .cs-header,
+            .cs-price {
+                background-color: var(--dark);
+            }
+
+            .cs-menu-text {
+                opacity: 0.8;
+            }
+        }
+    }
+}
+
+/*-- -------------------------- -->
+<---     Pricing Reverse        -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #pricing-r-995 {
+        background-color: #f7f7f7;
+
+        .cs-header, .cs-price {
+            /* same as the background color of the section */
+            background-color: #f7f7f7;
+        }
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #pricing-r-995 {
+        .cs-header,
+        .cs-price {
+            background-color: #f7f7f7;
+        }
+
+        .cs-picture {
+            /* sends it to the right in the 2nd position */
+            order: 2;
+        }
+    }
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #pricing-r-995 {
+            background-color: var(--medium);
+
+            .cs-header,
+            .cs-price {
+                background-color: var(--medium);
+            }
+        }
+    }
+}
+                                
+                                
+</style>

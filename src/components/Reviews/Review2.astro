@@ -1,0 +1,189 @@
+---
+// src/components/Reviews/Reviews2.astro
+import { t } from "i18n:astro";
+import client from "@data/client.json";
+
+// Create reviews array for easy mapping
+const reviews = [
+  {
+    text: t("home:reviews.review1.text"),
+    name: t("home:reviews.review1.name")
+  },
+  {
+    text: t("home:reviews.review2.text"),
+    name: t("home:reviews.review2.name")
+  }
+];
+---
+
+<!-- ============================================ -->
+<!--                   Reviews                    -->
+<!-- ============================================ -->
+
+<section id="reviews-354">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">{t("home:reviews.topper")}</span>
+            <h2 class="cs-title">{t("home:reviews.title")}</h2>
+            <p class="cs-text">
+                {t("home:reviews.description")}
+            </p>
+        </div>
+        <ul class="cs-card-group">
+            {reviews.map((review) => (
+                <li class="cs-item">
+                    <svg class="cs-quote" aria-hidden="true" width="40" height="33" viewBox="0 0 40 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_1_30)">
+                            <path d="M9.17589 33H0L7.32198 0H22L9.17589 33Z" fill="currentColor"/>
+                            <path d="M27.1759 33H18L25.322 0H40L27.1759 33Z" fill="currentColor"/>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_1_30">
+                                <rect width="40" height="33" fill="white"/>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    <p class="cs-review">
+                        {review.text}
+                    </p>
+                    <span class="cs-name">{review.name}</span>
+                </li>
+            ))}
+        </ul>
+        <a href={client.leaveReview} target="_blank" rel="noopener noreferrer" class="cs-button-solid">{t("home:reviews.cta")}</a>
+    </div>
+</section>
+
+<style lang="less">
+
+/*-- -------------------------- -->
+<---          Reviews           -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #reviews-354 {
+        padding: var(--sectionPadding);
+
+        .cs-container {
+            width: 100%;
+            max-width: (1280/16rem);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 48px - 64px */
+            gap: clamp(3rem, 6vw, 4rem);
+        }
+
+        .cs-content {
+            /* set text align to left if content needs to be left aligned */
+            text-align: center;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
+            align-items: center;
+        }
+
+        .cs-card-group {
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            /* 16px - 20px */
+            gap: clamp(1rem, 2.5vw, 1.15rem);
+        }
+
+        .cs-item {
+            list-style: none;
+            width: 100%;
+            max-width: (630/16rem);
+            /* 24px - 32px top & bottom */
+            /* 16px - 40px left & right */
+            padding: clamp(1.5rem, 3.15vw, 2rem) clamp(1rem, 3.15vw, 2.5rem);
+            background-color: var(--sectionColor);
+            /* prevents padding from adding to height and width */
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            position: relative;
+            .card-radius(lg);
+        }
+
+        .cs-quote {
+            width: (40/16rem);
+            height: auto;
+            margin-bottom: (32/16rem);
+            display: block;
+            color: var(--primary)
+        }
+
+        .cs-review {
+            /* 14px - 20px */
+            font-size: clamp(0.875rem, 2vw, 1.25rem);
+            line-height: 1.5em;
+            margin: 0;
+            /* 20px - 40px */
+            margin-bottom: clamp(1.25rem, 3vw, 2.5rem);
+            color: var(--bodyTextColor);
+        }
+
+        .cs-name {
+            /* 20px - 25px */
+            font-size: clamp(0.9375rem, 2.4vw, 1.25rem);
+            line-height: 1.2em;
+            font-weight: 700;
+            margin: 0;
+            /* in case one card has more text than the other, this pushes up against the review text so the name and title are always at the bottom. Only works if parent is a flexbox */
+            margin-top: auto;
+            color: var(--headerColor);
+            display: block;
+        }
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #reviews-354 {
+        .cs-card-group {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: stretch;
+        }
+    }
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #reviews-354 {
+            background-color: rgba(0, 0, 0, .3);
+            .cs-topper {
+                color: var(--primaryLight);
+            }
+
+            .cs-title,
+            .cs-text {
+                color: var(--bodyTextColorWhite);
+            }
+
+            .cs-item {
+                background-color: var(--accent);
+            }
+
+            .cs-review,
+            .cs-name {
+                color: var(--bodyTextColorWhite);
+            }
+        }
+    }
+}
+                                                   
+                                                                                            
+</style>
+                                

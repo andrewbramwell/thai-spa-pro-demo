@@ -1,0 +1,119 @@
+---
+// src/components/CTA/CTAFullWidth.astro
+import { t } from "i18n:astro";
+import { getImage } from "astro:assets";
+import client from "@data/client.json";
+
+// Import image
+import ctaImage from "@assets/images/CTA/cta.jpg";
+
+// Optimize image
+const optimizedCta = await getImage({ src: ctaImage, format: 'webp', width: 1920 });
+const optimizedCtaMobile = await getImage({ src: ctaImage, format: 'webp', width: 600 });
+---
+
+<!-- ============================================ -->
+<!--                     CTA                      -->
+<!-- ============================================ -->
+<section id="cta-51">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">{t("ctaComponent.topper")}</span>
+            <h2 class="cs-title">{t("ctaComponent.title")}</h2>
+            <p class="cs-text">
+                {t("ctaComponent.text")}
+            </p>
+            <a href={client.bookingUrl} target="_blank" rel="noopener noreferrer" class="cs-button-solid">{t("ctaComponent.button")}</a>
+        </div>
+    </div>
+    <!-- Background Image-->
+    <picture class="cs-picture">
+        <source media="(max-width: 600px)" srcset={optimizedCtaMobile.src} type="image/webp" />
+        <source media="(min-width: 601px)" srcset={optimizedCta.src} type="image/webp" />
+        <img loading="lazy" decoding="async" src={ctaImage.src} alt={t("ctaComponent.imageAlt")} width="1920" height="1280" aria-hidden="true" />
+    </picture>
+</section>
+
+<style lang="less">
+
+/*-- -------------------------- -->
+<---            CTA             -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #cta-51 {
+        padding: var(--sectionPadding);
+        position: relative;
+
+        .cs-container {
+            width: 100%;
+            max-width: (1280/16rem);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 48px - 64px */
+            gap: clamp(3rem, 6vw, 4rem);
+        }
+
+        .cs-content {
+            /* set text align to left if content needs to be left aligned */
+            text-align: center;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
+            align-items: center;
+        }
+
+        .cs-title {
+            color: var(--bodyTextColorWhite);
+        }
+
+        .cs-text {
+            margin-bottom: (16/16rem);
+            color: var(--bodyTextColorWhite);
+            opacity: 0.8;
+            &:last-of-type {
+                margin-bottom: (32/16rem);
+            }
+        }
+
+        .cs-picture {
+            height: 100%;
+            width: 100%;
+            display: block;
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            z-index: -1;
+
+            &:before {
+                /* black color overlay */
+                content: "";
+                position: absolute;
+                display: block;
+                height: 100%;
+                width: 100%;
+                background: #000;
+                opacity: 0.8;
+                top: 0;
+                left: 0;
+                z-index: 1;
+            }
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+                                                       
+</style>

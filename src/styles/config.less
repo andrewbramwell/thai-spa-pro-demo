@@ -1,0 +1,162 @@
+/* ============================================
+   CLIENT CONFIGURATION FILE
+   Thai Massage Business - Quick Deploy Settings
+   ============================================
+   
+   This file controls global settings across your entire project.
+   Simply change values here and they apply site-wide.
+   
+   Usage:
+   1. Set your font family name
+   2. Enable/disable border radius
+   3. Adjust border radius sizes if needed
+   4. Import this file into your root.less
+============================================ */
+
+/* ===== FONT CONFIGURATION ===== */
+// Heading font - for h1, h2, h3, h4, h5, h6, .cs-title
+@font-heading: 'DM Sans';
+
+// Body font - for body text, paragraphs, buttons, links, .cs-text, .cs-topper
+@font-body: 'DM Sans';
+
+// AVAILABLE HEADLINE FONTS (bold weights available):
+// 'Aleo'              - Slab serif, contemporary, warm
+// 'DM Sans'           - Geometric sans-serif, modern, clean
+// 'Josefin Sans'      - Geometric sans-serif, vintage-inspired, elegant
+// 'Jost'              - Geometric sans-serif, minimal, sleek
+// 'Oswald'            - Condensed sans-serif, bold, impactful
+// 'Playfair Display'  - Serif, high-contrast, luxurious
+// 'Raleway'           - Sans-serif, elegant, refined
+// 'Syne'              - Sans-serif, modern, distinctive
+
+// AVAILABLE BODY FONTS (regular weights available):
+// 'Aleo'              - Slab serif, readable, friendly
+// 'DM Sans'           - Geometric sans-serif, versatile, clear
+// 'Josefin Sans'      - Geometric sans-serif, unique, stylish
+// 'Jost'              - Geometric sans-serif, contemporary, neutral
+// 'Raleway'           - Sans-serif, clean, professional
+
+
+/* ===== BORDER RADIUS CONFIGURATION ===== */
+// Master switch: Set to true to enable rounded corners, false to disable
+@enable-border-radius: true;
+
+// Border radius sizes (only apply when @enable-border-radius is true)
+@border-radius-sm: 5px;      // Small - subtle rounding
+@border-radius-md: 10px;     // Medium - standard rounding
+@border-radius-lg: 20px;     // Large - prominent rounding
+@border-radius-xl: 30px;     // Extra large - very rounded
+@border-radius-full: 50%;    // Full - circular/pill shape
+
+
+/* ===== BUTTON STYLE CONFIGURATION ===== */
+// Choose your button corner style: 'pill', 'soft', 'sharp'
+@button-style: 'sharp';
+
+// Button radius values for each style
+@button-radius-pill: (100/16rem);   // Pill shape - fully rounded ends
+@button-radius-soft: (4/16rem);     // Soft corners - 4px radius
+@button-radius-sharp: 0;            // Sharp corners - no radius
+
+
+/* ===== BORDER RADIUS MIXINS ===== */
+// These mixins check the @enable-border-radius setting automatically
+
+// For images
+.img-radius(@size: md) when (@enable-border-radius = true) {
+  & when (@size = sm) { border-radius: @border-radius-sm; }
+  & when (@size = md) { border-radius: @border-radius-md; }
+  & when (@size = lg) { border-radius: @border-radius-lg; }
+  & when (@size = xl) { border-radius: @border-radius-xl; }
+  & when (@size = full) { border-radius: @border-radius-full; }
+}
+
+.img-radius(@size: md) when (@enable-border-radius = false) {
+  border-radius: 0;
+}
+
+// For cards and containers
+.card-radius(@size: md) when (@enable-border-radius = true) {
+  & when (@size = sm) { border-radius: @border-radius-sm; }
+  & when (@size = md) { border-radius: @border-radius-md; }
+  & when (@size = lg) { border-radius: @border-radius-lg; }
+  & when (@size = xl) { border-radius: @border-radius-xl; }
+  & when (@size = full) { border-radius: @border-radius-full; }
+}
+
+.card-radius(@size: md) when (@enable-border-radius = false) {
+  border-radius: 0;
+}
+
+// For buttons
+.button-radius(@size: sm) when (@enable-border-radius = true) {
+  & when (@size = sm) { border-radius: @border-radius-sm; }
+  & when (@size = md) { border-radius: @border-radius-md; }
+  & when (@size = lg) { border-radius: @border-radius-lg; }
+  & when (@size = full) { border-radius: @border-radius-full; }
+}
+
+.button-radius(@size: sm) when (@enable-border-radius = false) {
+  border-radius: 0;
+}
+
+// Button style mixin - automatically applies the correct radius based on @button-style
+.apply-button-style() when (@button-style = 'pill') {
+  border-radius: @button-radius-pill;
+}
+
+.apply-button-style() when (@button-style = 'soft') {
+  border-radius: @button-radius-soft;
+}
+
+.apply-button-style() when (@button-style = 'sharp') {
+  border-radius: @button-radius-sharp;
+}
+
+// General purpose radius mixin
+.apply-radius(@size: md) when (@enable-border-radius = true) {
+  & when (@size = sm) { border-radius: @border-radius-sm; }
+  & when (@size = md) { border-radius: @border-radius-md; }
+  & when (@size = lg) { border-radius: @border-radius-lg; }
+  & when (@size = xl) { border-radius: @border-radius-xl; }
+  & when (@size = full) { border-radius: @border-radius-full; }
+}
+
+.apply-radius(@size: md) when (@enable-border-radius = false) {
+  border-radius: 0;
+}
+
+
+/* ===== USAGE EXAMPLES ===== */
+/*
+In your component LESS files:
+
+// For images:
+img {
+  .img-radius(md);  // Applies medium border radius when enabled
+}
+
+// For cards:
+.cs-card {
+  .card-radius(lg);  // Applies large border radius when enabled
+}
+
+// For buttons - AUTOMATIC STYLE SWITCHING:
+.cs-button-solid {
+  .apply-button-style();  // Automatically applies pill, soft, or sharp based on @button-style
+  
+  &:before {
+    .apply-button-style();  // Also apply to :before pseudo-element for hover effects
+  }
+}
+
+// To switch fonts site-wide:
+// Change @font-family at the top of this file
+
+// To disable all border radius:
+// Change @enable-border-radius: false;
+
+// To switch button style across entire site:
+// Change @button-style to 'pill', 'soft', or 'sharp'
+*/

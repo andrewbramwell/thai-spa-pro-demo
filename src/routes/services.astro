@@ -1,0 +1,38 @@
+---
+// src/routes/services.astro
+import BaseLayout from "@layouts/BaseLayout.astro";
+import Landing from "@components/Landing.astro";
+import { t } from "i18n:astro";
+
+// Optimize our landing image and pass it as props to the BaseLayout (for preloading) and Landing (for rendering)
+import { getOptimizedImage } from "@utils/utils";
+import landingImage from "@assets/images/landing.jpg";
+const optimizedImage = await getOptimizedImage(landingImage);
+
+// Import the service component you want to use
+import ServicesTiles from "@components/ServicePages/ServicesTiles.astro";
+import ServicesList from "@components/ServicePages/ServicesList.astro";
+// import ServicesTable from "@components/Services/ServicesTable.astro";
+
+import CTAFullWidth from '@components/CTAs/CTAFullWidth.astro';
+// Page metadata
+const title = t("services:landing.title");
+const description = t("services:landing.description");
+---
+
+<BaseLayout
+    title={title}
+    description={description}
+    preloadedImage={optimizedImage}
+>
+    <!-- ============================================ -->
+    <!--                    LANDING                   -->
+    <!-- ============================================ -->
+
+    <Landing title={t("services:landing.title")} image={optimizedImage} />
+
+    <!-- Use the selected service component -->
+    <ServicesTiles />
+    <ServicesList />
+    <CTAFullWidth />
+</BaseLayout>

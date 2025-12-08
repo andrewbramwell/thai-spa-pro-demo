@@ -1,0 +1,328 @@
+---
+// src/components/Heroes/HeroLight.astro
+import { t } from "i18n:astro";
+import client from "@data/client.json";
+---
+
+<!-- ============================================ -->
+<!--                    Hero                      -->
+<!-- ============================================ -->
+
+<section id="hero-1469">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">{t("home:hero.topper")}</span>
+            <h1 class="cs-title">{t("home:hero.title")}</h1>
+            <p class="cs-text">
+                {t("home:hero.text")}
+            </p>
+            <a href={client.bookingUrl} target="_blank" rel="noopener noreferrer" class="cs-button-solid">{t("home:hero.cta")}</a>
+        </div>
+    </div>
+    <!-- Background Image, background image added in the css at 1600px for parallax effect -->
+    <picture class="cs-background">
+        <source media="(max-width: 600px)" srcset="/assets/images/hero-m.webp">
+        <source media="(min-width: 601px)" srcset="/assets/images/hero.webp">
+        <img decoding="async" src="/assets/images/hero.jpg" alt="hero" width="2250" height="1500" aria-hidden="true">
+    </picture>
+    <!--SVG Curve-->
+    <svg class="cs-curve" width="1920" height="136" viewBox="0 0 1920 136" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M1920 136V0C1803.21 45.3334 1445.52 136 951 136C456.485 136 111.116 45.3334 0 0V136H951H1920Z" fill="#fff"/>
+    </svg>
+</section>
+
+<style lang="less">
+
+/*-- -------------------------- -->
+<---           Hero             -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #hero-1469 {
+	    /* 200px - 288px - leaving extra space for the navigation */
+        padding: clamp(12.5rem, 29.95vw, 18rem) (16/16rem) 0;
+        /* 100px - 288px */
+        padding-bottom: clamp(6.25rem, 20vw, 18rem);
+        box-sizing: border-box;
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+
+        &:before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            background: #FFF3EC;
+            opacity: .9;
+            position: absolute;
+            display: block;
+            top: 0;
+            left: 0;
+        }
+
+        .cs-container {
+            width: 100%;
+            max-width: (1280/16rem);
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            /* 48px - 64px */
+            gap: clamp(3rem, 6vw, 4rem);
+            position: relative;
+        }
+
+        .cs-content {
+            /* set text align to left if content needs to be left aligned */
+            text-align: center;
+            width: 100%;
+            max-width: (616/16rem);
+            display: flex;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
+            align-items: center;
+        }
+
+        .cs-topper {
+            /* 13px - 16px */
+            font-size: clamp(.8125rem, 1.6vw, 1rem);
+            line-height: 1.2em;
+            text-transform: uppercase;
+            text-align: inherit;
+            letter-spacing: .1em;
+            font-weight: 700;
+            color: var(--secondary);
+            margin-bottom: (8/16rem);
+            display: block;
+        }
+
+        .cs-title {
+            /* 39px - 61px */
+            font-size: clamp(2.4375rem, 6.40vw, 3.8125rem);
+            font-weight: 700;
+            line-height: 1.2em;
+            text-align: inherit;
+            max-width: 20ch;
+            margin: 0 0 (16/16rem) 0;
+            color: var(--headerColor);
+            position: relative;
+        }
+
+        .cs-text {
+            /* 16px - 24px */
+            font-size: clamp(1rem, 2.3vw, 1.25rem);
+            line-height: 1.5em;
+            text-align: inherit;
+            width: 100%;
+            /* 32px - 40px */
+            margin: 0 0 clamp(2rem, 4vw, 2.5rem) 0;
+            color: var(--bodyTextColor);
+        }
+
+        .cs-background {
+            width: 100%;
+            height: 100%;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -2;
+            
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                /* makes the top of the image start at the top of the parent */
+                object-position: top;
+            }
+        }
+        
+        .cs-hide {
+            display: none;
+        }
+
+        .cs-curve {
+            width: 100%;
+            height: auto;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #hero-1469 {
+        &:before {
+            background: linear-gradient(89deg, rgba(255, 243, 236, 0.90) 44.46%, rgba(255, 243, 236, 0.00) 78.47%);
+            opacity: 1;
+        }
+        .cs-container {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .cs-content {
+            width: 67%;
+            text-align: left;
+            align-items: flex-start;
+        }
+
+        .cs-hide {
+            display: block;
+            position: absolute;
+            z-index: 10;
+        }
+
+        .cs-flower {
+            display: none;
+        }
+
+        .cs-blob1 {
+            /* 166px - 378px */
+            width: clamp(10.375rem, 18vw, 23.625rem);
+            height: auto;
+            left: (-10/16rem);
+            bottom: (32/16rem);
+            transform: rotate(-8deg);
+        }
+
+        .cs-blob2 {
+            /* 170px - 318px */
+            width: clamp(10.625rem, 23vw, 19.875rem);
+            height: auto;
+            right: (-56/16rem);
+            bottom: (-10/16rem);
+            transform: rotate(-8deg);
+        }
+
+        .cs-leaf {
+            /* 115px - 143px */
+            width: clamp(7.1875rem, 14vw, 8.9375rem);
+            height: auto;
+            right: (-56/16rem);
+            /* 200px - 340px */
+            top: clamp(12.5rem, 13vw, 21.25rem);
+            transform: rotate(-63deg);
+        }
+    }
+}
+
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+    #hero-1469 {
+        .cs-flower {
+            display: block;
+            left: (-56/16rem);
+            /* 150px - 280px */
+            top: clamp(9.375rem, 10vw, 17.5rem);
+        }
+    }
+}
+
+/* Large Desktop Parallax Effect - 1600px */
+@media only screen and (min-width: 100rem) {
+    #hero-1469 {
+        .cs-background {
+            background: url("https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/daycare.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+
+            img {
+                display: none;
+            }
+        }
+
+        .cs-flower {
+            left: auto;
+            right: 50%;
+            margin-right: (701/16rem);
+        }
+
+        .cs-blob1 {
+            left: auto;
+            right: 50%;
+            margin-right: (622/16rem);
+        }
+
+        .cs-blob2 {
+            right: auto;
+            left: 50%;
+            margin-left: (686/16rem);
+        }
+
+        .cs-leaf {
+            right: auto;
+            left: 50%;
+            margin-left: (747/16rem);
+        }
+    }
+}
+    
+/* Larger Desktop - 1800px */
+@media only screen and (min-width: 112.5rem) {
+    #hero-1469 {
+        .cs-bubbles2 {
+            margin-right: (800/16rem);
+            right: 50%;
+            left: auto;
+            top: (210/16rem);
+            bottom: auto;
+        }
+    }
+}
+
+/* Dark Mode - 360px */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #hero-1469 {
+            &:before {
+                background-color: var(--dark);
+                opacity: .94;
+            }
+
+            .cs-title, .cs-text {
+                color: var(--bodyTextColorWhite);
+            }
+
+            .cs-text {
+                opacity: .8;
+            }
+
+            .cs-curve {
+                path {
+                    fill: var(--dark);
+                }
+            }
+        }
+    }
+}
+
+/* Dark Mode - 768px */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #hero-1469 {
+            background-color: var(--dark);
+            &:before {
+                background: linear-gradient(to right,  rgba(0,0,0,1) 0%,rgba(0,0,0,1) 15%,rgba(0,0,0,1) 23%,rgba(0,0,0,0) 100%);
+                opacity: .8;
+            }
+
+            .cs-background {
+                opacity: .2;
+            }
+        }
+    }
+}
+                                
+                                
+                                                                                            
+</style>

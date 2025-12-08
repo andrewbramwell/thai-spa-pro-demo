@@ -1,0 +1,145 @@
+{
+	"_instructions": {
+	"prompt": "Fill this JSON homepage template using the provided client questionnaire. REQUIREMENTS: (1) Match the tone and positioning described in the questionnaire - extract their goals, values, and how they want to differentiate themselves. (2) Incorporate SEO keywords: [business name], [location], 'Thai massage', 'massage therapist', plus their specific treatment types. (3) Respect character limits per section. (4) Use specific details from questionnaire (years experience, qualifications, specialties, unique selling points, business goals). (5) Make content compelling and authentic to their brand vision. (6) If unclear about positioning, default to professional yet warm and welcoming tone.",
+    "character_limits": {
+      "hero.text": "150-200 chars",
+      "services.description": "150-200 chars",
+      "service[n].description": "100-120 chars",
+      "whyUs.description": "150-200 chars",
+      "whyUs.reason[n].description": "120-150 chars",
+      "about.paragraph[n]": "150-200 chars",
+      "reviews.review[n].text": "150-200 chars",
+      "faq.answer[n]": "200-250 chars"
+    },
+    "standard_ctas": {
+      "book_now": "/booking",
+      "view_services": "/services",
+      "learn_more": "/about",
+      "leave_review": "https://g.page/r/[GoogleBusinessID]/review"
+    }
+  },
+	"layout": {
+		"title": "Pixel Perfect Websites",
+		"description": "Meta description for the page"
+	},
+	"hero": {
+		"topper": "Your Business Category | Your Location",
+		"title": "Primary Service Keyword + Location + Unique Benefit",
+		"text": "Brief compelling description highlighting what makes you different and why customers should choose you. Include a secondary benefit or service feature.",
+		"cta": "Main CTA"
+	},
+	"services": {
+		"topper": "Our Services Category (e.g., Thai Massage, Spa Treatments)",
+		"title": "SEO Optimized Services Heading - Include Keywords",
+		"description": "Compelling description of your services offering. Highlight what makes your treatments unique and the benefits clients will experience. Keep it 2-3 sentences for optimal engagement.",
+		"service1": {
+		"name": "First Service Name",
+		"description": "Brief compelling description highlighting key benefits and unique aspects of this service",
+		"link": "/services/service-1"
+		},
+		"service2": {
+		"name": "Second Service Name",
+		"description": "Brief compelling description highlighting key benefits and unique aspects of this service",
+		"link": "/services/service-2"
+		},
+		"service3": {
+		"name": "Third Service Name",
+		"description": "Brief compelling description highlighting key benefits and unique aspects of this service",
+		"link": "/services/service-3"
+		},
+		"service4": {
+		"name": "Fourth Service Name ",
+		"description": "Brief compelling description highlighting key benefits and unique aspects of this service",
+		"link": "/services/service-4"
+		},
+		"linkText": "Learn More",
+		"cta": "View All Services Button Text",
+		"ctaLink": "/services"
+	},
+	"whyUs": {
+		"topper": "Why Choose Us Section Label",
+		"title": "Why Choose Your Thai Massage",
+		"description": "Compelling description explaining what sets your business apart from competitors. Focus on expertise, quality, experience, and customer satisfaction. Keep it 2-3 sentences.",
+		"reason1": {
+		"title": "First Reason Title",
+		"description": "Brief explanation of this benefit and how it helps customers achieve their goals or solve their problems"
+		},
+		"reason2": {
+		"title": "Second Reason Title",
+		"description": "Brief explanation of this benefit and how it helps customers achieve their goals or solve their problems"
+		},
+		"reason3": {
+		"title": "Third Reason Title",
+		"description": "Brief explanation of this benefit and how it helps customers achieve their goals or solve their problems"
+		},
+		"testimonial": "A testimonial from a customer or a quote from the business owner"
+	},
+	"about": {
+		"topper": "About Section ",
+		"title": "About Heading ",
+		"paragraph1": "First paragraph introducing your business, background, expertise, and what makes you unique. Focus on establishing credibility and connecting with your audience.",
+		"paragraph2": "Second paragraph elaborating on your mission, values, approach, or experience. Highlight what sets you apart and why customers should trust you.",
+		"cta": "Learn More",
+		"imageAlt": "Descriptive alt text for about image"
+	},
+	"featured1": {
+		"topper": "Featured Section Label",
+		"title": "SEO Optimized Featured Heading ",
+		"paragraph1": "First paragraph describing your featured service, treatment, or specialty. Explain what makes it unique and the benefits clients will experience.",
+		"paragraph2": "Second paragraph with additional details, results, or reasons why clients should try this featured offering. Build excitement and credibility.",
+		"cta": "Learn More",
+		"imageAlt": "Descriptive alt text for featured images"
+	},
+	"featured2": {
+		"topper": "Second Featured Section Label",
+		"title": "SEO Optimized Second Featured Heading",
+		"paragraph1": "First paragraph for your second featured section. Highlight a different service or treatment specialty.",
+		"paragraph2": "Second paragraph with additional details about this featured offering.",
+		"cta": "Learn More",
+		"imageAlt": "Descriptive alt text for second featured images"
+	},
+	"reviews": {
+		"topper": "Reviews Section Label",
+		"title": "SEO Optimized Reviews Heading - Build Trust",
+		"description": "Brief introduction explaining the value of customer feedback and your commitment to client satisfaction. Keep it 1-2 sentences.",
+		"review1": {
+		"text": "First client testimonial. Include specific benefits they experienced, results achieved, or what they appreciated most about your service. Keep authentic and relatable.",
+		"name": "Client Name or Initials"
+		},
+		"review2": {
+		"text": "Second client testimonial. Highlight different aspects of your service - quality, professionalism, results, or experience. Vary the focus from review1.",
+		"name": "Client Name or Initials"
+		},
+		"review3": {
+		"text": "Second client testimonial. Highlight different aspects of your service - quality, professionalism, results, or experience. Vary the focus from review1.",
+		"name": "Client Name or Initials"
+		},
+		"cta": "Leave A Review"
+	},
+	"faq": {
+		"topper": "FAQ Section Label (e.g., FAQ's, Common Questions)",
+		"title": "Frequently Asked Questions",
+		"imageAlt": "Descriptive alt text for FAQ image",
+		"question1": "First common question about your services (e.g., What should I expect during my first visit?)",
+		"answer1": "Clear, helpful answer addressing the question. Provide specific details that help potential clients understand what to expect.",
+		"question2": "Second common question (e.g., How long does a typical session last?)",
+		"answer2": "Detailed answer providing useful information. Be specific about timing, process, or other relevant details.",
+		"question3": "Third common question (e.g., Do I need to book in advance?)",
+		"answer3": "Informative answer that helps clients plan and prepare. Include any important details or recommendations.",
+		"question4": "Fourth common question (e.g., What should I wear for my appointment?)",
+		"answer4": "Practical answer with clear guidance. Help clients feel prepared and comfortable.",
+		"question5": "Fifth common question (e.g., What are your cancellation policies?)",
+		"answer5": "Professional answer explaining your policies clearly. Be transparent and helpful."
+	},
+	"extra": {
+		"topper": "SEO Ranking",
+		"title": "Talk about a main service keyword",
+		"p1": "Our main service In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.",
+		"p2": "Research shows that In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per."
+	},
+	"portfolio": {
+		"topper": "Our Portfolio",
+		"title": "Et orci volutpat, back up generator installations",
+		"cta": "View Our Products"
+	}
+}

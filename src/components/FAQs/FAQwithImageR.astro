@@ -1,0 +1,327 @@
+---
+// src/components/FAQ/FAQwithImageR.astro
+import { t } from "i18n:astro";
+import { getImage } from "astro:assets";
+
+// Import image
+import faqImage from "@assets/images/faq.jpg";
+
+// Optimize image
+const optimizedFaq = await getImage({ src: faqImage, format: 'webp', width: 522 });
+const optimizedFaqMobile = await getImage({ src: faqImage, format: 'webp', width: 600 });
+
+// Create FAQ array for easy mapping
+const faqs = [
+  {
+    question: t("home:faq.question1"),
+    answer: t("home:faq.answer1")
+  },
+  {
+    question: t("home:faq.question2"),
+    answer: t("home:faq.answer2")
+  },
+  {
+    question: t("home:faq.question3"),
+    answer: t("home:faq.answer3")
+  },
+  {
+    question: t("home:faq.question4"),
+    answer: t("home:faq.answer4")
+  },
+  {
+    question: t("home:faq.question5"),
+    answer: t("home:faq.answer5")
+  }
+];
+---
+
+<!-- ============================================ -->
+<!--                    FAQ                       -->
+<!-- ============================================ -->
+
+<section id="faq-1108">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">{t("home:faq.topper")}</span>
+            <h2 class="cs-title">{t("home:faq.title")}</h2>
+            <picture class="cs-picture">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset={optimizedFaqMobile.src} type="image/webp" />
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset={optimizedFaq.src} type="image/webp" />
+                <img loading="lazy" decoding="async" src={faqImage.src} alt={t("home:faq.imageAlt")} width="522" height="400" />
+            </picture>
+        </div>
+        <div class="cs-flex-group">
+            <ul class="cs-faq-group">
+                {faqs.map((faq, index) => (
+                    <li class={`cs-faq-item ${index === 0 ? 'active' : ''}`}>
+                        <button class="cs-button">
+                            <span class="cs-button-text">
+                                {faq.question}
+                            </span>
+                        </button>
+                        <p class="cs-item-p">
+                            {faq.answer}
+                        </p>
+                    </li>
+                ))}
+            </ul>
+        </div>
+    </div>
+</section>
+
+<script>
+    const faqItems = Array.from(document.querySelectorAll('#faq-1108 .cs-faq-item'));
+    for (const item of faqItems) {
+        const onClick = () => {
+            item.classList.toggle('active');
+        }
+        item.addEventListener('click', onClick);
+    }
+</script>
+
+<style lang="less">
+
+/*-- -------------------------- -->
+<---            FAQ             -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #faq-1108 {
+        padding: var(--sectionPadding);
+        position: relative;
+
+        .cs-container {
+            width: 100%;
+            /* changes to 1280px at desktop */
+            max-width: (584/16rem);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 32px - 48px */
+            gap: clamp(2rem, 6vw, 3rem);
+        }
+
+        .cs-content {
+            /* set text align to left if content needs to be left aligned */
+            text-align: center;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
+            align-items: center;
+        }
+
+        .cs-title {
+            /* 32px - 48px */
+            margin: 0 0 clamp(2rem, 5vw, 3rem);
+        }
+
+        .cs-picture {
+            width: 100%;
+            /* 360px - 400px */
+            height: clamp(22.5rem, 54vw, 25rem);
+            display: block;
+            position: relative;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                .img-radius (lg);
+            }
+        }
+
+        .cs-faq-group {
+            width: 100%;
+            max-width: (650/16rem);
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: (12/16rem);
+        }
+
+        .cs-faq-item {
+            list-style: none;
+            width: 100%;
+            background-color: var(--sectionColor);
+            /* clips all corners of the button that overlap the rounded border */
+            overflow: hidden;
+            transition: border-bottom 0.3s;
+            .card-radius (md);
+
+            &.active {
+                .cs-button {
+                    color: var(--primary);
+                    &:before {
+                        background-color: var(--primary);
+                        transform: rotate(315deg);
+                    }
+                    &:after {
+                        background-color: var(--primary);
+                        transform: rotate(-315deg);
+                    }
+                }
+                .cs-item-p {
+                    height: auto;
+                    /* 20px - 24px bottom */
+                    /* 16px - 24px left & right */
+                    padding: 0 clamp(1rem, 2vw, 1.5rem)
+                        clamp(1.25rem, 1.3vw, 1.5rem);
+                    opacity: 1;
+                }
+            }
+        }
+
+        .cs-button {
+            /* 16px - 20px */
+            font-family: inherit;
+            font-size: clamp(1rem, 2.5vw, 1.25rem);
+            line-height: 1.2em;
+            text-align: left;
+            font-weight: bold;
+            /* 20px - 24px */
+            padding: clamp(1.25rem, 2vw, 1.5rem);
+            background-color: var(--sectionColor);
+            border: none;
+            color: var(--headerColor);
+            display: block;
+            width: 100%;
+            position: relative;
+            transition:
+                background-color 0.3s,
+                color 0.3s;
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            &:before {
+                /* left line */
+                content: "";
+                width: (8/16rem);
+                height: (2/16rem);
+                background-color: var(--headerColor);
+                opacity: 1;
+                border-radius: 50%;
+                position: absolute;
+                display: block;
+                top: 50%;
+                right: (24/16rem);
+                transform: rotate(45deg);
+                /* animate the transform from the left side of the x axis, and the center of the y */
+                transform-origin: left center;
+                transition: transform 0.5s;
+            }
+
+            &:after {
+                /* right line */
+                content: "";
+                width: (8/16rem);
+                height: (2/16rem);
+                background-color: var(--headerColor);
+                opacity: 1;
+                border-radius: 50%;
+                position: absolute;
+                display: block;
+                top: 50%;
+                right: (21/16rem);
+                transform: rotate(-45deg);
+                /* animate the transform from the right side of the x axis, and the center of the y */
+                transform-origin: right center;
+                transition: transform 0.5s;
+            }
+        }
+
+        .cs-button-text {
+            width: 80%;
+            display: block;
+        }
+
+        .cs-item-p {
+            /* 14px - 16px */
+            font-size: clamp(0.875rem, 1.5vw, 1rem);
+            line-height: 1.5em;
+            width: 90%;
+            height: 0;
+            margin: 0;
+            /* 16px - 24px */
+            padding: 0 clamp(1rem, 2vw, 1.5rem);
+            opacity: 0;
+            color: var(--bodyTextColor);
+            /* clips the text so it doesn't show up */
+            overflow: hidden;
+            transition:
+                opacity 0.3s,
+                padding-bottom 0.3s;
+        }
+    }
+}
+
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+    #faq-1108 {
+        .cs-container {
+            max-width: (1280/16rem);
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: stretch;
+        }
+
+        .cs-content {
+            width: 40%;
+            text-align: left;
+            align-items: flex-start;
+            /* prevents flexbox from squishing it */
+            flex: none;
+        }
+    }
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #faq-1108 {
+            .cs-title,
+            .cs-item-p {
+                color: var(--bodyTextColorWhite);
+            }
+
+            .cs-faq-item {
+                background-color: var(--accent);
+                &.active {
+                    .cs-button {
+                        background-color: var(--primary);
+                        color: var(--bodyTextColorWhite);
+                        &:before,
+                        &:after {
+                            background-color: var(--bodyTextColorWhite);
+                        }
+                    }
+
+                    .cs-item-p {
+                        /* 20px - 24px */
+                        padding-top: clamp(1.25rem, 1.3vw, 1.5rem);
+                    }
+                }
+            }
+
+            .cs-button {
+                background-color: var(--accent);
+                color: var(--bodyTextColorWhite);
+                &:before,
+                &:after {
+                    background-color: var(--bodyTextColorWhite);
+                }
+            }
+        }
+    }
+}
+                                                       
+</style>

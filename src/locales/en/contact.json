@@ -1,0 +1,26 @@
+{
+  "landing": {
+    "title": "Contact Us",
+    "description": "Contact [Your Business] today. Book your appointment, ask questions, or learn more about our services. We're here to help you feel your best."
+  },
+  "section": {
+    "topper": "Contact Section Label",
+    "title": "Get in Touch With Us",
+    "text": "We're here to answer your questions and help you book your next appointment. Reach out to us by phone, email, or visit us at our location.",
+    "phoneLabel": "Phone",
+    "hoursLabel": "Opening Hours",
+    "addressLabel": "Address"
+  },
+  "form": {
+    "title": "Make An Appointment",
+    "nameLabel": "Name",
+    "namePlaceholder": "Your Name",
+    "emailLabel": "Email",
+    "emailPlaceholder": "Your Email",
+    "phoneLabel": "Phone",
+    "phonePlaceholder": "Your Phone Number",
+    "messageLabel": "Message",
+    "messagePlaceholder": "Tell us about your needs...",
+    "submitButton": "Send Message"
+  }
+}

@@ -1,0 +1,54 @@
+{
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "projects": "Projects",
+    "project-1": "Project 1",
+    "project-2": "Project 2",
+    "blog": "Blog",
+    "contact": "Contact",
+    "requestQuote": "Request A Quote",
+    "theme-label": "Choisissez le thème",
+    "language-label": "Choisissez la langue",
+    "languageSelect": {
+        "en": "English",
+        "fr": "French"
+    },
+    "themeSelect": {
+        "accessibleLabel": "Select Theme",
+        "light": "Light",
+        "dark": "Dark",
+        "auto": "Auto"
+    },
+    "ctaComponent": {
+        "topper": "CTA Section Label ",
+        "title": "SEO Optimized CTA Heading",
+        "text": "Brief compelling text encouraging action. Highlight urgency, benefits, or special offers. Keep it 1-2 sentences.",
+        "button": "Action Button Text",
+        "imageAlt": "Descriptive alt text for CTA background image"
+    },
+    "cookiePopup": {
+        "title": "This website uses cookies",
+        "text": "This website uses cookies. By using our website you consent to all cookies in accordance with our Cookie Policy.",
+        "readMore": "Read More",
+        "policyLink": "/privacy-policy",
+        "accept": "Accept"
+    },
+    "footer": {
+        "information": "Information",
+        "services": "Services",
+        "contact": "Contact",
+        "click": "Click to email",
+        "p": "Extra content if you need it, if not you can delete this whole p tag. I usually do.",
+        "credit": "Designed and Hand Coded by "
+    },
+    "notFound": {
+        "pageNotFound": "404 - The page you're looking for does not exist.",
+        "linkText": "Back to homepage"
+    },
+    "skipLink": "Click To Skip To Main Content",
+    "pagination": {
+        "previous": "Prev",
+        "next": "Next"
+    }
+}

@@ -1,0 +1,254 @@
+---
+// src/components/Featured/FeaturedMultiR.astro
+import { t } from "i18n:astro";
+import { getImage } from "astro:assets";
+import client from "@data/client.json";
+
+// Import images
+import featured1 from "@assets/images/massages/featured1.jpg";
+import featured2 from "@assets/images/massages/featured2.jpg";
+import featured3 from "@assets/images/massages/featured3.jpg";
+
+// Optimize images for different sizes
+const optimizedFeatured1Tall = await getImage({ src: featured1, format: 'webp', width: 349 });
+const optimizedFeatured1TallMobile = await getImage({ src: featured1, format: 'webp', width: 600 });
+const optimizedFeatured2Top = await getImage({ src: featured2, format: 'webp', width: 281 });
+const optimizedFeatured2TopMobile = await getImage({ src: featured2, format: 'webp', width: 600 });
+const optimizedFeatured3Bottom = await getImage({ src: featured3, format: 'webp', width: 281 });
+const optimizedFeatured3BottomMobile = await getImage({ src: featured3, format: 'webp', width: 600 });
+---
+
+<!-- ============================================ -->
+<!--                Side By Side                  -->
+<!-- ============================================ -->
+
+<section id="sbs-945">
+    <div class="cs-container">
+        <div class="cs-image-group">
+            <!--Long Left Image-->
+            <picture class="cs-picture cs-picture1">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset={optimizedFeatured1TallMobile.src} type="image/webp" />
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset={optimizedFeatured1Tall.src} type="image/webp" />
+                <img loading="lazy" decoding="async" src={featured1.src} alt={t("home:featured2.imageAlt")} width="349" height="590" />
+            </picture>
+            <!--Top right image-->
+            <picture class="cs-picture cs-picture2">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset={optimizedFeatured2TopMobile.src} type="image/webp" />
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset={optimizedFeatured2Top.src} type="image/webp" />
+                <img loading="lazy" decoding="async" src={featured2.src} alt={t("home:featured2.imageAlt")} width="281" height="387" />
+            </picture>
+            <!--Bottom right image-->
+            <picture class="cs-picture cs-picture3">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset={optimizedFeatured3BottomMobile.src} type="image/webp" />
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset={optimizedFeatured3Bottom.src} type="image/webp" />
+                <img loading="lazy" decoding="async" src={featured3.src} alt={t("home:featured2.imageAlt")} width="281" height="280" />
+            </picture>
+            <!--Seal-->
+            <img class="cs-seal" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/seal.svg" alt="seal" width="150" height="150" />
+        </div>
+        <div class="cs-content">
+            <span class="cs-topper">{t("home:featured2.topper")}</span>
+            <h2 class="cs-title">{t("home:featured2.title")}</h2>
+            <p class="cs-text">
+                {t("home:featured2.paragraph1")}
+            </p>
+            <p class="cs-text">
+                {t("home:featured2.paragraph2")}
+            </p>
+            <a href={client.bookingUrl} class="cs-button-solid" aria-label="learn more">{t("home:featured2.cta")}</a>
+        </div>
+    </div>
+</section>
+
+<style lang="less">
+
+/*-- -------------------------- -->
+<---       Side By Side         -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #sbs-945 {
+        padding: var(--sectionPadding);
+        /* clips anything overflowing */
+        overflow: hidden;
+        position: relative;
+        background-color: var(--sectionColor);
+
+        .cs-container {
+            width: 100%;
+            /* changes to 1280px at desktop */
+            max-width: (550/16rem);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 48px - 64px */
+            gap: clamp(3rem, 6vw, 4rem);
+        }
+
+        .cs-content {
+            /* set text align to left if content needs to be left aligned */
+            text-align: left;
+            width: 100%;
+            max-width: (542/16rem);
+            display: flex;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
+            align-items: flex-start;
+        }
+
+        .cs-text {
+            margin-bottom: (16/16rem);
+            &:last-of-type {
+                margin-bottom: (32/16rem);
+            }
+        }
+
+        .cs-image-group {
+            /* scales the whole section down and ties the font size to the vw and stops at 75% of the vale of 1em, changes at desktop */
+            font-size: ~"min(2.24vw, .844em)";
+            /* everything inside this box is in ems so we can scale it all down proportionally with a font size */
+            width: (650/16em);
+            height: (687/16em);
+            position: relative;
+            z-index: 1;
+        }
+
+        .cs-picture {
+            /* clips the image to match the border radius of the cs-picture */
+            overflow: hidden;
+            display: block;
+            position: absolute;
+            .img-radius(md);
+
+            img {
+                width: 100%;
+                height: 100%;
+                /* makes it act like a background image */
+                object-fit: cover;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+
+        .cs-picture1 {
+            width: (349/16em);
+            height: (590/16em);
+            top: (49/16em);
+            left: 0;
+        }
+
+        .cs-picture2 {
+            width: (281/16em);
+            height: (387/16em);
+            top: 0;
+            right: 0;
+        }
+
+        .cs-picture3 {
+            width: (281/16em);
+            height: (280/16em);
+            bottom: 0;
+            right: 0;
+        }
+
+        .cs-seal {
+            width: (150/16em);
+            height: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-30%, -40%);
+        }
+
+        .cs-floater {
+            display: none;
+        }
+    }
+}
+
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+    #sbs-945 {
+        .cs-container {
+            max-width: (1280/16rem);
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .cs-image-group {
+            /* set to inherit at Large Desktop */
+            font-size: ~"min(1.15vw, 1em)";
+            margin: 0;
+            /* prevents flexbox from squishing it */
+            flex: none;
+        }
+
+        .cs-content {
+            width: 51%;
+        }
+    }
+}
+
+/* Large Desktop - 1800px */
+@media only screen and (min-width: 112.5rem) {
+    #sbs-945 {
+        .cs-floater {
+            width: (445/16rem);
+            height: auto;
+            display: block;
+            position: absolute;
+            right: 0;
+            top: (20/16rem);
+        }
+    }
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #sbs-945 {
+            background-color: rgba(0, 0, 0, .2);
+            .cs-title,
+            .cs-text,
+            .cs-header,
+            .cs-link-content {
+                color: var(--bodyTextColorWhite);
+                transition: color 0.3s;
+            }
+
+            .cs-text {
+                opacity: 0.8;
+            }
+
+            .cs-link {
+                &:before {
+                    background-color: var(--accent);
+                }
+            }
+
+            .cs-icon {
+                /* makes icons that are not black turn white */
+                filter: grayscale(1) brightness(1000%);
+            }
+
+            .cs-graphic1,
+            .cs-graphic2 {
+                filter: brightness(50%);
+            }
+        }
+    }
+}         
+
+                                                       
+</style>
+                                

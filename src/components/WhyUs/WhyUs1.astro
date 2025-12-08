@@ -1,0 +1,439 @@
+---
+// src/components/WhyUs/WhyUs1.astro
+import { t } from "i18n:astro";
+import { getImage } from "astro:assets";
+
+// Import images
+import image1 from "@assets/images/about1.jpg";
+import image2 from "@assets/images/about2.jpg";
+
+// Optimize images
+const optimizedImage1 = await getImage({ src: image1, format: 'webp', width: 434 });
+const optimizedImage1Mobile = await getImage({ src: image1, format: 'webp', width: 600 });
+const optimizedImage2 = await getImage({ src: image2, format: 'webp', width: 197 });
+
+// Create reasons array for easy mapping
+const reasons = [
+  {
+    icon: "https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/chat-gold.svg",
+    title: t("home:whyUs.reason1.title"),
+    description: t("home:whyUs.reason1.description")
+  },
+  {
+    icon: "https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/call-gold.svg",
+    title: t("home:whyUs.reason2.title"),
+    description: t("home:whyUs.reason2.description")
+  },
+  {
+    icon: "https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/money-gold.svg",
+    title: t("home:whyUs.reason3.title"),
+    description: t("home:whyUs.reason3.description")
+  }
+];
+---
+
+<!-- ============================================ -->
+<!--                Why Choose Us                 -->
+<!-- ============================================ -->
+
+<section id="why-choose-1635">
+    <div class="cs-container">
+        <div class="cs-content">
+            <div class="cs-flex">
+                <span class="cs-topper">{t("home:whyUs.topper")}</span>
+                <h2 class="cs-title">{t("home:whyUs.title")}</h2>
+            </div>
+            <p class="cs-text">
+                {t("home:whyUs.description")}
+            </p>
+        </div>  
+        <div class="cs-wrapper">
+            <ul class="cs-card-group">
+                {reasons.map((reason) => (
+                    <li class="cs-item">
+                        <picture class="cs-icon-wrapper">
+                            <img class="cs-icon" src={reason.icon} loading="lazy" decoding="async" alt="icon" width="32" height="32" aria-hidden="true" />
+                        </picture>
+                        <!-- Text Grouped For Flexbox-->
+                        <div class="cs-text-group">
+                            <h3 class="cs-h3">{reason.title}</h3>
+                            <p class="cs-item-text">
+                                {reason.description}
+                            </p>
+                        </div>
+                    </li>
+                ))}
+            </ul>
+            <div class="cs-image-group">
+                <div class="cs-picture-wrapper">
+                    <picture class="cs-picture cs-picture1">
+                        <!--Mobile Image-->
+                        <source media="(max-width: 600px)" srcset={optimizedImage1Mobile.src} type="image/webp" />
+                        <!--Tablet and above Image-->
+                        <source media="(min-width: 601px)" srcset={optimizedImage1.src} type="image/webp" />
+                        <img loading="lazy" decoding="async" src={image1.src} alt={t("home:whyUs.imageAlt")} width="434" height="414" />
+                    </picture>
+                </div>
+                <picture class="cs-picture cs-picture2">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset={optimizedImage2.src} type="image/webp" />
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset={optimizedImage2.src} type="image/webp" />
+                    <img loading="lazy" decoding="async" src={image2.src} alt={t("home:whyUs.imageAlt")} width="197" height="197" />
+                </picture>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style lang="less">
+
+/*-- -------------------------- -->
+<---      Why Choose Us         -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #why-choose-1635 {
+        padding: var(--sectionPadding);
+        
+        .cs-container {
+            width: 100%;
+            /* changes to 1280px at tablet */
+            max-width: (584/16rem);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 48px - 100px */
+            gap: clamp(3rem, 10vw, 6.25rem);
+        }
+    
+        .cs-content {
+            /* set text align to left if content needs to be left aligned */
+            text-align: left;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
+            align-items: flex-start;
+        }
+
+        .cs-flex {
+            max-width: (616/16rem);
+        }
+    
+        .cs-title {
+            max-width: 20ch;
+        }
+
+        .cs-text {
+            margin-bottom: (16/16rem);
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+
+        .cs-wrapper {
+            width: 100%;
+        }
+
+        .cs-card-group {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            row-gap: (28/16rem);
+            /* 16px - 20px */
+            column-gap: clamp(1rem, 2.3vw, 1.25rem);
+        }
+
+        .cs-item {
+            text-align: left;
+            list-style: none;
+            width: 100%;
+            margin: 0;
+            box-sizing: border-box;
+            display: flex;
+            grid-column: span 12;
+            flex-direction: column;
+            align-items: flex-start;
+            /* 16px - 24px */
+            gap: clamp(1rem, 3vw, 1.5rem);
+        }
+
+        .cs-icon-wrapper {
+            /* 60px - 80px */
+            width: clamp(3.75rem, 7vw, 5rem);
+            height: clamp(3.75rem, 7vw, 5rem);
+            margin: 0;
+            box-sizing: border-box;
+            border: 1px solid var(--primary);
+            .card-radius(full);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            /* prevents flexbox from squishing it */
+            flex: none;
+        }
+
+        .cs-icon {
+            width: (32/16rem);
+            height: auto;
+            display: block;
+        }
+
+        .cs-h3 {
+            font-size: (20/16rem);
+            line-height: 1.5em;
+            margin: 0;
+            margin-bottom: (8/16rem);
+            color: var(--headerColor);
+            text-align: inherit;
+        }
+
+        .cs-item-text {
+            /* 14px - 16px */
+            font-size: clamp(0.875rem, 1.5vw, 1rem);
+            line-height: 1.5em;
+            margin: 0;
+            color: var(--bodyTextColor);
+            text-align: inherit;
+        }
+
+        .cs-wrapper {
+            /* makes the contents of this container act as though the container doesn't exist. They are now children of the cs-container so they can be positioned around each other. This allows us to sue the order property to place the cs-image-group at the top of the page on mobile */
+            display: contents;
+        }
+
+        .cs-image-group {
+            font-size:~"min(2.7vw, 1em)";
+            width: (542/16em);
+            height: (494/16em);
+            /* sends it to teh top in the 1st position */
+            order: -1;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cs-picture-wrapper {
+            width: 80.073801%;
+            height: 83.805668%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: stretch;
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            left: 0;
+        }
+
+        .cs-box {
+            width: 60%;
+            margin-top: (-38/16em);
+            margin-left: (24/16em);
+            padding: (16/16em);
+            background-color: #f7f7f7;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: (4/16rem);
+            position: relative;
+            z-index: 10;
+        }
+
+        .cs-header {
+            font-size: (16/16em);
+            line-height: 1.2em;
+            font-weight: 700;
+            margin: 0;
+            color: var(--headerColor);
+            display: block;
+        }
+
+        .cs-desc {
+            font-size: (14/16em);
+            line-height: 1.5em;
+            margin: 0;
+            color: var(--primary);
+            display: block;
+        }
+
+        .cs-picture {
+            position: relative;
+            z-index: 1;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                position: absolute;
+                top: 0;
+                left: 0;
+                .img-radius(lg);
+            }
+        }
+
+        .cs-picture1 {
+            width: 100%;
+            height: 100%;
+        }
+
+        .cs-picture2 {
+            width: 36.346863%;
+            height: 39.878543%;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #why-choose-1635 {
+        .cs-container {
+            max-width: (1280/16rem);
+        }
+
+        .cs-content {
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cs-flex {
+            text-align: left;
+            width: 40vw;
+            max-width: (640/16rem);
+            flex: none;
+        }
+
+        .cs-title {
+            margin: 0;
+        }
+
+        .cs-h3,
+        .cs-item-text {
+            text-align: left;
+        }
+        
+        .cs-item {
+            grid-column: span 4;
+        }
+
+        .cs-image-group {
+            width: 100%;
+        }
+    }
+}
+
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+    #why-choose-1635 {
+        /* set the darker background color on the main div */
+        background-color: var(--sectionColor);
+        overflow: hidden;
+        
+        .cs-content {
+            align-items: flex-start;
+        }
+
+        .cs-flex {
+            width: 50%;
+        }
+
+        .cs-wrapper {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: stretch;
+            gap: (40/16rem);
+            position: relative;
+            z-index: 1;
+
+            &:before {
+                /* make the white space dependant on the height of the cs-wrapper as a pseudo element attached to the cs wrapper. This makes the white background responsive to the amount of items you have in your list. When the list grows or shrinks, the design will maintain its same spacing */
+                content: '';
+                width: 100vw;
+                height: 100vw;
+                background: #fff;
+                opacity: 1;
+                position: absolute;
+                display: block;
+                top: 0;
+                left: 50%;
+                z-index: -1;
+                transform: translateX(-50%);
+            }
+        }
+
+        .cs-card-group {
+            max-width: (630/16rem);
+            /* use padding to push add the same amount of space between the content and the top of the card group as the negative margin top value on the cs-image-group. This makes sure that it counter acts the effects of the negative margin affecting the card group as well */
+            padding-top: (48/16rem);
+            align-self: flex-start;
+        }
+
+        .cs-image-group {
+            width: (542/16em);
+            /* by setting height to auto, it will stretch to fill the container height. So when you add or subtract more cards and change the height of the container, the image group will shrink as well. Thats why we set the heights of the images in percentages. They will always be X% tall inside the cs-image-group. So when the image group stretches to match the container height, the pictures percentage height also grows proportionally. This ensures the design responds to changes in height from the card section on the left. */
+            height: auto;
+            min-height: (494/16em);
+            /* makes it overlap the .cs-wrapper div */
+            margin-top: (-48/16rem);
+            flex: none;
+        }
+
+        .cs-item {
+            grid-column: span 12;
+            flex-direction: row;
+        }
+    }
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #why-choose-1635 {
+            background-color: rgba(0, 0, 0, .3);
+
+            .cs-title, .cs-text, .cs-h3, .cs-item-text, .cs-header {
+                color: var(--bodyTextColorWhite);
+            }
+
+            .cs-text, .cs-item-text {
+                opacity: .8;
+            }
+
+            .cs-box {
+                background-color: var(--dark);
+                position: relative;
+                z-index: 1;
+
+                &:before {
+                    content: '';
+                    width: 100%;
+                    height: 100%;
+                    background: #000;
+                    opacity: .2;
+                    position: absolute;
+                    display: block;
+                    top: 0;
+                    left: 0;
+                    z-index: -1;
+                }
+            }
+
+            .cs-wrapper {
+                &:before {
+                    background-color: var(--dark);
+                }
+            }
+        }
+    }
+}                                                                                                            
+</style>

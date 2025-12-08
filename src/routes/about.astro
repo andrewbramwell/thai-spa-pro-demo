@@ -1,0 +1,545 @@
+---
+// src/routes/about.astro
+import BaseLayout from "@layouts/BaseLayout.astro";
+import Landing from "@components/Landing.astro";
+import { t } from "i18n:astro";
+import { getImage } from "astro:assets";
+import CTAFullWidth from '@components/CTAs/CTAFullWidth.astro';
+
+// Optimize our landing image and pass it as props to the BaseLayout (for preloading) and Landing (for rendering)
+import { getOptimizedImage } from "@utils/utils";
+import landingImage from "@assets/images/landing.jpg";
+const optimizedImage = await getOptimizedImage(landingImage);
+
+// Import about section image
+import aboutImage from "@assets/images/about.jpg";
+
+// Optimize images for section
+const optimizedAbout = await getImage({ src: aboutImage, format: 'webp', width: 630 });
+const optimizedAboutMobile = await getImage({ src: aboutImage, format: 'webp', width: 600 });
+
+// Import team member images
+import staff1 from "@assets/images/staff/staff1.jpg";
+import staff2 from "@assets/images/staff/staff2.jpg";
+import staff3 from "@assets/images/staff/staff3.jpg";
+import staff4 from "@assets/images/staff/staff4.jpg";
+
+// Optimize team images
+const optimizedStaff1 = await getImage({ src: staff1, format: 'webp', width: 290 });
+const optimizedStaff1Mobile = await getImage({ src: staff1, format: 'webp', width: 600 });
+const optimizedStaff2 = await getImage({ src: staff2, format: 'webp', width: 290 });
+const optimizedStaff2Mobile = await getImage({ src: staff2, format: 'webp', width: 600 });
+const optimizedStaff3 = await getImage({ src: staff3, format: 'webp', width: 290 });
+const optimizedStaff3Mobile = await getImage({ src: staff3, format: 'webp', width: 600 });
+const optimizedStaff4 = await getImage({ src: staff4, format: 'webp', width: 290 });
+const optimizedStaff4Mobile = await getImage({ src: staff4, format: 'webp', width: 600 });
+
+// Create team members array
+const teamMembers = [
+  {
+    name: t("about:team.member1.name"),
+    job: t("about:team.member1.job"),
+    linkedin: t("about:team.member1.linkedin"),
+    imageDesktop: optimizedStaff1.src,
+    imageMobile: optimizedStaff1Mobile.src,
+    imageFallback: staff1.src
+  },
+  {
+    name: t("about:team.member2.name"),
+    job: t("about:team.member2.job"),
+    linkedin: t("about:team.member2.linkedin"),
+    imageDesktop: optimizedStaff2.src,
+    imageMobile: optimizedStaff2Mobile.src,
+    imageFallback: staff2.src
+  },
+  {
+    name: t("about:team.member3.name"),
+    job: t("about:team.member3.job"),
+    linkedin: t("about:team.member3.linkedin"),
+    imageDesktop: optimizedStaff3.src,
+    imageMobile: optimizedStaff3Mobile.src,
+    imageFallback: staff3.src
+  },
+  {
+    name: t("about:team.member4.name"),
+    job: t("about:team.member4.job"),
+    linkedin: t("about:team.member4.linkedin"),
+    imageDesktop: optimizedStaff4.src,
+    imageMobile: optimizedStaff4Mobile.src,
+    imageFallback: staff4.src
+  }
+];
+
+// Page metadata
+const title = t("about:landing.title");
+const description = t("about:landing.description");
+---
+
+<BaseLayout
+    title={title}
+    description={description}
+    preloadedImage={optimizedImage}
+>
+    <!-- ============================================ -->
+    <!--                    LANDING                   -->
+    <!-- ============================================ -->
+
+    <Landing title={t("about:landing.title")} image={optimizedImage} />
+    <!-- ============================================ -->
+    <!--                 Side By Side                 -->
+    <!-- ============================================ -->
+
+    <section id="sbs-867">
+        <div class="cs-container">
+            <picture class="cs-picture">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset={optimizedAboutMobile.src} type="image/webp" />
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset={optimizedAbout.src} type="image/webp" />
+                <img loading="lazy" decoding="async" src={aboutImage.src} alt={t("about:section.imageAlt")} width="630" height="775" />
+            </picture>
+            <div class="cs-content">
+                <span class="cs-topper">{t("about:section.topper")}</span>
+                <h2 class="cs-title">{t("about:section.title")}</h2>
+                <p class="cs-text">
+                    {t("about:section.paragraph1")}
+                </p>
+                <p class="cs-text">
+                    {t("about:section.paragraph2")}
+                </p>
+                <p class="cs-text">
+                    {t("about:section.paragraph3")}
+                </p>
+                <p class="cs-text">
+                    {t("about:section.paragraph4")}
+                </p>
+                <div id="quote-827">
+                    <span class="cs-quote-text">
+                        {t("about:section.quoteText")}
+                    </span>
+                    <span class="cs-name">{t("about:section.quoteName")}</span>
+                    <span class="cs-job">{t("about:section.quoteJob")}</span>
+                    <img class="cs-quote-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/quote-white.svg" alt="quote" width="136" height="77" />
+                </div>                     
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!--                Meet The Team                 -->
+    <!-- ============================================ -->
+
+    <section id="meet-team-1677">
+        <div class="cs-container">
+            <div class="cs-content">
+                <span class="cs-topper">{t("about:team.topper")}</span>
+                <h2 class="cs-title">{t("about:team.title")}</h2>
+            </div>
+            <ul class="cs-card-group">
+                {teamMembers.map((member) => (
+                    <li class="cs-item">
+                        <picture class="cs-picture">
+                            <!--Mobile Image-->
+                            <source media="(max-width: 600px)" srcset={member.imageMobile} type="image/webp" />
+                            <!--Tablet and above Image-->
+                            <source media="(min-width: 601px)" srcset={member.imageDesktop} type="image/webp" />
+                            <img loading="lazy" decoding="async" src={member.imageFallback} alt={member.name} width="290" height="380" />
+                        </picture>
+                        </a>
+                        <div class="cs-info">
+                            <span class="cs-name">{member.name}</span>
+                            <span class="cs-job">{member.job}</span>
+                        </div>
+                    </li>
+                ))}
+            </ul>
+        </div>
+    </section>
+
+    <CTAFullWidth />
+
+</BaseLayout>
+
+<style lang="less">
+
+/*-- -------------------------- -->
+<---       Side By Side         -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #sbs-867 {
+        padding: var(--sectionPadding);
+
+        .cs-container {
+            width: 100%;
+            /* changes to 1280px at desktop */
+            max-width: (550/16rem);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            /* 48px - 64px */
+            gap: clamp(3rem, 7vw, 4rem);
+        }
+
+        .cs-content {
+            /* set text aling to left if content needs to be left aligned */
+            text-align: left;
+            width: 100%;
+            max-width: (542/16rem);
+            /* prevents padding from affecting width and height */
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
+            align-items: flex-start;
+        }
+
+        .cs-title {
+            text-align: left;
+            width: 100%;  /* ADD THIS */
+        }
+
+        .cs-text {
+            margin-bottom: (16/16rem);
+            &:last-of-type {
+                margin-bottom: (32/16rem);
+            }
+        }
+
+        .cs-picture {
+            display: block;
+            position: relative;
+            width: 100%;
+            max-width: (630/16rem);
+            /* 400px - 775px */
+            height: clamp(25rem, 70vw, 48.4375rem);
+            .img-radius (xl);
+            overflow: hidden;
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 64rem) {
+    #sbs-867 {
+        padding: var(--sectionPadding);
+
+        .cs-container {
+            flex-direction: row;
+            max-width: (1280/16rem);
+            justify-content: space-between;
+        }
+
+        .cs-content {
+            width: 53%;
+            /* reset the padding, add the section padding back to the section container */
+            padding: 0;
+        }
+
+        .cs-picture {
+            width: 47vw;
+            position: relative;
+        }
+    }
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #sbs-867 {
+            .cs-topper {
+                color: var(--primaryLight);
+            }
+
+            .cs-title,
+            .cs-text {
+                color: var(--bodyTextColorWhite);
+            }
+
+            .cs-text {
+                opacity: 0.8;
+            }
+
+            .cs-picture {
+                &:before {
+                    background-color: var(--accent);
+                }
+            }
+        }
+    }
+}
+
+/*-- -------------------------- -->
+<---           Quote            -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+/* you can copy and paste these styles into the section CSS where you placed the #list-827 HTML, or you can place it in your global stylesheet so you can reuse the HTML in any Side By Side section on your site. That way when you make changes to it, it will also change everywhere in the site */
+#quote-827 {
+    width: 100%;
+    max-width: (630/16rem);
+    margin: 0 0 (32/16rem) 0;
+    /* 16px - 32px */
+    padding: clamp(1rem, 3vw, 2rem);
+    background-color: var(--sectionColor);
+    position: relative;
+    .card-radius (lg);
+
+    .cs-quote-text {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        line-height: 1.5em;
+        width: 100%;
+        max-width: (500/16rem);
+        margin: 0 0 (16/16rem);
+        color: #767676;
+        display: block;
+    }
+
+    .cs-name {
+        font-size: (16/16rem);
+        line-height: 1.2em;
+        text-transform: uppercase;
+        font-weight: bold;
+        width: 100%;
+        margin: 0 0 (4/16rem);
+        color: var(--headerColor);
+        display: block;
+    }
+
+    .cs-job {
+        font-size: (14/16rem);
+        line-height: 1.5em;
+        color: #767676;
+        display: block;
+    }
+
+    .cs-quote-icon {
+        /* 60px - 136px */
+        width: clamp(3.75rem, 10vw, 8.5rem);
+        height: auto;
+        position: absolute;
+        bottom: 0;
+        /* 16px - 32px */
+        right: clamp(1rem, 4vw, 2rem);
+    }
+}
+
+/* Dark Mode, copy and paste only the styles inside the #list-827 brackets into your section's dark mode media query */
+body.dark-mode {
+    #quote-827 {
+        background-color: var(--accent);
+
+        .cs-quote-text,
+        .cs-name {
+            color: var(--bodyTextColorWhite);
+        }
+
+        .cs-job {
+            color: var(--bodyTextColorWhite);
+            opacity: 0.8;
+        }
+
+        .cs-quote-icon {
+            opacity: 0.2;
+        }
+    }
+}
+
+/*-- -------------------------- -->
+<---       Meet The Team        -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #meet-team-1677 {
+        padding: var(--sectionPadding);
+        overflow: hidden;
+        background-color: var(--sectionColor);
+
+        .cs-container {
+            width: 100%;
+            max-width: (1280/16rem);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 48px - 64px */
+            gap: clamp(3rem, 6vw, 4rem);
+        }
+
+        .cs-content {
+            text-align: center;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .cs-title {
+            margin: 0;
+            max-width: 23ch;
+        }
+
+        .cs-card-group {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            /* 20px - 40px */
+            column-gap: clamp(1.25rem, 1.9vw, 2.5rem);
+            /* 24px - 40px */
+            row-gap: clamp(1.5rem, 3vw, 2.5rem);
+        }
+
+        .cs-item {
+            list-style: none;
+            width: 100%;
+            display: flex;
+            grid-column: span 12;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            position: relative;
+            gap: (16/16rem);
+        }
+
+        .cs-picture {
+            width: 100%;
+            /* 300px - 380px */
+            height: clamp(18.75rem, 35vw, 23.75rem);
+            /* clips img tag from overflowing it on hover */
+            overflow: hidden;
+            display: block;
+            position: relative;
+            z-index: 1;
+            .img-radius (lg);
+
+            &:after {
+                content: "";
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0.00) 39.89%);
+                opacity: 0;
+                position: absolute;
+                display: block;
+                top: 0;
+                left: 0;
+                transition: opacity 0.3s;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                /* makes sure the top of the image is at the top of the parent, heads won't get cut off this way */
+                object-position: top;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                transition: transform 0.7s;
+            }
+        }
+
+        .cs-info {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            gap: (4/16rem);
+        }
+
+        .cs-name {
+            font-size: (20/16rem);
+            line-height: 1.2em;
+            font-weight: 700;
+            margin: 0;
+            color: var(--headerColor);
+            display: block;
+        }
+
+        .cs-job {
+            font-size: (16/16rem);
+            line-height: 1.5em;
+            color: var(--bodyTextColor);
+            display: block;
+        }
+
+        .cs-link {
+            gap: (8/16rem);
+            position: absolute;
+            right: (8/16rem);
+            bottom: (72/16rem);
+            z-index: 1;
+            padding: (8/16rem);
+            opacity: 0;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cs-icon {
+            width: (24/16rem);
+            height: (24/16rem);
+        }
+    }
+}
+
+/* Tablet - 500px */
+@media only screen and (min-width: 31.25rem) {
+    #meet-team-1677 {
+        .cs-item {
+            grid-column: span 6;
+        }
+    }
+}
+
+/* Small Desktop - 850px */
+@media only screen and (min-width: 53.125rem) {
+    #meet-team-1677 {
+        .cs-item {
+            grid-column: span 3;
+        }
+    }
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #meet-team-1677 {
+            background-color: var(--dark);
+
+            .cs-title,
+            .cs-name, 
+            .cs-job {
+                color: var(--bodyTextColorWhite);
+            }
+
+            .cs-job {
+                opacity: 0.8;
+            }
+        }
+    }
+}
+                                
+
+                                                                         
+</style>
+
+
+                                

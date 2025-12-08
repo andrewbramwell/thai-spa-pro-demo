@@ -1,0 +1,153 @@
+---
+import type { GetImageResult } from "astro";
+import { ClientRouter } from "astro:transitions";
+import I18nClient from "@astrolicious/i18n/components/I18nClient.astro";
+import I18nHead from "@astrolicious/i18n/components/I18nHead.astro";
+
+import { getHtmlAttrs, getLocales, t } from "i18n:astro";
+import client from "@data/client.json";
+import { trimArrSlashes, trimStringSlashes } from "@utils/utils";
+import ThemeProvider from "@components/TemplateComponents/ThemeProvider.astro";
+import Header from "@components/Header.astro";
+import Header2 from "@components/Header2.astro";
+import Header3 from "@components/Header3.astro";
+import Footer from "@components/Footer.astro";
+import CookiePopup from "@components/CookiePopup.astro";
+import "@styles/root.less";
+
+interface Props {
+	description: string;
+	title: string;
+	preloadedImage: GetImageResult;
+}
+
+const { description, title, preloadedImage } = Astro.props as Props;
+
+const locales = getLocales();
+// Trimming "/" from the beginning and end to handle URLs with or without trailing slashes.
+const trimmedLocales = trimArrSlashes(locales);
+const trimmedPathname = trimStringSlashes(Astro.url.pathname);
+
+const isLandingPage = Astro.url.pathname === "/" || trimmedLocales.includes(trimmedPathname);
+
+// Generate Local Business Schema from client.json
+const localBusinessSchema = {
+	"@context": "https://schema.org",
+	"@type": "HealthAndBeautyBusiness",
+	"name": client.name,
+	"image": `https://${client.domain}/assets/images/logo.svg`,
+	"@id": `https://${client.domain}`,
+	"url": `https://${client.domain}`,
+	"telephone": client.phoneForTel,
+	"address": {
+		"@type": "PostalAddress",
+		"streetAddress": `${client.address.lineOne}${client.address.lineTwo ? ', ' + client.address.lineTwo : ''}`,
+		"addressLocality": client.address.city,
+		"postalCode": client.address.postcode,
+		"addressCountry": client.address.country
+	},
+	"openingHours": client.hours,
+	...(client.social && {
+		"sameAs": [
+			client.social.facebook,
+			client.social.instagram,
+			client.social.google
+		].filter(Boolean)
+	})
+};
+---
+
+<!-- A fully fleshed-out <head>, dynamically changing based on client.json and the page front matter -->
+<html {...getHtmlAttrs()}>
+	<!-- Automatically generates attributes -->
+	<head>
+		<!-- i18n support -->
+		<I18nClient />
+
+		<!-- View Transitions support -->
+		<ClientRouter />
+
+		<!-- Preloads the image passed as a prop -->
+		<link rel="preload" href={preloadedImage.src} as="image" />
+
+		<!-- Standard meta tags -->
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content={description} />
+		<meta name="keywords" content="" />
+		<link rel="canonical" href={`https://${client.domain}${Astro.url.pathname}`} />
+		<link rel="sitemap" href="/sitemap-index.xml" />
+
+		<!-- automatically generates hreflang alternate links to improve SEO -->
+		<I18nHead />
+
+		<!-- Local Business Schema for SEO -->
+		<script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
+
+		<!--Social Media Display-->
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={`https://${client.domain}${Astro.url.pathname}`} />
+		<meta property="og:image" content="/assets/images/logo-small.png" />
+		<meta property="og:image:secure_url" content="/assets/images/logo-small.png" />
+
+		<!--Favicons-->
+		<link rel="icon" type="image/png" href="/assets/favicons/favicon-96x96.png" sizes="96x96" />
+		<link rel="icon" type="image/svg+xml" href="/assets/favicons/favicon.svg" />
+		<link rel="shortcut icon" href="/assets/favicons/favicon.ico" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png" />
+		<link rel="manifest" href="/assets/favicons/site.webmanifest" />
+
+
+		<!--For home page, use service keywords for the title, including location for SEO.
+        Other pages should just include the page name.-->
+
+		<title>
+			{
+				isLandingPage
+					? `${title} | ${client.name} | ${client.address.city}`
+					: `${title} | ${client.name}`
+			}
+		</title>
+
+		<!-- Dark / Light mode component -->
+		<ThemeProvider />
+
+		<!-- Navigation scripts - auto-loads correct one based on header -->
+		<script>
+			// Load correct navigation script based on which header is present
+			document.addEventListener('DOMContentLoaded', () => {
+				const isHeader2 = document.querySelector('#cs-navigation[data-header="2"]');
+				const isHeader3 = document.querySelector('#cs-navigation[data-header="3"]');
+				
+				if (isHeader3) {
+					import('@assets/js/nav3.js');
+				} else if (isHeader2) {
+					import('@assets/js/nav2.js');
+				} else {
+					import('@assets/js/nav.js');
+				}
+			});
+		</script>
+	</head>
+	<body>
+		<!--Screen reader skip main nav-->
+		<a class="skip" aria-label="skip to main content" href="#main">{t("skipLink")}</a>
+
+		<Header3 />
+		<main id="main">
+			<slot />
+		</main>
+		<Footer />
+
+		<CookiePopup />
+	</body>
+</html>
+
+{/* Inlined to avoid FOUC. Uses global scope from `ThemeProvider.astro` */}
+<script is:inline>
+	StarlightThemeProvider.getPreferredColorScheme();
+	StarlightThemeProvider.updatePickers();
+</script>

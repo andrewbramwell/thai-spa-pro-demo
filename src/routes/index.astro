@@ -1,0 +1,77 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import CTA from "@components/CTA.astro";
+import { getLocalePath, t } from "i18n:astro";
+import { getOptimizedImage } from "@utils/utils";
+import HeroSplit from '@components/Heroes/HeroSplit.astro';
+import HeroLeft from '@components/Heroes/HeroLeft.astro';
+import HeroLeft2 from '@components/Heroes/HeroLeft2.astro';
+import HeroCenter from '@components/Heroes/HeroCenter.astro';
+import HeroLight from '@components/Heroes/HeroLight.astro';
+import ServiceSquares from '@components/Services/ServiceSquares.astro';
+import Service4 from '@components/Services/Service4.astro';
+import ServiceFullWidth from '@components/Services/ServiceFullWidth.astro';
+import WhyUs1 from '@components/WhyUs/WhyUs1.astro';
+import WhyUs2 from '@components/WhyUs/WhyUs2.astro';
+import WhyUs2R from '@components/WhyUs/WhyUs2R.astro';
+import WhyUs3 from '@components/WhyUs/WhyUs3.astro';
+import About1 from '@components/About/About1.astro';
+import About1R from '@components/About/About1R.astro';
+import FeaturedMulti from '@components/Featured/FeaturedMulti.astro';
+import FeaturedMultiR from '@components/Featured/FeaturedMultiR.astro';
+import FeaturedSingle from '@components/Featured/FeaturedSingle.astro';
+import FeaturedSingleR from '@components/Featured/FeaturedSingleR.astro';
+import Review2 from '@components/Reviews/Review2.astro';
+import Review3 from '@components/Reviews/Review3.astro';
+import FAQwithImage from '@components/FAQs/FAQwithImage.astro';
+import FAQwithImageR from '@components/FAQs/FAQwithImageR.astro';
+import CTAFullWidth from '@components/CTAs/CTAFullWidth.astro';
+
+// Optimize our landing image and pass it as props to the BaseLayout (for preloading) and Hero (for rendering)
+import landingImage from "@assets/images/hero.jpg"; // <-- THE PATH TO THE ASSET YOU WANT TO PRELOAD - The asset must live in src
+import mobileLandingImage from "@assets/images/hero-m.jpg"; // <-- THE PATH TO THE ASSET YOU WANT TO PRELOAD - The asset must live in src
+const optimizedLandingImage = await getOptimizedImage(landingImage);
+const optimizedMobileLandingImage = await getOptimizedImage(mobileLandingImage);
+---
+
+<BaseLayout title={t("home:layout.title")} description={t("home:layout.description")} preloadedImage={optimizedMobileLandingImage}>
+
+
+<HeroLeft />
+<HeroSplit />
+<HeroLeft2 />
+<HeroCenter />
+<HeroLight />
+
+<ServiceSquares />
+<Service4 />
+<ServiceFullWidth />
+
+<WhyUs1 />
+<WhyUs2 />
+<WhyUs2R />
+<WhyUs3 />
+<About1 />
+<About1R />
+
+<FeaturedMulti />
+<FeaturedMultiR />
+<FeaturedSingle />
+<FeaturedSingleR />
+
+<Review2 />
+<Review3 />
+<FAQwithImage />
+<FAQwithImageR />
+
+
+	
+	
+<CTAFullWidth />
+
+</BaseLayout>
+
+<style lang="less">
+	
+	
+</style>
