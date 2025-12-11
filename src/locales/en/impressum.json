@@ -1,51 +1,51 @@
 {
   "landing": {
-    "title": "Impressum | Your Business Name",
-    "description": "Legal information and imprint for our business as required by German law."
+    "title": "Legal Notice",
+    "description": "Legal information and imprint for our business as required by German law (§5 TMG)."
   },
   "content": {
     "h1": "Impressum",
     "businessInfo": {
-      "heading": "Business Information"
+      "heading": "Information According to §5 TMG"
     },
     "contact": {
-      "heading": "Contact",
-      "phone": "Phone:",
+      "heading": "Contact Information",
+      "phone": "Telephone:",
       "email": "Email:",
       "website": "Website:"
     },
     "representative": {
       "heading": "Authorized Representative",
-      "text": "Represented by: [Business Owner/Manager Name]"
+      "text": "Represented by: Kristira"
     },
     "taxInfo": {
       "heading": "Tax Information",
-      "text": "VAT ID: [VAT Number if applicable]"
+      "text": "VAT Identification Number according to §27a VAT Tax Act: DE123456789"
     },
     "regulatory": {
-      "heading": "Regulatory Authority",
-      "text": "Responsible regulatory authority: [Local regulatory body for massage therapy businesses]"
+      "heading": "Regulatory Authority and Professional Body",
+      "text": "Responsible regulatory authority: Gesundheitsamt Berlin Mitte, Mathilde-Jacob-Platz 1, 10551 Berlin. Professional association: Verband Physikalische Therapie (VPT) e.V."
     },
     "liability": {
-      "heading": "Liability for Content",
+      "heading": "Liability Disclaimer",
       "content": {
-        "heading": "Content Liability",
-        "text": "The contents of our pages have been created with the utmost care. However, we cannot guarantee the accuracy, completeness, or timeliness of the content. As a service provider, we are responsible for our own content on these pages in accordance with general laws. However, we are not obligated to monitor transmitted or stored third-party information or to investigate circumstances that indicate illegal activity."
+        "heading": "Liability for Content",
+        "text": "The contents of our pages have been created with the utmost care and to the best of our knowledge. However, we cannot guarantee the accuracy, completeness, or timeliness of the content. According to statutory provisions, we as a service provider are responsible for our own content on these pages under general laws according to §7 Para.1 TMG. According to §§8 to 10 TMG, however, we as a service provider are not obligated to monitor transmitted or stored third-party information or to investigate circumstances that indicate illegal activity. Obligations to remove or block the use of information under general laws remain unaffected. However, liability in this regard is only possible from the point in time at which knowledge of a specific infringement becomes known. Upon notification of such violations, we will remove this content immediately."
       },
       "links": {
         "heading": "Liability for Links",
-        "text": "Our website contains links to external third-party websites over whose content we have no control. Therefore, we cannot accept any liability for this third-party content. The respective provider or operator of the pages is always responsible for the content of the linked pages."
+        "text": "Our website contains links to external third-party websites, over whose content we have no influence. Therefore, we cannot assume any liability for this external content. The respective provider or operator of the linked pages is always responsible for the content of the linked pages. The linked pages were checked for possible legal violations at the time of linking. Illegal content was not recognizable at the time of linking. However, permanent monitoring of the content of the linked pages is not reasonable without concrete evidence of an infringement. Upon notification of violations, we will remove such links immediately."
       }
     },
     "copyright": {
       "heading": "Copyright",
-      "text": "The content and works created by the site operators on these pages are subject to copyright law. Duplication, processing, distribution, and any kind of use beyond the scope of copyright law require the written consent of the respective author or creator."
+      "text": "The content and works created by the site operators on these pages are subject to German copyright law. The reproduction, editing, distribution, and any kind of exploitation outside the limits of copyright law require the written consent of the respective author or creator. Downloads and copies of this site are only permitted for private, non-commercial use. Insofar as the content on this site was not created by the operator, the copyrights of third parties are respected. In particular, third-party content is marked as such. Should you nevertheless become aware of a copyright infringement, please inform us accordingly. Upon notification of violations, we will remove such content immediately."
     },
     "disputeResolution": {
-      "heading": "Dispute Resolution",
-      "text1": "The European Commission provides a platform for online dispute resolution (ODR):",
-      "text2": "Our email address can be found in the imprint above.",
-      "text3": "We are not willing or obliged to participate in dispute resolution proceedings before a consumer arbitration board."
+      "heading": "EU Dispute Resolution",
+      "text1": "The European Commission provides a platform for online dispute resolution (ODR). This platform can be found at the following link:",
+      "text2": "Our email address can be found in the contact information section above.",
+      "text3": "We are neither willing nor obliged to participate in dispute resolution proceedings before a consumer arbitration board."
     }
   }
 }

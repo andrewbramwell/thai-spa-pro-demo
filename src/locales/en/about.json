@@ -1,38 +1,38 @@
 {
   "landing": {
     "title": "About Us",
-    "description": "Learn about our story, mission, and the team behind [Your Business]. Discover what makes us unique and why clients trust us for their [service] needs."
+    "description": "Discover Sabai Thai Spa's story. Founded by Thailand-trained Kris, we bring authentic Thai massage and healing traditions to Manchester. Meet our expert team."
   },
   "section": {
-    "topper": "About Section Label ",
-    "title": "About Page  ",
-    "paragraph1": "First paragraph introducing your business story, mission, and values. Explain what drives you and what makes your approach unique. Connect emotionally with your audience.",
-    "paragraph2": "Second paragraph elaborating on your expertise, experience, or philosophy. Share what sets you apart and why clients should trust you with their wellbeing.",
-    "paragraph3": "Third paragraph elaborating on your expertise, experience, or philosophy. Share what sets you apart and why clients should trust you with their wellbeing.",
-    "paragraph4": "Third paragraph elaborating on your expertise, experience, or philosophy. Share what sets you apart and why clients should trust you with their wellbeing.",
-    "quoteText": "Inspirational or meaningful quote that captures your business philosophy, mission, or approach to client care.",
-    "quoteName": "Quote Author Name ",
-    "quoteJob": "Quote Author Title ",
-    "imageAlt": "Descriptive alt text for about section image"
+    "topper": "Meet Kris",
+    "title": "Authentic Thai Massage, Delivered with Heart",
+    "paragraph1": "When Kris moved from Thailand to Manchester, she noticed something missing: genuine Thai massage delivered by people who truly understood the tradition. Too many places offered 'Thai-style' treatments that bore little resemblance to the real thing. So she decided to create Sabai Thai Spa—a place where Manchester could experience authentic Thai healing the way it's practised in Thailand.",
+    "paragraph2": "Kris's credentials speak for themselves. She trained at Wat Pho, Bangkok's legendary massage school where Thai healing arts have been taught for centuries. This isn't a weekend certification; it's comprehensive training from masters who've dedicated their lives to this practice. Moving to the UK, Kris also gained British therapeutic qualifications, ensuring her work meets the highest professional standards in both countries.",
+    "paragraph3": "The business has grown organically through word-of-mouth and returning clients who've experienced the difference authentic treatment makes. We now operate four treatment rooms with six massage beds, meaning we can welcome more people without compromising on quality or attention. We've also invested in facilities that matter—private showers, easy parking, and a genuinely peaceful environment where you can unwind properly.",
+    "paragraph4": "What makes Sabai special isn't just the techniques we use; it's the care we take with each client. Kris has built a team that shares her values: listen first, treat with skill and compassion, and never rush. Whether you're managing chronic pain, recovering from injury, or simply need to decompress from city stress, we're here to help you feel genuinely better.",
+    "quoteText": "Every body tells a story. Our job is to listen to that story and respond with the right treatment, pressure, and care. That's real Thai massage.",
+    "quoteName": "Kris",
+    "quoteJob": "Founder, Sabai Thai Spa",
+    "imageAlt": "Kris, founder of Sabai Thai Spa, welcoming clients to the peaceful Manchester wellness centre"
   },
   "team": {
-    "topper": "Team Section Label (e.g., Our Team, Meet The Team)",
-    "title": "Our Expert Team Members",
+    "topper": "Meet Our Team",
+    "title": "Expert Thai Therapists Dedicated to Your Wellbeing",
     "member1": {
-      "name": "Team Member 1 Name",
-      "job": "Role/Title "
+      "name": "May",
+      "job": "Spa Manager"
     },
     "member2": {
-      "name": "Team Member 2 Name",
-      "job": "Role/Title"
+      "name": "Fah",
+      "job": "Senior Therapist"
     },
     "member3": {
-      "name": "Team Member 3 Name",
-      "job": "Role/Title"
+      "name": "Joy",
+      "job": "Massage Therapist"
     },
     "member4": {
-      "name": "Team Member 4 Name",
-      "job": "Role/Title"
+      "name": "Chompoo",
+      "job": "Massage Therapist"
     }
   }
 }

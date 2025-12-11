@@ -1,0 +1,53 @@
+{
+    "home": "Startseite",
+    "about": "Über Uns",
+    "services": "Behandlungen",
+    "contact": "Kontakt",
+    "requestQuote": "Jetzt Buchen",
+    "theme-label": "Thema auswählen",
+    "language-label": "Sprache auswählen",
+    "languageSelect": {
+        "en": "English",
+        "fr": "Français",
+        "de": "Deutsch"
+    },
+    "themeSelect": {
+        "accessibleLabel": "Thema Auswählen",
+        "light": "Hell",
+        "dark": "Dunkel",
+        "auto": "Auto"
+    },
+    "ctaComponent": {
+        "topper": "Spüren Sie den Unterschied",
+        "title": "Erleben Sie Authentische Thai-Massage in Manchester",
+        "text": "Von Tiefengewebsmassage bis zu Hot-Stone-Behandlungen – unsere in Thailand ausgebildeten Therapeuten helfen Ihnen, sich rundum wohlzufühlen. Verfügbarkeit prüfen und Termin buchen – in weniger als einer Minute.",
+        "button": "Jetzt Online Buchen",
+        "imageAlt": "Professionelle Thai-Massage im Sabai Thai Spa"
+    },
+    "cookiePopup": {
+        "title": "Diese Website verwendet Cookies",
+        "text": "Diese Website verwendet Cookies. Durch die Nutzung unserer Website stimmen Sie allen Cookies gemäß unserer Datenschutzerklärung zu.",
+        "readMore": "Mehr Erfahren",
+        "policyLink": "/privacy-policy",
+        "accept": "Akzeptieren"
+    },
+    "footer": {
+        "information": "Schnellzugriff",
+        "services": "Informationen",
+        "service1": "Impressum",
+        "service2": "Datenschutzerklärung",
+        "contact": "Kontakt",
+        "click": "E-Mail senden",
+        "p": "Erleben Sie die heilende Kraft traditioneller Massagetherapie in einer ruhigen, professionellen Umgebung.",
+        "credit": "Entworfen und Handcodiert von "
+    },
+    "notFound": {
+        "pageNotFound": "404 - Die gesuchte Seite existiert nicht.",
+        "linkText": "Zurück zur Startseite"
+    },
+    "skipLink": "Zum Hauptinhalt Springen",
+    "pagination": {
+        "previous": "Zurück",
+        "next": "Weiter"
+    }
+}

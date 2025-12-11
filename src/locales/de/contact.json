@@ -1,0 +1,26 @@
+{
+  "landing": {
+    "title": "Kontakt",
+    "description": "Kontaktieren Sie Sabai Thai Spa noch heute. Vereinbaren Sie einen Termin, stellen Sie Ihre Fragen oder informieren Sie sich über unsere Behandlungen. Wir helfen Ihnen gerne."
+  },
+  "section": {
+    "topper": "Kontaktieren Sie Uns",
+    "title": "Nehmen Sie Kontakt mit Uns Auf",
+    "text": "Wir beantworten gerne Ihre Fragen und helfen Ihnen bei der Buchung Ihres nächsten Termins. Kontaktieren Sie uns telefonisch, per E-Mail oder besuchen Sie uns vor Ort.",
+    "phoneLabel": "Telefon",
+    "hoursLabel": "Öffnungszeiten",
+    "addressLabel": "Adresse"
+  },
+  "form": {
+    "title": "Termin Vereinbaren",
+    "nameLabel": "Name",
+    "namePlaceholder": "Ihr Name",
+    "emailLabel": "E-Mail",
+    "emailPlaceholder": "Ihre E-Mail-Adresse",
+    "phoneLabel": "Telefon",
+    "phonePlaceholder": "Ihre Telefonnummer",
+    "messageLabel": "Nachricht",
+    "messagePlaceholder": "Beschreiben Sie Ihre Wünsche und Bedürfnisse...",
+    "submitButton": "Nachricht Senden"
+  }
+}

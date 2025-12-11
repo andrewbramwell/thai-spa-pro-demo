@@ -2,17 +2,14 @@
     "home": "Home",
     "about": "About",
     "services": "Services",
-    "projects": "Projects",
-    "project-1": "Project 1",
-    "project-2": "Project 2",
-    "blog": "Blog",
     "contact": "Contact",
-    "requestQuote": "Request A Quote",
+    "requestQuote": "Book Now",
     "theme-label": "Choisissez le thème",
     "language-label": "Choisissez la langue",
     "languageSelect": {
         "en": "English",
-        "fr": "French"
+        "fr": "Français",
+        "de": "Deutsch"
     },
     "themeSelect": {
         "accessibleLabel": "Select Theme",
@@ -21,11 +18,11 @@
         "auto": "Auto"
     },
     "ctaComponent": {
-        "topper": "CTA Section Label ",
-        "title": "SEO Optimized CTA Heading",
-        "text": "Brief compelling text encouraging action. Highlight urgency, benefits, or special offers. Keep it 1-2 sentences.",
-        "button": "Action Button Text",
-        "imageAlt": "Descriptive alt text for CTA background image"
+        "topper": "Feel the Difference",
+        "title": "Experience Authentic Thai Massage in Manchester",
+        "text": "From deep tissue to hot stone treatments, our Thailand-trained therapists are ready to help you feel your best. Check availability and book your session now—it takes less than a minute.",
+        "button": "Book Online Now",
+        "imageAlt": "Professional Thai massage therapy at Sabai Thai Spa"
     },
     "cookiePopup": {
         "title": "This website uses cookies",
@@ -35,11 +32,13 @@
         "accept": "Accept"
     },
     "footer": {
-        "information": "Information",
-        "services": "Services",
+        "information": "Quick Links",
+        "services": "Information",
+        "service1": "Impressum",
+        "service2": "Privacy Policy",
         "contact": "Contact",
         "click": "Click to email",
-        "p": "Extra content if you need it, if not you can delete this whole p tag. I usually do.",
+        "p": "Experience the healing power of traditional massage therapy in a tranquil, professional environment.",
         "credit": "Designed and Hand Coded by "
     },
     "notFound": {

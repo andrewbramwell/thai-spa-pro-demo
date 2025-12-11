@@ -1,51 +1,104 @@
 {
 	"layout": {
-		"title": "Sites Internet au pixel près !",
-		"description": "Meta description pour la page"
+		"title": "Massage Thaïlandais Authentique",
+		"description": "Massage thaï traditionnel à Manchester. Soins authentiques par thérapeutes formés en Thaïlande. Massage sportif, deep tissue, pierres chaudes. Réservation en ligne 24h/24."
 	},
 	"hero": {
-		"topper": "Kit Avancé",
-		"title": {
-			"1": "Kit Avancé Astro v5",
-			"2": "i18n"
-		},
-		"p1": "Ce kit avancé comprend un environnement Astro préconfiguré qui permet de réutiliser des composants, de centraliser les données et d'évoluer en fonction de la croissance de vos clients. Ce kit est spécialement conçu pour les clients souhaitant un site multi-langues et est donc configuré avec les outils d'internationalisation (i18n) d'Astro pour deux langues: anglais et français",
-		"p2": "Ce kit utilise astrolicious/i18n, qui n'est plus maintenu. Le package, ainsi que ce kit, devraient toujours fonctionner, mais soyez particulièrement prudent lors de la mise à jour des versions d'Astro.",
-		"cta1": "En savoir plus",
-		"cta2": "Écrivez-nous"
+		"topper": "Votre Havre de Paix",
+		"title": "L'Art Ancestral du Massage Thaï au Cœur de Manchester",
+		"text": "Découvrez des techniques de massage thaï millénaires pratiquées par des thérapeutes diplômés. Du deep tissue à l'aromathérapie, nous perpétuons les traditions authentiques du bien-être thaïlandais à Manchester—avec réservation en ligne disponible 24h/24.",
+		"cta": "Réserver un Soin"
 	},
-	"services": [
-		{
-			"heading": "Service 1",
-			"p": "Parlez du service à l'aide de mots-clés que les gens rechercheront. Faites 1 à 2 phrases."
+	"services": {
+		"topper": "Nos Soins Signature",
+		"title": "Massages Authentiques pour le Corps et l'Esprit",
+		"description": "Chez Sabai Thai Spa, nous honorons des traditions ancestrales tout en répondant aux besoins de bien-être contemporains. Chaque soin est personnalisé et dispensé dans notre havre de paix à Manchester par des thérapeutes formés en Thaïlande.",
+		"service1": {
+			"name": "Massage Sportif",
+			"description": "Massage thérapeutique puissant conçu pour les modes de vie actifs. Associe étirements thaïlandais et pressions ciblées pour soulager les courbatures, améliorer la mobilité et soutenir vos objectifs sportifs.",
+			"link": "/services"
 		},
-		{
-			"heading": "Service 2",
-			"p": "Parlez du service à l'aide de mots-clés que les gens rechercheront. Faites 1 à 2 phrases."
+		"service2": {
+			"name": "Massage Deep Tissue",
+			"description": "Pressions intenses atteignant les couches musculaires profondes pour libérer les tensions chroniques et restaurer la mobilité. Particulièrement efficace pour les personnes travaillant en bureau et celles souffrant de gênes persistantes.",
+			"link": "/services"
 		},
-		{
-			"heading": "Service 3",
-			"p": "Parlez du service à l'aide de mots-clés que les gens rechercheront. Faites 1 à 2 phrases."
-		}
-	],
+		"service3": {
+			"name": "Réflexologie Plantaire",
+			"description": "Thérapie plantaire thaïlandaise traditionnelle agissant sur les lignes énergétiques et points de pression. Un soin profondément apaisant qui bénéficie à tout votre corps pendant que vos pieds sont chouchoutés et revitalisés.",
+			"link": "/services"
+		},
+		"service4": {
+			"name": "Massage aux Pierres Chaudes",
+			"description": "La chaleur luxueuse rencontre la douceur du massage tandis que des pierres lisses et chauffées apaisent les tensions musculaires. Laissez-vous glisser dans une relaxation profonde avec ce soin nourrissant pour tout le corps.",
+			"link": "/services"
+		},
+		"linkText": "Réserver",
+		"cta": "Découvrir Tous les Soins",
+		"ctaLink": "/services"
+	},
+	"whyUs": {
+		"topper": "Pourquoi Nous Choisir",
+		"title": "L'Expérience Sabai Thai Spa",
+		"reason1": {
+			"description": "Tous nos thérapeutes possèdent des qualifications professionnelles obtenues en Thaïlande et sont entièrement assurés. Vous êtes entre des mains expertes et bienveillantes, avec des praticiens qui se soucient réellement de votre bien-être."
+		},
+		"reason2": {
+			"description": "Massage thaï haut de gamme à des tarifs compétitifs à Manchester. Nous ne faisons aucun compromis sur la qualité, la propreté ou la durée des soins. Vous bénéficiez d'un rapport qualité-prix exceptionnel—séances complètes, installations impeccables et soins experts sans prix prohibitif."
+		},
+		"reason3": {
+			"description": "Consultez les disponibilités, choisissez votre thérapeute préféré et réservez en moins d'une minute depuis n'importe quel appareil. Confirmation instantanée, rappels automatiques et reprise de rendez-vous simplifiée."
+		},
+		"testimonial": "Sabai est mon moment rien qu'à moi chaque mois. Le personnel est adorable et l'espace toujours impeccable. Ça vaut vraiment chaque centime !"
+	},
 	"about": {
-		"topper": "À propos",
-		"title": "À propos de Nom de la société",
-		"p1": "Notre société a été In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.",
-		"p2": "Nous croyons fermement que In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.",
-		"p3": "Il est vital de In consequat tincidunt turpis sit amet imperdiet.",
-		"rank": "PDG",
-		"cta": "En savoir plus sur Nom de la Société"
+		"topper": "À Propos",
+		"title": "Quand le Confort Rencontre l'Authenticité Thaïlandaise",
+		"paragraph1": "Sabai signifie 'confortable' en thaï. Nous créons ce confort grâce à des soins authentiques et une relaxation profonde au centre de Manchester.",
+		"paragraph2": "Du massage sportif aux soins aux pierres chaudes, nos thérapeutes thaïlandais qualifiés obtiennent de vrais résultats en utilisant des techniques traditionnelles et une hospitalité sincère.",
+		"cta": "Notre Histoire",
+		"imageAlt": "Espace d'accueil chaleureux au Sabai Thai Spa avec la propriétaire"
 	},
-	"extra": {
-		"topper": "SEO Ranking",
-		"title": "Parler d'un mot-clé de service principal",
-		"p1": "Nom de la société est spécialisée en In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.",
-		"p2": "Les statistiques montrent que In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per."
+	"featured1": {
+		"topper": "Soin Vedette",
+		"title": "Massage Thai Solution",
+		"paragraph1": "Le Massage Thai Solution représente des siècles de sagesse thérapeutique transmise par les maîtres thaïlandais. Cette approche sophistiquée travaille avec les lignes énergétiques naturelles de votre corps—les canaux 'Sen' qui se connectent à votre système nerveux et votre bien-être global. Par des manipulations expertes utilisant une pression et un poids corporel appropriés, nos thérapeutes stimulent les tissus profonds, favorisent une relaxation intense et rétablissent l'équilibre là où les massages conventionnels échouent souvent.",
+		"paragraph2": "Particulièrement bénéfique pour les affections chroniques qui n'ont pas répondu aux autres traitements : migraines, épicondylite (tennis elbow), douleurs musculaires persistantes, arthrose du genou, crampes aux mollets et fasciite plantaire. Plutôt que de suivre des protocoles standardisés, nos thérapeutes formés en Thaïlande lisent les indicateurs individuels de votre corps et adaptent leur technique en conséquence. Le résultat est un soin thérapeutique authentique et personnalisé qui répond à vos besoins spécifiques et aide votre corps à fonctionner comme il le devrait.",
+		"cta": "En Savoir Plus",
+		"ctaLink": "/featured1",
+		"imageAlt": "Séance de Massage Thai Solution traditionnel au Sabai Thai Spa spécialisé dans le traitement des douleurs chroniques"
 	},
-	"portfolio": {
-		"topper": "Notre Portfolio",
-		"title": "In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet",
-		"cta": "Voir tous nos projets"
+	"reviews": {
+		"topper": "Avis Clients",
+		"title": "Ce Que Nos Clients Disent du Sabai Thai Spa",
+		"description": "Ne nous croyez pas sur parole. Voici ce que nos clients disent de leur expérience avec nos soins de massage thaï authentiques et nos thérapeutes.",
+		"review1": {
+			"text": "Je souffrais de douleurs lombaires depuis des années à cause de mon travail de bureau. Après seulement deux séances de massage deep tissue chez Sabai, j'ai remarqué une énorme différence. La thérapeute savait vraiment ce qu'elle faisait et m'a tout expliqué. Trois mois plus tard, je n'ai toujours aucune douleur. Je recommande absolument.",
+			"name": "James M."
+		},
+		"review2": {
+			"text": "Le meilleur massage que j'aie jamais eu à Manchester. Le soin aux pierres chaudes était un pur bonheur—je me suis même endormie ! La thérapeute était adorable, la salle impeccable, et réserver en ligne était si facile. J'ai déjà pris mon prochain rendez-vous. Ça vaut vraiment chaque centime.",
+			"name": "Sarah T."
+		},
+		"review3": {
+			"text": "En tant que coureur, je viens ici chaque mois pour un massage sportif afin de prévenir les blessures. Les thérapeutes comprennent exactement ce dont les athlètes ont besoin. Ils travaillent mes ischio-jambiers et mollets tendus correctement, pas juste un massage relaxant. Service brillant et bon rapport qualité-prix aussi.",
+			"name": "David L."
+		},
+		"cta": "Laisser un Avis"
+	},
+	"faq": {
+		"topper": "Questions Fréquentes",
+		"title": "Vos Questions sur le Massage Thaï",
+		"imageAlt": "Salle de soin du Sabai Thai Spa mettant en valeur l'atmosphère tranquille et l'installation professionnelle",
+		"question1": "Comment se déroule mon premier rendez-vous ?",
+		"answer1": "Vous rencontrerez votre thérapeute qui discutera de votre santé, des zones problématiques et de ce que vous souhaitez obtenir du soin. Après cette brève consultation, vous vous changerez avec des vêtements confortables que nous fournissons. Votre thérapeute effectuera ensuite le massage choisi, en vérifiant régulièrement la pression et votre confort. L'expérience est détendue et professionnelle—les nouveaux clients nous disent toujours qu'ils se sont sentis immédiatement à l'aise.",
+		"question2": "Quelle est la durée des séances de massage ?",
+		"answer2": "Nous proposons des soins de 60 minutes et 90 minutes. Ces durées correspondent au massage effectif—nous n'incluons pas le temps de consultation ou d'habillage dans la durée de votre séance. Une séance de 60 minutes convient bien pour cibler des zones spécifiques, tandis que 90 minutes permettent un soin complet du corps ou un travail thérapeutique plus approfondi sur plusieurs zones problématiques.",
+		"question3": "Dois-je réserver à l'avance ou puis-je venir sans rendez-vous ?",
+		"answer3": "La réservation à l'avance est recommandée, particulièrement pour les rendez-vous en soirée et le week-end lorsque nous sommes les plus sollicités. Vous pouvez vérifier les disponibilités et réserver instantanément via notre système en ligne—il est disponible 24h/24 et affiche les créneaux en temps réel. Nous avons parfois des disponibilités le jour même, surtout en matinée et début d'après-midi en semaine.",
+		"question4": "Que dois-je porter pour mon rendez-vous ?",
+		"answer4": "Venez habillé comme vous êtes—nous fournissons des vêtements confortables et amples pour votre soin. Le massage thaï se pratique traditionnellement habillé (contrairement au massage à l'huile), vous porterez donc la tenue que nous fournissons. Pas besoin d'apporter quoi que ce soit de spécial. Tout est fourni, y compris des serviettes propres.",
+		"question5": "Quelle est votre politique d'annulation ?",
+		"answer5": "Nous demandons un préavis d'au moins 24 heures si vous devez annuler ou reporter votre rendez-vous. Avec un préavis suffisant, nous déplacerons votre rendez-vous à un moment qui vous convient mieux, sans aucun frais. Les annulations effectuées avec moins de 24 heures de préavis peuvent être soumises à des frais d'annulation. Vous pouvez gérer vos réservations à tout moment via notre système en ligne."
 	}
 }

@@ -1,0 +1,175 @@
+{
+  "landing": {
+    "title": "Unsere Behandlungen",
+    "description": "Entdecken Sie unser Angebot an professionellen Massagen und Spa-Behandlungen. Von traditioneller Thai-Massage bis hin zur Aromatherapie – finden Sie die perfekte Behandlung für Ihre Bedürfnisse."
+  },
+  "tiles": {
+    "topper": "Unsere Behandlungen",
+    "title": "Professionelle Massagen & Spa-Behandlungen",
+    "text": "Wählen Sie aus unserem Angebot fachkundig durchgeführter Behandlungen, die darauf ausgelegt sind, Körper und Geist zu entspannen, zu revitalisieren und wiederherzustellen. Jede Dienstleistung wird individuell auf Ihre Bedürfnisse abgestimmt.",
+    "service1": {
+      "name": "Traditionelle Thai-Massage",
+      "tagline": "Uralte Techniken für moderne Entspannung",
+      "price1": "30 Min: 40 £",
+      "price2": "60 Min: 60 £",
+      "price3": "90 Min: 85 £",
+      "price4": ""
+    },
+    "service2": {
+      "name": "Aromatherapie-Massage",
+      "tagline": "Ätherische Öle & beruhigende Techniken",
+      "price1": "60 Min: 70 £",
+      "price2": "90 Min: 95 £",
+      "price3": "",
+      "price4": ""
+    },
+    "service3": {
+      "name": "Tiefengewebe-Massage",
+      "tagline": "Zielt auf chronische Verspannungen und Muskelschmerzen",
+      "price1": "60 Min: 75 £",
+      "price2": "90 Min: 100 £",
+      "price3": "",
+      "price4": ""
+    },
+    "service4": {
+      "name": "Hot-Stone-Massage",
+      "tagline": "Erwärmte Steine für tiefe Muskelentspannung",
+      "price1": "60 Min: 80 £",
+      "price2": "90 Min: 105 £",
+      "price3": "",
+      "price4": ""
+    },
+    "service5": {
+      "name": "Sportmassage",
+      "tagline": "Fördert Leistung und beugt Verletzungen vor",
+      "price1": "30 Min: 45 £",
+      "price2": "60 Min: 70 £",
+      "price3": "",
+      "price4": ""
+    },
+    "service6": {
+      "name": "Reflexzonenmassage",
+      "tagline": "Druckpunkte für ganzheitliches Wohlbefinden",
+      "price1": "30 Min: 35 £",
+      "price2": "60 Min: 55 £",
+      "price3": "",
+      "price4": ""
+    },
+    "service7": {
+      "name": "Paarmassage",
+      "tagline": "Entspannen Sie gemeinsam in unserer Couple-Suite",
+      "price1": "60 Min: 120 £",
+      "price2": "90 Min: 170 £",
+      "price3": "",
+      "price4": ""
+    },
+    "service8": {
+      "name": "Pränatalmassage",
+      "tagline": "Sanfte & sichere Behandlung für werdende Mütter",
+      "price1": "60 Min: 65 £",
+      "price2": "90 Min: 90 £",
+      "price3": "",
+      "price4": ""
+    },
+    "service9": {
+      "name": "Lymphdrainage",
+      "tagline": "Fördert die Durchblutung und reduziert Schwellungen",
+      "price1": "60 Min: 75 £",
+      "price2": "90 Min: 100 £",
+      "price3": "",
+      "price4": ""
+    },
+    "cta": "Termin Buchen"
+  },
+  "list": {
+    "topper": "Unsere Behandlungen",
+    "title30": "30-Minuten-Behandlungen",
+    "title60": "60-Minuten-Behandlungen",
+    "title90": "90-Minuten-Behandlungen",
+    "title120": "120-Minuten-Behandlungen",
+    "imageAlt": "Therapeutische Massage-Sitzung",
+    "duration30": {
+      "service1": {
+        "name": "Express-Rückenmassage",
+        "description": "Gezielte Linderung für Rücken, Nacken und Schultern. Perfekt für eine regenerative Pause an einem vollgepackten Tag.",
+        "price": "40 £"
+      },
+      "service2": {
+        "name": "Fußreflexzonenmassage",
+        "description": "Druckpunkttherapie über die Füße, die bestimmte Körperbereiche anspricht und das allgemeine Wohlbefinden fördert.",
+        "price": "35 £"
+      },
+      "service3": {
+        "name": "Kopf- & Schultermassage",
+        "description": "Löst Verspannungen im oberen Körperbereich. Ideal für Büroangestellte und Stressabbau.",
+        "price": "40 £"
+      }
+    },
+    "duration60": {
+      "service1": {
+        "name": "Traditionelle Thai-Massage",
+        "description": "Uralte Techniken kombiniert mit Akupressur, Dehnungen und Energiearbeit. Ganzkörperbehandlung für tiefe Entspannung.",
+        "price": "60 £"
+      },
+      "service2": {
+        "name": "Aromatherapie-Massage",
+        "description": "Therapeutische Massage mit ätherischen Ölen. Individuell abgestimmte Mischung – entspannend, belebend oder ausgleichend.",
+        "price": "70 £"
+      },
+      "service3": {
+        "name": "Tiefengewebe-Massage",
+        "description": "Intensive Therapie zur Behandlung chronischer Muskelverspannungen und Knoten. Fester Druck löst tief sitzenden Stress.",
+        "price": "75 £"
+      },
+      "service4": {
+        "name": "Hot-Stone-Massage",
+        "description": "Erwärmte, glatte Steine lösen Spannungen. Die Wärme dringt tief ein und sorgt für intensive Muskelentspannung.",
+        "price": "80 £"
+      },
+      "service5": {
+        "name": "Sportmassage",
+        "description": "Spezialisierte Behandlung für Sportler und aktive Personen. Verbessert Leistung, beugt Verletzungen vor und fördert Regeneration.",
+        "price": "70 £"
+      }
+    },
+    "duration90": {
+      "service1": {
+        "name": "Thai-Ganzkörpermassage",
+        "description": "Verlängerte traditionelle Thai-Behandlung. Ganzheitliche Therapie von Kopf bis Fuß mit Dehnungen, Akupressur und Energieausgleich.",
+        "price": "85 £"
+      },
+      "service2": {
+        "name": "Aromatherapie Prestige",
+        "description": "Luxuriöse, verlängerte Aromatherapie-Sitzung. Inklusive Gesichtsmassage und zusätzlicher Zeit für vollkommene Entspannung.",
+        "price": "95 £"
+      },
+      "service3": {
+        "name": "Tiefengewebe-Therapie",
+        "description": "Umfassende Tiefenbehandlung. Behandelt mehrere Problemzonen mit gezielter Aufmerksamkeit und Zeit für Muskelregeneration.",
+        "price": "100 £"
+      },
+      "service4": {
+        "name": "Hot-Stone-Therapie",
+        "description": "Verlängerte Hot-Stone-Behandlung mit Ganzkörpermassage. Das ultimative Entspannungserlebnis mit therapeutischer Wärme.",
+        "price": "105 £"
+      }
+    },
+    "duration120": {
+      "service1": {
+        "name": "Thai Supreme Experience",
+        "description": "Das vollständige Erlebnis der traditionellen Thai-Massage. Inklusive Kräuterkompressen, Dehnungen und intensiver Energiearbeit für komplette Regeneration.",
+        "price": "110 £"
+      },
+      "service2": {
+        "name": "Paarmassage-Paket",
+        "description": "Erleben Sie die Behandlung gemeinsam in unserer Couple-Suite. Zwei Therapeuten führen synchronisierte Massagen durch.",
+        "price": "170 £"
+      },
+      "service3": {
+        "name": "Ganzheitliche Wellness-Therapie",
+        "description": "Unsere Signature-Behandlung, die mehrere Methoden kombiniert. Individuell abgestimmt für umfassende körperlich-geistige Heilung.",
+        "price": "120 £"
+      }
+    }
+  }
+}

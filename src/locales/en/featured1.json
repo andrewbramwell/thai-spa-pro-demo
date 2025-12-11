@@ -1,24 +1,27 @@
 {
   "landing": {
-    "title": "Thai Massage | Your Business Name - Traditional Healing",
-    "description": "Experience authentic Thai massage therapy. Ancient healing techniques for modern wellness, stress relief, and deep relaxation."
+    "title": "Thai Solution Massage",
+    "description": "Expert Thai Solution Massage in Manchester. Ancient therapeutic techniques for migraines, tennis elbow, arthritis, and chronic pain. Book your treatment today."
   },
   "content": {
-    "imageAlt": "Thai massage therapy session",
-    "h1": "Traditional Thai Massage:",
-    "h1Highlight": "Ancient Healing for Modern Life",
-    "h3_1": "What is Thai Massage?",
-    "paragraph1": "Thai massage is an ancient healing practice that combines acupressure, assisted yoga postures, and Ayurvedic principles. Unlike traditional Western massage, Thai massage is performed fully clothed on a comfortable mat on the floor.",
-    "paragraph2": "This therapeutic technique works along energy lines in the body, known as 'sen' lines, to release blockages and restore balance. Through rhythmic compression, gentle rocking, and passive stretching, Thai massage helps improve flexibility, reduce tension, and promote overall wellbeing.",
-    "paragraph3": "Each session is tailored to your individual needs and comfort level. Our experienced therapists use their hands, thumbs, elbows, forearms, and sometimes feet to apply pressure and guide you through gentle stretches.",
-    "paragraph4": "Whether you're seeking relief from chronic pain, improved flexibility, or simply deep relaxation, Thai massage offers a holistic approach to healing that benefits both body and mind.",
-    "h3_2": "Benefits of Thai Massage",
-    "orderedList1": "Improves flexibility and range of motion through assisted stretching",
-    "orderedList2": "Relieves muscle tension and reduces chronic pain",
-    "orderedList3": "Enhances circulation and boosts energy levels",
-    "h4": "What to Expect During Your Session",
-    "unorderedList1": "Wear comfortable, loose-fitting clothing",
-    "unorderedList2": "Session duration typically 60-90 minutes",
-    "unorderedList3": "Communicate with your therapist about pressure and comfort"
+    "imageAlt": "Thai Solution Massage therapy session at Sabai Thai Spa Manchester",
+    "h1": "Thai Solution Massage in Manchester",
+    "h1Highlight": "",
+    "h3_1": "What is Thai Solution Massage?",
+    "paragraph1": "Thai Solution Massage is an ancient therapeutic art passed down through generations of Thai masters. Unlike standard relaxation massage, this specialized technique targets the body's energy channels—called 'Sen' lines—and the tendons and ligaments that reveal imbalances and guide treatment.",
+    "paragraph2": "This powerful healing method doesn't rely on rigid protocols but on wisdom and intuition developed over centuries. Your therapist reads your body's natural indicators to identify problem areas, then uses precise pressure and skilled manipulation to stimulate deep tissues, promote profound relaxation, and help your body regenerate and restore balance.",
+    "paragraph3": "Through effective techniques using appropriate pressure and body weight, Thai Solution Massage stimulates nerves and deep connective tissues in ways conventional massage cannot reach. Each session is completely personalized—your therapist adapts their approach based on your individual symptoms and what your body reveals during treatment.",
+    "paragraph4": "Particularly effective for chronic conditions that haven't responded to other treatments, Thai Solution Massage addresses root causes rather than just masking symptoms. This is authentic Thai therapeutic work that helps your body function as it should.",
+    "h3_2": "Conditions Effectively Treated",
+    "orderedList1": "Migraines and tension headaches through specialized cervical and cranial techniques",
+    "orderedList2": "Tennis elbow (epicondylitis) targeting forearm tendon inflammation and restoring mobility",
+    "orderedList3": "Chronic muscular pain and contractures with deep manipulation to restore flexibility",
+    "orderedList4": "Knee arthritis using gentle techniques to reduce stiffness and improve joint function",
+    "orderedList5": "Recurring calf cramps through therapeutic work that improves circulation",
+    "orderedList6": "Plantar fasciitis with specific treatment to reduce heel pain and restore foot function",
+    "h4": "What to Expect During Your Thai Solution Massage",
+    "unorderedList1": "Initial consultation to discuss your specific condition and symptoms",
+    "unorderedList2": "Personalized treatment lasting 60 or 90 minutes based on your needs",
+    "unorderedList3": "Traditional techniques adapted specifically to address your problem areas"
   }
 }

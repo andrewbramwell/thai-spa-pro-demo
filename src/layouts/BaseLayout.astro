@@ -8,8 +8,6 @@ import { getHtmlAttrs, getLocales, t } from "i18n:astro";
 import client from "@data/client.json";
 import { trimArrSlashes, trimStringSlashes } from "@utils/utils";
 import ThemeProvider from "@components/TemplateComponents/ThemeProvider.astro";
-import Header from "@components/Header.astro";
-import Header2 from "@components/Header2.astro";
 import Header3 from "@components/Header3.astro";
 import Footer from "@components/Footer.astro";
 import CookiePopup from "@components/CookiePopup.astro";
@@ -35,7 +33,7 @@ const localBusinessSchema = {
 	"@context": "https://schema.org",
 	"@type": "HealthAndBeautyBusiness",
 	"name": client.name,
-	"image": `https://${client.domain}/assets/images/logo.svg`,
+	"image": `https://${client.domain}/assets/images/logo-white.svg`,
 	"@id": `https://${client.domain}`,
 	"url": `https://${client.domain}`,
 	"telephone": client.phoneForTel,

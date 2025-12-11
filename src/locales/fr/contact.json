@@ -1,16 +1,26 @@
 {
-    "landing": "Contact",
-    "topper": "Contact",
-    "title": "Nous écrire",
-    "p-1": "Dites-nous Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ridiculus elementum ullamcorper ipsum porttitor aliquam. Id magna urna ultrices odio pulvinar. Sed ut.",
-    "form": {
-        "name": "Nom",
-        "email": "Email",
-        "phone": "Téléphone",
-        "how": "Comment nous avez-vous connu ?",
-        "message": "Message",
-        "message-placeholder": "Je serais intéressé par...",
-        "address": "Adresse"
-    },
-    "cta": "Envoyer votre message"
+  "landing": {
+    "title": "Nous Contacter",
+    "description": "Contactez Sabai Thai Spa dès aujourd'hui. Prenez rendez-vous, posez vos questions ou découvrez nos soins. Nous sommes là pour vous aider à vous sentir au mieux."
+  },
+  "section": {
+    "topper": "Contactez-Nous",
+    "title": "Entrez en Contact avec Nous",
+    "text": "Nous sommes là pour répondre à vos questions et vous aider à réserver votre prochain rendez-vous. Contactez-nous par téléphone, email, ou rendez-nous visite à notre adresse.",
+    "phoneLabel": "Téléphone",
+    "hoursLabel": "Horaires d'Ouverture",
+    "addressLabel": "Adresse"
+  },
+  "form": {
+    "title": "Prendre Rendez-Vous",
+    "nameLabel": "Nom",
+    "namePlaceholder": "Votre Nom",
+    "emailLabel": "Email",
+    "emailPlaceholder": "Votre Email",
+    "phoneLabel": "Téléphone",
+    "phonePlaceholder": "Votre Numéro de Téléphone",
+    "messageLabel": "Message",
+    "messagePlaceholder": "Parlez-nous de vos besoins...",
+    "submitButton": "Envoyer le Message"
+  }
 }

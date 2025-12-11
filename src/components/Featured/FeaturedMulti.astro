@@ -49,8 +49,6 @@ const optimizedFeatured3BottomMobile = await getImage({ src: featured3, format: 
                 <source media="(min-width: 601px)" srcset={optimizedFeatured3Bottom.src} type="image/webp" />
                 <img loading="lazy" decoding="async" src={featured3.src} alt={t("home:featured1.imageAlt")} width="281" height="280" />
             </picture>
-            <!--Seal-->
-            <img class="cs-seal" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/seal.svg" alt="seal" width="150" height="150" />
         </div>
         <div class="cs-content">
             <span class="cs-topper">{t("home:featured1.topper")}</span>
@@ -61,7 +59,7 @@ const optimizedFeatured3BottomMobile = await getImage({ src: featured3, format: 
             <p class="cs-text">
                 {t("home:featured1.paragraph2")}
             </p>
-            <a href={client.bookingUrl} class="cs-button-solid" aria-label="learn more">{t("home:featured1.cta")}</a>
+            <a href={t("home:featured1.ctaLink")} class="cs-button-solid" aria-label="learn more">{t("home:featured1.cta")}</a>
         </div>
     </div>
 </section>

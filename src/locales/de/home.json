@@ -1,0 +1,104 @@
+{
+	"layout": {
+		"title": "Authentische Thai-Massage",
+		"description": "Traditionelle Thai-Massage in Manchester. Authentische Behandlungen von in Thailand ausgebildeten Therapeuten. Sportmassage, Tiefengewebsmassage, Hot Stone. Online-Buchung 24/7."
+	},
+	"hero": {
+		"topper": "Ihre Friedliche Oase",
+		"title": "Jahrhundertealte Thai-Heilkunst im Herzen von Manchester",
+		"text": "Erleben Sie jahrtausendealte Thai-Massage-Techniken, ausgeführt von ausgebildeten Therapeuten. Von Tiefengewebsmassage bis Aromatherapie – wir pflegen authentische Thai-Wellness-Traditionen in Manchester – mit Online-Buchung rund um die Uhr.",
+		"cta": "Behandlung Buchen"
+	},
+	"services": {
+		"topper": "Unsere Signature-Behandlungen",
+		"title": "Authentische Massagen für Körper und Geist",
+		"description": "Im Sabai Thai Spa ehren wir jahrhundertealte Heiltraditionen und erfüllen gleichzeitig moderne Wellness-Bedürfnisse. Jede Behandlung wird individuell auf Sie abgestimmt und in unserem friedlichen Refugium in Manchester von in Thailand ausgebildeten Therapeuten durchgeführt.",
+		"service1": {
+			"name": "Sportmassage",
+			"description": "Kraftvolle therapeutische Massage für aktive Lebensstile. Kombiniert Thai-Dehnungen mit gezieltem Druck, um Muskelkater zu lindern, die Beweglichkeit zu verbessern und Ihre sportlichen Ziele zu unterstützen.",
+			"link": "/services"
+		},
+		"service2": {
+			"name": "Tiefengewebsmassage",
+			"description": "Gezielter Druck erreicht tiefe Muskelschichten, um chronische Verspannungen zu lösen und Beweglichkeit wiederherzustellen. Besonders wirksam bei Büroangestellten und Menschen mit langanhaltenden Beschwerden.",
+			"link": "/services"
+		},
+		"service3": {
+			"name": "Fußreflexzonenmassage",
+			"description": "Traditionelle Thai-Fußtherapie, die auf Energielinien und Druckpunkte einwirkt. Eine tiefenwirksame, beruhigende Behandlung, die Ihrem gesamten Körper zugute kommt, während Ihre Füße verwöhnt und revitalisiert werden.",
+			"link": "/services"
+		},
+		"service4": {
+			"name": "Hot-Stone-Massage",
+			"description": "Luxuriöse Wärme trifft auf sanfte Massage, während glatte, erhitzte Steine Verspannungen aus müden Muskeln lösen. Gleiten Sie in tiefe Entspannung mit dieser nährenden Ganzkörperbehandlung.",
+			"link": "/services"
+		},
+		"linkText": "Buchen",
+		"cta": "Alle Behandlungen Entdecken",
+		"ctaLink": "/services"
+	},
+	"whyUs": {
+		"topper": "Warum Sabai Wählen",
+		"title": "Das Sabai Thai Spa Erlebnis",
+		"reason1": {
+			"description": "Alle unsere Therapeuten besitzen professionelle Qualifikationen aus Thailand und sind vollständig versichert. Sie sind in fachkundigen und fürsorglichen Händen bei Praktikern, denen Ihr Wohlbefinden wirklich am Herzen liegt."
+		},
+		"reason2": {
+			"description": "Premium Thai-Massage zu wettbewerbsfähigen Preisen in Manchester. Wir machen keine Kompromisse bei Qualität, Sauberkeit oder Behandlungszeit. Sie erhalten außergewöhnliches Preis-Leistungs-Verhältnis – vollständige Sitzungen, makellose Einrichtungen und Expertenbetreuung ohne überhöhte Preise."
+		},
+		"reason3": {
+			"description": "Sehen Sie verfügbare Termine, wählen Sie Ihren bevorzugten Therapeuten und buchen Sie in weniger als einer Minute von jedem Gerät aus. Sofortbestätigung, automatische Erinnerungen und einfache Terminumbuchung."
+		},
+		"testimonial": "Sabai ist meine monatliche Auszeit nur für mich. Das Personal ist wunderbar und die Räumlichkeiten immer makellos. Jeden Cent wert!"
+	},
+	"about": {
+		"topper": "Über Uns",
+		"title": "Wo Komfort auf Authentische Thai-Heilkunst Trifft",
+		"paragraph1": "Sabai bedeutet 'komfortabel' auf Thai. Wir schaffen diesen Komfort durch authentische Heilbehandlungen und tiefe Entspannung im Zentrum von Manchester.",
+		"paragraph2": "Von Sportmassage bis Hot-Stone-Behandlungen – unsere qualifizierten Thai-Therapeuten erzielen echte Ergebnisse mit traditionellen Techniken und aufrichtiger Gastfreundschaft.",
+		"cta": "Unsere Geschichte",
+		"imageAlt": "Einladender Empfangsbereich im Sabai Thai Spa mit der Inhaberin"
+	},
+	"featured1": {
+		"topper": "Featured-Behandlung",
+		"title": "Thai Solution Massage",
+		"paragraph1": "Die Thai Solution Massage verkörpert Jahrhunderte therapeutischer Weisheit, die von Thai-Meistern weitergegeben wurde. Dieser ausgefeilte therapeutische Ansatz arbeitet mit den natürlichen Energielinien Ihres Körpers – den 'Sen'-Kanälen, die mit Ihrem Nervensystem und Ihrem gesamten Wohlbefinden verbunden sind. Durch fachkundige Manipulation unter Verwendung von angemessenem Druck und Körpergewicht stimulieren unsere Therapeuten tiefes Gewebe, fördern intensive Entspannung und stellen das Gleichgewicht dort wieder her, wo herkömmliche Massagen oft versagen.",
+		"paragraph2": "Besonders vorteilhaft bei chronischen Beschwerden, die auf andere Behandlungen nicht angesprochen haben: Migräne, Tennisellenbogen, anhaltende Muskelschmerzen, Kniearthrose, Wadenkrämpfe und Plantarfasziitis. Anstatt standardisierten Protokollen zu folgen, lesen unsere in Thailand ausgebildeten Therapeuten die individuellen Indikatoren Ihres Körpers und passen ihre Technik entsprechend an. Das Ergebnis ist eine authentische, personalisierte therapeutische Behandlung, die auf Ihre spezifischen Bedürfnisse eingeht und Ihrem Körper hilft, so zu funktionieren, wie er sollte.",
+		"cta": "Mehr Erfahren",
+		"ctaLink": "/featured1",
+		"imageAlt": "Traditionelle Thai Solution Massage Sitzung im Sabai Thai Spa spezialisiert auf chronische Schmerzbehandlung"
+	},
+	"reviews": {
+		"topper": "Kundenbewertungen",
+		"title": "Was Unsere Kunden über Sabai Thai Spa Sagen",
+		"description": "Verlassen Sie sich nicht nur auf unser Wort. Hier berichten unsere Kunden über ihre Erfahrungen mit unseren authentischen Thai-Massage-Behandlungen und Therapeuten.",
+		"review1": {
+			"text": "Ich litt jahrelang unter Rückenschmerzen durch meine Büroarbeit. Nach nur zwei Tiefengewebsmassagen bei Sabai bemerkte ich einen enormen Unterschied. Die Therapeutin wusste wirklich, was sie tat, und erklärte alles. Drei Monate später bin ich immer noch schmerzfrei. Absolute Empfehlung.",
+			"name": "James M."
+		},
+		"review2": {
+			"text": "Die beste Massage, die ich je in Manchester hatte. Die Hot-Stone-Behandlung war pure Glückseligkeit – ich bin sogar eingeschlafen! Die Therapeutin war wunderbar, der Raum makellos, und die Online-Buchung war so einfach. Habe bereits meinen nächsten Termin gebucht. Jeden Cent wert.",
+			"name": "Sarah T."
+		},
+		"review3": {
+			"text": "Als Läufer komme ich hier jeden Monat zur Sportmassage, um verletzungsfrei zu bleiben. Die Therapeuten verstehen genau, was Sportler brauchen. Sie bearbeiten meine verspannten Oberschenkel und Waden richtig, nicht nur eine entspannende Massage. Brillanter Service und gutes Preis-Leistungs-Verhältnis.",
+			"name": "David L."
+		},
+		"cta": "Bewertung Hinterlassen"
+	},
+	"faq": {
+		"topper": "Häufig Gestellte Fragen",
+		"title": "Ihre Fragen zur Thai-Massage Beantwortet",
+		"imageAlt": "Behandlungsraum des Sabai Thai Spa mit ruhiger Atmosphäre und professioneller Ausstattung",
+		"question1": "Was passiert bei meinem ersten Termin?",
+		"answer1": "Sie treffen Ihren Therapeuten, der mit Ihnen über Ihre Gesundheit, Problembereiche und Ihre Behandlungsziele spricht. Nach dieser kurzen Beratung ziehen Sie sich in bequeme Kleidung um, die wir bereitstellen. Ihr Therapeut führt dann die gewählte Massage durch und überprüft regelmäßig Druck und Komfort. Das Erlebnis ist entspannt und professionell – Erstbesucher berichten uns immer, dass sie sich sofort wohlgefühlt haben.",
+		"question2": "Wie lange dauern die Massagesitzungen?",
+		"answer2": "Wir bieten 60-minütige und 90-minütige Behandlungen an. Diese Zeiten beziehen sich auf die tatsächliche Massage – wir rechnen Beratungs- oder Umkleidezeit nicht in Ihre Sitzungsdauer ein. Eine 60-minütige Sitzung eignet sich gut zur gezielten Behandlung bestimmter Bereiche, während 90 Minuten eine Ganzkörperbehandlung oder tiefere therapeutische Arbeit an mehreren Problembereichen ermöglichen.",
+		"question3": "Muss ich im Voraus buchen oder kann ich spontan vorbeikommen?",
+		"answer3": "Vorabreservierung wird empfohlen, besonders für Abend- und Wochenendtermine, wenn wir am stärksten nachgefragt sind. Sie können die Verfügbarkeit überprüfen und sofort über unser Online-System buchen – es ist 24/7 verfügbar und zeigt Zeitfenster in Echtzeit an. Gelegentlich haben wir auch spontane Verfügbarkeiten, besonders vormittags und am frühen Nachmittag unter der Woche.",
+		"question4": "Was soll ich zu meinem Termin tragen?",
+		"answer4": "Kommen Sie, wie Sie sind – wir stellen bequeme, lockere Kleidung für Ihre Behandlung bereit. Thai-Massage wird traditionell bekleidet durchgeführt (anders als Ölmassage), Sie tragen also das von uns bereitgestellte Outfit. Sie müssen nichts Besonderes mitbringen. Alles wird bereitgestellt, einschließlich frischer Handtücher.",
+		"question5": "Wie ist Ihre Stornierungsrichtlinie?",
+		"answer5": "Wir bitten um mindestens 24 Stunden Vorankündigung, wenn Sie stornieren oder umbuchen müssen. Bei ausreichender Vorankündigung verlegen wir Ihren Termin kostenlos auf einen Zeitpunkt, der Ihnen besser passt. Stornierungen mit weniger als 24 Stunden Vorankündigung können mit einer Stornierungsgebühr verbunden sein. Sie können Ihre Buchungen jederzeit über unser Online-System verwalten."
+	}
+}

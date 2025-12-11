@@ -1,0 +1,38 @@
+{
+  "landing": {
+    "title": "Notre Histoire",
+    "description": "Découvrez l'histoire du Sabai Thai Spa. Fondé par Kris, formée en Thaïlande, nous apportons l'art authentique du massage thaï à Manchester. Rencontrez notre équipe d'experts."
+  },
+  "section": {
+    "topper": "Rencontrez Kris",
+    "title": "Massage Thaï Authentique, Pratiqué avec le Cœur",
+    "paragraph1": "Lorsque Kris a quitté la Thaïlande pour s'installer à Manchester, elle a constaté un manque criant : le véritable massage thaï pratiqué par des personnes qui en comprennent vraiment la tradition. Trop d'établissements proposaient des soins 'style thaï' qui n'avaient que peu de ressemblance avec la réalité. Elle a donc décidé de créer le Sabai Thai Spa—un lieu où Manchester pourrait découvrir le massage thaï authentique tel qu'il se pratique en Thaïlande.",
+    "paragraph2": "Les qualifications de Kris parlent d'elles-mêmes. Elle s'est formée au Wat Pho, l'école de massage légendaire de Bangkok où les arts thérapeutiques thaïlandais sont enseignés depuis des siècles. Il ne s'agit pas d'une certification express, mais d'une formation complète auprès de maîtres qui ont consacré leur vie à cette pratique. En s'installant au Royaume-Uni, Kris a également obtenu des qualifications thérapeutiques britanniques, garantissant que son travail répond aux plus hauts standards professionnels des deux pays.",
+    "paragraph3": "L'entreprise s'est développée naturellement grâce au bouche-à-oreille et aux clients fidèles qui ont ressenti la différence qu'apporte un soin authentique. Nous disposons aujourd'hui de quatre salles de soin avec six tables de massage, ce qui nous permet d'accueillir davantage de personnes sans jamais compromettre la qualité ni l'attention portée à chacun. Nous avons également investi dans des équipements essentiels—douches privées, parking facile, et un environnement véritablement paisible où vous pouvez vous détendre pleinement.",
+    "paragraph4": "Ce qui rend Sabai unique, ce n'est pas seulement les techniques que nous utilisons, c'est l'attention que nous portons à chaque client. Kris a constitué une équipe qui partage ses valeurs : écouter d'abord, soigner avec compétence et compassion, et ne jamais se presser. Que vous gériez des douleurs chroniques, vous remettiez d'une blessure, ou ayez simplement besoin de vous libérer du stress urbain, nous sommes là pour vous aider à vous sentir véritablement mieux.",
+    "quoteText": "Chaque corps raconte une histoire. Notre rôle est d'écouter cette histoire et d'y répondre avec le bon soin, la bonne pression et l'attention appropriée. C'est ça, le vrai massage thaï.",
+    "quoteName": "Kris",
+    "quoteJob": "Fondatrice, Sabai Thai Spa",
+    "imageAlt": "Kris, fondatrice du Sabai Thai Spa, accueillant les clients dans le centre de bien-être paisible de Manchester"
+  },
+  "team": {
+    "topper": "Notre Équipe",
+    "title": "Thérapeutes Thaïlandais Experts Dévoués à Votre Bien-Être",
+    "member1": {
+      "name": "May",
+      "job": "Responsable du Spa"
+    },
+    "member2": {
+      "name": "Fah",
+      "job": "Thérapeute Senior"
+    },
+    "member3": {
+      "name": "Joy",
+      "job": "Massothérapeute"
+    },
+    "member4": {
+      "name": "Chompoo",
+      "job": "Massothérapeute"
+    }
+  }
+}

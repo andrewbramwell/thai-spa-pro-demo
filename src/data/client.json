@@ -1,16 +1,16 @@
 {
-	"name": "Your Spa Name Here",
+	"name": "Sabai Thai Spa",
 	"businessType": "Thai Massage & Spa",
 	"servicesTemplate": "tiles",
-	"email": "info@yourspa.com",
+	"email": "info@sabai-thai-spa.com",
 	"phoneForTel": "+44-20-1234-5678",
 	"phoneFormatted": "+44 20 1234 5678",
 	"whatsapp": "+447123456789",
 	"address": {
 		"lineOne": "123 High Street",
-		"lineTwo": "Soho",
-		"city": "London",
-		"postcode": "SW1A 1AA",
+		"lineTwo": "Northern Quarter",
+		"city": "Manchester",
+		"postcode": "M4 1LT",
 		"country": "United Kingdom",
 		"mapLink": "https://goo.gl/maps/YOUR_MAP_LINK"
 		
@@ -22,7 +22,7 @@
 	},
 	"hours": "Mon-Sat: 10:00-20:00, Sun: 10:00-18:00",
 	"domain": "www.yourspa.com",
-	"bookingUrl": "https://book.yourspa.com",
+	"bookingUrl": "https://thaispapro-demosite.setmore.com/",
 	"giftVoucherUrl": "https://vouchers.yourspa.com",
 	"leaveReview": "https://g.page/yourspa/review"
 }

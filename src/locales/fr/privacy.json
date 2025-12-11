@@ -1,0 +1,58 @@
+{
+  "landing": {
+    "title": "Politique de Confidentialité",
+    "description": "Consultez notre politique de confidentialité pour comprendre comment nous collectons, utilisons et protégeons vos informations personnelles."
+  },
+  "content": {
+    "h1": "Politique de Confidentialité pour",
+    "lastUpdated": "Dernière mise à jour : Décembre 2025",
+    "intro": {
+      "heading": "Introduction",
+      "text": "Nous nous engageons à protéger votre vie privée et à assurer la sécurité de vos informations personnelles. Cette politique de confidentialité explique comment nous collectons, utilisons et protégeons vos données lorsque vous réservez nos services de massage thérapeutique ou visitez notre site Web. En utilisant nos services, vous consentez aux pratiques de traitement des données décrites dans cette politique."
+    },
+    "infoCollect": {
+      "heading": "Informations que Nous Collectons",
+      "text": "Nous collectons les informations que vous nous fournissez directement et les informations collectées automatiquement lorsque vous utilisez notre site Web :",
+      "item1": "Informations d'identification personnelle (nom, adresse email, numéro de téléphone, date de naissance)",
+      "item2": "Détails de rendez-vous et de réservation, y compris le thérapeute préféré, le type de soin et les informations de planification",
+      "item3": "Informations de santé pertinentes pour fournir des services de massage sûrs et efficaces, notamment les conditions médicales, blessures, allergies et zones de préoccupation",
+      "item4": "Informations de paiement pour le traitement des transactions (traitées de manière sécurisée via notre prestataire de paiement)"
+    },
+    "howWeUse": {
+      "heading": "Comment Nous Utilisons Vos Informations",
+      "text": "Nous utilisons les informations collectées aux fins commerciales légitimes suivantes :",
+      "item1": "Pour fournir et maintenir nos services de massage thérapeutique de manière sûre et efficace, en adaptant les soins à vos besoins individuels",
+      "item2": "Pour traiter les rendez-vous, gérer les réservations et envoyer des rappels et confirmations de rendez-vous",
+      "item3": "Pour communiquer avec vous concernant vos rendez-vous, nos services, offres spéciales et conseils bien-être (vous pouvez vous désabonner à tout moment)",
+      "item4": "Pour améliorer nos services, comprendre les préférences des clients et enrichir votre expérience globale"
+    },
+    "cookies": {
+      "heading": "Cookies et Technologies de Suivi",
+      "text": "Notre site Web utilise des cookies et technologies de suivi similaires pour améliorer votre expérience de navigation et fournir un contenu personnalisé. Les cookies sont de petits fichiers texte stockés sur votre appareil qui nous aident à mémoriser vos préférences, comprendre comment vous utilisez notre site et améliorer les fonctionnalités. Nous utilisons à la fois des cookies de session (qui expirent lorsque vous fermez votre navigateur) et des cookies persistants (qui restent sur votre appareil). Vous pouvez contrôler les paramètres des cookies via les préférences de votre navigateur, bien que la désactivation des cookies puisse affecter certaines fonctionnalités du site."
+    },
+    "dataProtection": {
+      "heading": "Protection et Sécurité des Données",
+      "text": "Nous prenons la sécurité de vos informations personnelles au sérieux et mettons en œuvre des mesures techniques et organisationnelles appropriées pour les protéger contre l'accès non autorisé, l'altération, la divulgation ou la destruction. Vos informations sont stockées en toute sécurité sur des serveurs protégés avec accès restreint. Seul le personnel autorisé ayant besoin des informations pour fournir nos services peut accéder à vos données. Toutes les informations de paiement sont traitées via des passerelles de paiement sécurisées et cryptées, et nous ne stockons pas les détails complets de carte bancaire sur nos systèmes. Cependant, veuillez noter qu'aucune méthode de transmission sur Internet n'est sécurisée à 100 %, et nous ne pouvons garantir une sécurité absolue."
+    },
+    "thirdParty": {
+      "heading": "Services Tiers et Partage de Données",
+      "text": "Nous pouvons partager vos informations avec des prestataires de services tiers de confiance qui nous aident à exploiter notre entreprise, tels que les processeurs de paiement, systèmes de réservation, fournisseurs de services email et services d'hébergement Web. Ces prestataires n'ont accès à vos informations personnelles que pour effectuer des tâches spécifiques en notre nom et sont contractuellement tenus de protéger vos données et de les utiliser uniquement aux fins que nous spécifions. Nous ne vendons, ne louons ni n'échangeons vos informations personnelles à des tiers à des fins marketing. Nous pouvons également divulguer vos informations si la loi, une ordonnance judiciaire ou une autorité gouvernementale l'exige, ou pour protéger nos droits, notre propriété ou notre sécurité."
+    },
+    "yourRights": {
+      "heading": "Vos Droits en Matière de Confidentialité",
+      "text": "En vertu des lois applicables sur la protection des données, vous disposez des droits suivants concernant vos informations personnelles :",
+      "item1": "Accès : Vous avez le droit de demander des copies de vos données personnelles que nous détenons",
+      "item2": "Rectification : Vous avez le droit de demander la correction de toute information inexacte ou incomplète",
+      "item3": "Suppression : Vous avez le droit de demander la suppression de vos informations personnelles, sous réserve des exigences légales de conservation",
+      "item4": "Opposition : Vous avez le droit de vous opposer ou de restreindre le traitement de vos informations dans certaines circonstances"
+    },
+    "contact": {
+      "heading": "Nous Contacter",
+      "text": "Si vous avez des questions concernant cette politique de confidentialité, souhaitez exercer vos droits en matière de confidentialité ou avez des préoccupations concernant la manière dont nous traitons vos informations personnelles, veuillez nous contacter :"
+    },
+    "changes": {
+      "heading": "Modifications de Cette Politique de Confidentialité",
+      "text": "Nous pouvons mettre à jour cette politique de confidentialité de temps à autre pour refléter les changements dans nos pratiques, services, exigences légales ou pour d'autres raisons opérationnelles, légales ou réglementaires. Nous vous informerons de toute modification importante en publiant la politique mise à jour sur notre site Web avec une date de 'Dernière mise à jour' révisée. Nous vous encourageons à consulter régulièrement cette politique pour rester informé de la manière dont nous protégeons vos informations. Votre utilisation continue de nos services après toute modification constitue une acceptation de la politique mise à jour."
+    }
+  }
+}

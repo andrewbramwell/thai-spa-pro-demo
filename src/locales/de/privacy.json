@@ -1,0 +1,58 @@
+{
+  "landing": {
+    "title": "Datenschutzerklärung",
+    "description": "Lesen Sie unsere Datenschutzerklärung, um zu verstehen, wie wir Ihre personenbezogenen Daten erfassen, nutzen und schützen."
+  },
+  "content": {
+    "h1": "Datenschutzerklärung für",
+    "lastUpdated": "Letzte Aktualisierung: Dezember 2025",
+    "intro": {
+      "heading": "Einleitung",
+      "text": "Wir verpflichten uns, Ihre Privatsphäre zu schützen und die Sicherheit Ihrer personenbezogenen Daten zu gewährleisten. Diese Datenschutzerklärung erläutert, wie wir Ihre Daten erfassen, nutzen und schützen, wenn Sie unsere therapeutischen Massagedienstleistungen buchen oder unsere Website besuchen. Durch die Nutzung unserer Dienste stimmen Sie den in dieser Erklärung beschriebenen Datenschutzpraktiken zu."
+    },
+    "infoCollect": {
+      "heading": "Welche Informationen wir erfassen",
+      "text": "Wir erfassen sowohl Informationen, die Sie uns direkt zur Verfügung stellen, als auch Informationen, die automatisch erhoben werden, wenn Sie unsere Website nutzen:",
+      "item1": "Personenbezogene Identifikationsdaten (Name, E-Mail-Adresse, Telefonnummer, Geburtsdatum)",
+      "item2": "Termin- und Buchungsdetails, einschließlich bevorzugter Therapeut, Art der Behandlung und Planungsinformationen",
+      "item3": "Gesundheitsinformationen, die notwendig sind, um sichere und effektive Massagedienstleistungen zu erbringen, einschließlich medizinischer Bedingungen, Verletzungen, Allergien und Problembereiche",
+      "item4": "Zahlungsinformationen zur Abwicklung von Transaktionen (sicher verarbeitet über unseren Zahlungsdienstleister)"
+    },
+    "howWeUse": {
+      "heading": "Wie wir Ihre Informationen verwenden",
+      "text": "Wir nutzen die erfassten Informationen für die folgenden berechtigten geschäftlichen Zwecke:",
+      "item1": "Bereitstellung und Aufrechterhaltung unserer therapeutischen Massagedienstleistungen auf sichere und effektive Weise sowie Anpassung der Behandlungen an Ihre individuellen Bedürfnisse",
+      "item2": "Bearbeitung von Terminen, Verwaltung von Buchungen sowie Versand von Erinnerungen und Terminbestätigungen",
+      "item3": "Kommunikation mit Ihnen bezüglich Ihrer Termine, unserer Dienstleistungen, Sonderangebote und Wellness-Tipps (Sie können sich jederzeit abmelden)",
+      "item4": "Verbesserung unserer Dienstleistungen, Verständnis der Kundenpräferenzen und Optimierung Ihres gesamten Erlebnisses"
+    },
+    "cookies": {
+      "heading": "Cookies und Tracking-Technologien",
+      "text": "Unsere Website verwendet Cookies und ähnliche Tracking-Technologien, um Ihre Benutzererfahrung zu verbessern und personalisierte Inhalte bereitzustellen. Cookies sind kleine Textdateien, die auf Ihrem Gerät gespeichert werden und uns helfen, Ihre Präferenzen zu speichern, zu verstehen, wie Sie unsere Website nutzen, und die Funktionalität zu verbessern. Wir verwenden sowohl Sitzungscookies (die beim Schließen Ihres Browsers ablaufen) als auch persistente Cookies (die auf Ihrem Gerät verbleiben). Sie können Ihre Cookie-Einstellungen über die Präferenzen Ihres Browsers verwalten, jedoch kann das Deaktivieren von Cookies bestimmte Funktionen der Website beeinträchtigen."
+    },
+    "dataProtection": {
+      "heading": "Datenschutz und Datensicherheit",
+      "text": "Wir nehmen die Sicherheit Ihrer personenbezogenen Daten sehr ernst und setzen geeignete technische und organisatorische Maßnahmen ein, um sie vor unbefugtem Zugriff, Veränderung, Offenlegung oder Zerstörung zu schützen. Ihre Informationen werden sicher auf geschützten Servern mit eingeschränktem Zugriff gespeichert. Nur autorisiertes Personal, das die Daten zur Erbringung unserer Dienstleistungen benötigt, hat Zugang zu Ihren Informationen. Alle Zahlungsinformationen werden über sichere und verschlüsselte Zahlungsportale verarbeitet, und wir speichern keine vollständigen Kreditkartendaten in unseren Systemen. Bitte beachten Sie jedoch, dass keine Übertragungsmethode über das Internet zu 100 % sicher ist und wir keine absolute Sicherheit garantieren können."
+    },
+    "thirdParty": {
+      "heading": "Drittanbieter und Weitergabe von Daten",
+      "text": "Wir können Ihre Informationen mit vertrauenswürdigen Drittanbietern teilen, die uns bei der Durchführung unseres Geschäfts unterstützen, wie z. B. Zahlungsabwickler, Buchungssysteme, E-Mail-Dienstleister und Webhosting-Anbieter. Diese Dienstleister haben nur Zugang zu Ihren personenbezogenen Daten, um bestimmte Aufgaben in unserem Auftrag auszuführen, und sind vertraglich verpflichtet, Ihre Daten zu schützen und sie ausschließlich für die von uns festgelegten Zwecke zu verwenden. Wir verkaufen, vermieten oder tauschen Ihre personenbezogenen Daten nicht zu Marketingzwecken mit Dritten. Wir können Ihre Daten außerdem offenlegen, wenn dies gesetzlich erforderlich ist, durch eine gerichtliche Anordnung oder eine staatliche Behörde, oder um unsere Rechte, unser Eigentum oder unsere Sicherheit zu schützen."
+    },
+    "yourRights": {
+      "heading": "Ihre Datenschutzrechte",
+      "text": "Gemäß den geltenden Datenschutzgesetzen haben Sie folgende Rechte in Bezug auf Ihre personenbezogenen Daten:",
+      "item1": "Auskunft: Sie haben das Recht, Kopien der personenbezogenen Daten anzufordern, die wir über Sie gespeichert haben",
+      "item2": "Berichtigung: Sie haben das Recht, die Korrektur unrichtiger oder unvollständiger Informationen zu verlangen",
+      "item3": "Löschung: Sie haben das Recht, die Löschung Ihrer personenbezogenen Daten zu verlangen, vorbehaltlich gesetzlicher Aufbewahrungspflichten",
+      "item4": "Widerspruch: Sie haben das Recht, der Verarbeitung Ihrer Informationen unter bestimmten Umständen zu widersprechen oder diese einzuschränken"
+    },
+    "contact": {
+      "heading": "Kontakt",
+      "text": "Wenn Sie Fragen zu dieser Datenschutzerklärung haben, Ihre Datenschutzrechte ausüben möchten oder Bedenken hinsichtlich der Verarbeitung Ihrer personenbezogenen Daten haben, kontaktieren Sie uns bitte:"
+    },
+    "changes": {
+      "heading": "Änderungen dieser Datenschutzerklärung",
+      "text": "Wir können diese Datenschutzerklärung gelegentlich aktualisieren, um Änderungen unserer Praktiken, Dienstleistungen, gesetzlichen Anforderungen oder aus anderen betrieblichen, rechtlichen oder regulatorischen Gründen widerzuspiegeln. Wir werden Sie über wichtige Änderungen informieren, indem wir die aktualisierte Erklärung mit einem überarbeiteten 'Letzte Aktualisierung'-Datum auf unserer Website veröffentlichen. Wir empfehlen Ihnen, diese Erklärung regelmäßig zu überprüfen, um informiert zu bleiben, wie wir Ihre Daten schützen. Ihre fortgesetzte Nutzung unserer Dienste nach Änderungen stellt Ihre Zustimmung zur aktualisierten Erklärung dar."
+    }
+  }
+}

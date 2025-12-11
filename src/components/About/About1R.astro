@@ -1,8 +1,9 @@
 ---
 // src/components/About/About1R.astro
-import { t } from "i18n:astro";
+
 import { getImage } from "astro:assets";
 import client from "@data/client.json";
+import { getLocalePath, t } from "i18n:astro";
 
 // Import image
 import about1 from "@assets/images/about1.jpg";
@@ -39,7 +40,7 @@ const optimizedAbout1Mobile = await getImage({ src: about1, format: 'webp', widt
                 <span class="cs-spacer"></span>
                 {t("home:about.paragraph2")}
             </p>
-            <a href={client.bookingUrl} class="cs-button-solid">{t("home:about.cta")}</a>
+            <a href={getLocalePath("/about")} class="cs-button-solid">{t("home:about.cta")}</a>
         </div>
     </div>
 </section>
@@ -54,6 +55,7 @@ const optimizedAbout1Mobile = await getImage({ src: about1, format: 'webp', widt
 @media only screen and (min-width: 0rem) {
     #sbs-1006 {
         padding: var(--sectionPadding);
+        padding-top: 0;
 
         .cs-container {
             width: 100%;

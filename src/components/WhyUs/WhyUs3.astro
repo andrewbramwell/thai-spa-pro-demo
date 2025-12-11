@@ -4,11 +4,11 @@ import { t } from "i18n:astro";
 import { getImage } from "astro:assets";
 
 // Import image
-import about1 from "@assets/images/about1.jpg";
+import why1 from "@assets/images/why1.jpg";
 
 // Optimize image
-const optimizedAbout1 = await getImage({ src: about1, format: 'webp', width: 630 });
-const optimizedAbout1Mobile = await getImage({ src: about1, format: 'webp', width: 600 });
+const optimizedWhy1 = await getImage({ src: why1, format: 'webp', width: 630 });
+const optimizedWhy1Mobile = await getImage({ src: why1, format: 'webp', width: 600 });
 
 // Create reasons array for easy mapping
 const reasons = [
@@ -51,10 +51,10 @@ const reasons = [
         <div class="cs-wrapper">
             <picture class="cs-picture">
                 <!--Mobile Image-->
-                <source media="(max-width: 600px)" srcset={optimizedAbout1Mobile.src} type="image/webp" />
+                <source media="(max-width: 600px)" srcset={optimizedWhy1Mobile.src} type="image/webp" />
                 <!--Tablet and above Image-->
-                <source media="(min-width: 601px)" srcset={optimizedAbout1.src} type="image/webp" />
-                <img loading="lazy" decoding="async" src={about1.src} alt={t("home:whyUs.imageAlt")} width="630" height="414" />
+                <source media="(min-width: 601px)" srcset={optimizedWhy1.src} type="image/webp" />
+                <img loading="lazy" decoding="async" src={why1.src} alt={t("home:whyUs.imageAlt")} width="630" height="414" />
             </picture>
             <p class="cs-review">
                 <svg class="cs-quote" preserveAspectRatio="none" viewBox="0 0 100 93" fill="none" xmlns="http://www.w3.org/2000/svg" preser><g opacity=".4" clip-path="url(#a)" fill="var(--quoteColor)"><path d="M22.94 84H0L18.305.854H55L22.94 84ZM67.94 84H45L63.305.854H100L67.94 84Z"/></g><defs><clipPath id="a-1658"><path fill="#fff" transform="translate(0 .854)" d="M0 0h100v83.146H0z"/></clipPath></defs></svg>

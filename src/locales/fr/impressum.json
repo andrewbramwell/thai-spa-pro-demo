@@ -1,0 +1,51 @@
+{
+  "landing": {
+    "title": "Mentions Légales",
+    "description": "Informations légales et mentions obligatoires pour notre entreprise conformément à la loi allemande (§5 TMG)."
+  },
+  "content": {
+    "h1": "Mentions Légales (Impressum)",
+    "businessInfo": {
+      "heading": "Informations Conformément au §5 TMG"
+    },
+    "contact": {
+      "heading": "Coordonnées",
+      "phone": "Téléphone :",
+      "email": "Email :",
+      "website": "Site Web :"
+    },
+    "representative": {
+      "heading": "Représentant Autorisé",
+      "text": "Représenté par : Kristira"
+    },
+    "taxInfo": {
+      "heading": "Informations Fiscales",
+      "text": "Numéro d'identification TVA conformément au §27a de la loi sur la TVA : DE123456789"
+    },
+    "regulatory": {
+      "heading": "Autorité de Réglementation et Organisme Professionnel",
+      "text": "Autorité de réglementation compétente : Gesundheitsamt Berlin Mitte, Mathilde-Jacob-Platz 1, 10551 Berlin. Association professionnelle : Verband Physikalische Therapie (VPT) e.V."
+    },
+    "liability": {
+      "heading": "Clause de Non-Responsabilité",
+      "content": {
+        "heading": "Responsabilité du Contenu",
+        "text": "Le contenu de nos pages a été créé avec le plus grand soin et selon nos meilleures connaissances. Cependant, nous ne pouvons garantir l'exactitude, l'exhaustivité ou l'actualité du contenu. Conformément aux dispositions légales, nous sommes, en tant que prestataire de services, responsables de notre propre contenu sur ces pages selon les lois générales conformément au §7 Para.1 TMG. Selon les §§8 à 10 TMG, cependant, nous ne sommes pas, en tant que prestataire de services, obligés de surveiller les informations tierces transmises ou stockées, ni de rechercher des circonstances indiquant une activité illégale. Les obligations de supprimer ou de bloquer l'utilisation d'informations en vertu des lois générales restent inchangées. Toutefois, la responsabilité à cet égard n'est possible qu'à partir du moment où nous avons connaissance d'une infraction spécifique. Dès notification de telles violations, nous supprimerons immédiatement ce contenu."
+      },
+      "links": {
+        "heading": "Responsabilité des Liens",
+        "text": "Notre site Web contient des liens vers des sites Web tiers externes, sur le contenu desquels nous n'avons aucune influence. Par conséquent, nous ne pouvons assumer aucune responsabilité pour ce contenu externe. Le fournisseur ou l'opérateur respectif des pages liées est toujours responsable du contenu des pages liées. Les pages liées ont été vérifiées pour d'éventuelles violations légales au moment de la création du lien. Aucun contenu illégal n'était reconnaissable au moment de la création du lien. Cependant, une surveillance permanente du contenu des pages liées n'est pas raisonnable sans preuve concrète d'une infraction. Dès notification de violations, nous supprimerons immédiatement ces liens."
+      }
+    },
+    "copyright": {
+      "heading": "Droits d'Auteur",
+      "text": "Le contenu et les œuvres créés par les opérateurs du site sur ces pages sont soumis au droit d'auteur allemand. La reproduction, l'édition, la distribution et toute forme d'exploitation en dehors des limites du droit d'auteur nécessitent le consentement écrit de l'auteur ou du créateur respectif. Les téléchargements et copies de ce site ne sont autorisés que pour un usage privé et non commercial. Dans la mesure où le contenu de ce site n'a pas été créé par l'opérateur, les droits d'auteur des tiers sont respectés. En particulier, le contenu tiers est identifié comme tel. Si vous constatez néanmoins une violation du droit d'auteur, veuillez nous en informer. Dès notification de violations, nous supprimerons immédiatement ce contenu."
+    },
+    "disputeResolution": {
+      "heading": "Règlement des Litiges UE",
+      "text1": "La Commission européenne fournit une plateforme de résolution des litiges en ligne (RLL). Cette plateforme est accessible au lien suivant :",
+      "text2": "Notre adresse email se trouve dans la section coordonnées ci-dessus.",
+      "text3": "Nous ne sommes ni disposés ni obligés à participer à des procédures de règlement des litiges devant un conseil d'arbitrage de consommation."
+    }
+  }
+}

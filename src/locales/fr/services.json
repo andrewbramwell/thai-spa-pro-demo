@@ -1,0 +1,175 @@
+{
+  "landing": {
+    "title": "Nos Soins",
+    "description": "Découvrez notre gamme de massages et soins spa professionnels. Du massage thaï traditionnel à l'aromathérapie, trouvez le soin parfait pour vos besoins."
+  },
+  "tiles": {
+    "topper": "Nos Soins",
+    "title": "Massages Professionnels & Soins Spa",
+    "text": "Choisissez parmi notre gamme de soins expertement dispensés, conçus pour relaxer, revitaliser et restaurer votre corps et votre esprit. Chaque service est adapté à vos besoins individuels.",
+    "service1": {
+      "name": "Massage Thaï Traditionnel",
+      "tagline": "Techniques ancestrales pour une relaxation moderne",
+      "price1": "30 min : 40 £",
+      "price2": "60 min : 60 £",
+      "price3": "90 min : 85 £",
+      "price4": ""
+    },
+    "service2": {
+      "name": "Massage Aromathérapie",
+      "tagline": "Huiles essentielles et techniques apaisantes",
+      "price1": "60 min : 70 £",
+      "price2": "90 min : 95 £",
+      "price3": "",
+      "price4": ""
+    },
+    "service3": {
+      "name": "Massage Deep Tissue",
+      "tagline": "Cible les tensions chroniques et douleurs musculaires",
+      "price1": "60 min : 75 £",
+      "price2": "90 min : 100 £",
+      "price3": "",
+      "price4": ""
+    },
+    "service4": {
+      "name": "Massage aux Pierres Chaudes",
+      "tagline": "Pierres chauffées pour une relaxation musculaire profonde",
+      "price1": "60 min : 80 £",
+      "price2": "90 min : 105 £",
+      "price3": "",
+      "price4": ""
+    },
+    "service5": {
+      "name": "Massage Sportif",
+      "tagline": "Améliore la performance et prévient les blessures",
+      "price1": "30 min : 45 £",
+      "price2": "60 min : 70 £",
+      "price3": "",
+      "price4": ""
+    },
+    "service6": {
+      "name": "Réflexologie",
+      "tagline": "Points de pression pour le bien-être global",
+      "price1": "30 min : 35 £",
+      "price2": "60 min : 55 £",
+      "price3": "",
+      "price4": ""
+    },
+    "service7": {
+      "name": "Massage en Duo",
+      "tagline": "Détendez-vous ensemble dans notre suite couple",
+      "price1": "60 min : 120 £",
+      "price2": "90 min : 170 £",
+      "price3": "",
+      "price4": ""
+    },
+    "service8": {
+      "name": "Massage Prénatal",
+      "tagline": "Soin doux et sécurisé pour futures mamans",
+      "price1": "60 min : 65 £",
+      "price2": "90 min : 90 £",
+      "price3": "",
+      "price4": ""
+    },
+    "service9": {
+      "name": "Drainage Lymphatique",
+      "tagline": "Stimule la circulation et réduit les gonflements",
+      "price1": "60 min : 75 £",
+      "price2": "90 min : 100 £",
+      "price3": "",
+      "price4": ""
+    },
+    "cta": "Réserver Votre Rendez-Vous"
+  },
+  "list": {
+    "topper": "Nos Soins",
+    "title30": "Soins de 30 Minutes",
+    "title60": "Soins de 60 Minutes",
+    "title90": "Soins de 90 Minutes",
+    "title120": "Soins de 120 Minutes",
+    "imageAlt": "Séance de massage thérapeutique",
+    "duration30": {
+      "service1": {
+        "name": "Massage Express du Dos",
+        "description": "Soulagement ciblé pour le dos, la nuque et les épaules. Parfait pour une pause régénérante dans votre journée chargée.",
+        "price": "40 £"
+      },
+      "service2": {
+        "name": "Réflexologie Plantaire",
+        "description": "Thérapie par points de pression ciblant des zones spécifiques via les pieds. Favorise le bien-être général.",
+        "price": "35 £"
+      },
+      "service3": {
+        "name": "Massage Tête & Épaules",
+        "description": "Libère les tensions du haut du corps. Idéal pour les travailleurs de bureau et la gestion du stress.",
+        "price": "40 £"
+      }
+    },
+    "duration60": {
+      "service1": {
+        "name": "Massage Thaï Traditionnel",
+        "description": "Techniques ancestrales combinant acupression, étirements et travail énergétique. Soin complet du corps pour une relaxation profonde.",
+        "price": "60 £"
+      },
+      "service2": {
+        "name": "Massage Aromathérapie",
+        "description": "Massage thérapeutique enrichi d'huiles essentielles. Mélange personnalisé selon vos besoins - relaxation, énergie ou équilibre.",
+        "price": "70 £"
+      },
+      "service3": {
+        "name": "Massage Deep Tissue",
+        "description": "Thérapie intensive ciblant les tensions musculaires chroniques et les nœuds. Utilise des pressions fermes pour libérer le stress profondément ancré.",
+        "price": "75 £"
+      },
+      "service4": {
+        "name": "Massage aux Pierres Chaudes",
+        "description": "Des pierres lisses et chauffées font fondre les tensions. La chaleur pénètre en profondeur pour une relaxation musculaire intense.",
+        "price": "80 £"
+      },
+      "service5": {
+        "name": "Massage Sportif",
+        "description": "Soin spécialisé pour athlètes et personnes actives. Améliore la performance, prévient les blessures et favorise la récupération.",
+        "price": "70 £"
+      }
+    },
+    "duration90": {
+      "service1": {
+        "name": "Massage Thaï Corps Complet",
+        "description": "Soin thaï traditionnel prolongé. Thérapie complète de la tête aux pieds avec étirements, acupression et rééquilibrage énergétique.",
+        "price": "85 £"
+      },
+      "service2": {
+        "name": "Aromathérapie Prestige",
+        "description": "Séance d'aromathérapie luxueuse et prolongée. Comprend un massage du visage et du temps supplémentaire pour une relaxation totale.",
+        "price": "95 £"
+      },
+      "service3": {
+        "name": "Thérapie Deep Tissue",
+        "description": "Travail complet en profondeur. Traite plusieurs zones problématiques avec une attention ciblée et du temps pour la récupération musculaire.",
+        "price": "100 £"
+      },
+      "service4": {
+        "name": "Thérapie aux Pierres Chaudes",
+        "description": "Soin prolongé aux pierres chaudes avec massage du corps complet. L'expérience de relaxation ultime avec chaleur thérapeutique.",
+        "price": "105 £"
+      }
+    },
+    "duration120": {
+      "service1": {
+        "name": "Expérience Thaï Suprême",
+        "description": "Le voyage complet du massage thaï traditionnel. Comprend compresse aux herbes, étirements et travail énergétique profond pour une restauration totale.",
+        "price": "110 £"
+      },
+      "service2": {
+        "name": "Forfait Massage en Duo",
+        "description": "Partagez l'expérience ensemble dans notre suite couple. Deux thérapeutes dispensent des massages synchronisés.",
+        "price": "170 £"
+      },
+      "service3": {
+        "name": "Thérapie Bien-Être Complète",
+        "description": "Notre soin signature combinant plusieurs modalités. Personnalisé selon vos besoins pour une guérison globale corps-esprit.",
+        "price": "120 £"
+      }
+    }
+  }
+}
