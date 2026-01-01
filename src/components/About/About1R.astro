@@ -29,7 +29,7 @@ const optimizedAbout1Mobile = await getImage({ src: about1, format: 'webp', widt
                 <source media="(max-width: 600px)" srcset={optimizedAbout1Mobile.src} type="image/webp" />
                 <img loading="lazy" decoding="async" src={about1.src} alt={t("home:about.imageAlt")} width="522" height="461" aria-hidden="true" />
             </picture>
-            <img class="cs-seal" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/SideBySide/seal2.svg" alt="seal" width="190" height="182" />
+            <img class="cs-seal" loading="lazy" decoding="async" src="/assets/svgs/award.svg" alt="seal" width="190" height="182" />
         </div>
         <div class="cs-content">
             <span class="cs-topper">{t("home:about.topper")}</span>
